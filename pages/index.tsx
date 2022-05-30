@@ -1,19 +1,12 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import Page from '../components/layout/Page';
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Aaron&apos;s Adventures</title>
-        <meta name="description" content="A blog about my adventures around the Pacific Northwest!" />
-      </Head>
-
-      <main>
-        
-      </main>
-    </div>
-  );
-};
+const Home = () => (
+  <Page
+    title="Aaron's Adventures"
+    description="A blog about my adventures around the Pacific Northwest!"
+  >
+    <h1>Hello</h1>
+  </Page>
+);
 
 export default Home;
