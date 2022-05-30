@@ -4,8 +4,8 @@ import { ReactNode } from 'react';
 import styles from '../../styles/components/layout/page.module.scss';
 
 type PageType = {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   children?: ReactNode;
 };
 
@@ -24,14 +24,27 @@ const Page: NextPage<PageType> = ({
 }: PageType) => {
   const mainClass = 'page';
   return (
-    <div className={styles[mainClass]}>
+    <div
+      className={styles[mainClass]}
+      data-testid="page"
+    >
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        {title && <title>{title}</title>}
+        {description && (
+          <meta
+            name="description"
+            content={description}
+          />
+        )}
       </Head>
 
       {children && (
-        <main className={styles[`${mainClass}__body`]}>{children}</main>
+        <main
+          className={styles[`${mainClass}__body`]}
+          data-testid="page-body"
+        >
+          {children}
+        </main>
       )}
     </div>
   );
