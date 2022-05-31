@@ -3,6 +3,9 @@ import Head from 'next/head';
 import { ReactNode } from 'react';
 import styles from '../../styles/components/layout/page.module.scss';
 
+// Import components
+import Header from '../navigation/Header';
+
 type PageType = {
   title?: string;
   description?: string;
@@ -37,7 +40,10 @@ const Page: NextPage<PageType> = ({
           />
         )}
       </Head>
-
+      <Header
+        title="Aaron&rsquo;s Adventures"
+        to="/"
+      />
       {children && (
         <main
           className={styles[`${mainClass}__body`]}
