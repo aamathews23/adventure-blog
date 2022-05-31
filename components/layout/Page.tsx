@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { ReactNode } from 'react';
 import styles from '../../styles/components/layout/page.module.scss';
+import Footer from '../navigation/Footer';
 
 // Import components
 import Header from '../navigation/Header';
@@ -52,6 +53,7 @@ const Page: NextPage<PageType> = ({
           {children}
         </main>
       )}
+      <Footer />
     </div>
   );
 };
