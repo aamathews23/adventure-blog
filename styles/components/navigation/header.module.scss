@@ -1,0 +1,36 @@
+.header {
+  &__title {
+    font-family: Karla, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      border-bottom: 4px solid #fff;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__title {
+      font-size: 48px;
+      text-align: left;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    &__title {
+      text-align: center;
+    }
+  }
+}

@@ -2,6 +2,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { ReactNode } from 'react';
 import styles from '../../styles/components/layout/page.module.scss';
+import Footer from '../navigation/Footer';
+
+// Import components
+import Header from '../navigation/Header';
 
 type PageType = {
   title?: string;
@@ -37,7 +41,10 @@ const Page: NextPage<PageType> = ({
           />
         )}
       </Head>
-
+      <Header
+        title="Aaron&rsquo;s Adventures"
+        to="/"
+      />
       {children && (
         <main
           className={styles[`${mainClass}__body`]}
@@ -46,6 +53,7 @@ const Page: NextPage<PageType> = ({
           {children}
         </main>
       )}
+      <Footer />
     </div>
   );
 };
