@@ -1,4 +1,6 @@
-./node_modules
+.next
+node_modules
 .gitignore
 package-lock.json
 package.json
+__tests__
