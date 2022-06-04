@@ -4,10 +4,12 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - name: 'models'
-    label: 'Models'
-    fields:
-      - name: 'name'
-        label: 'Name'
-        widget: 'string'
-        required: true
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - name: 'home'
+        label: 'Home'
+        file: 'content/pages/home.md'
+        fields:
+          - { name: 'title', label: 'Title', widget: 'string' }
+          - { name: 'description', label: 'Description', widget: 'string' }
