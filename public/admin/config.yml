@@ -6,3 +6,8 @@ public_folder: img
 collections:
   - name: 'models'
     label: 'Models'
+    fields:
+      - name: 'name'
+        label: 'Name'
+        widget: 'string'
+        required: true
