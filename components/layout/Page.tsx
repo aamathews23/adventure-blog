@@ -2,16 +2,15 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { ReactNode } from 'react';
 import styles from '../../styles/components/layout/page.module.scss';
-import Footer from '../navigation/Footer';
 
 // Import components
 import Header from '../navigation/Header';
+import Footer from '../navigation/Footer';
 
 type PageType = {
   title?: string;
   description?: string;
-  ogImg?: string;
-  twitterImg?: string;
+  previewImg?: string;
   children?: ReactNode;
 };
 
@@ -20,16 +19,14 @@ type PageType = {
  *
  * @param {String} title the page title
  * @param {String} description the page description
- * @param {String} ogImg the og image of the page
- * @param {String} twitterImg the twitter image of the page
+ * @param {String} previewImg the social media preview image of the page
  * @param {ReactNode} children a list of react children
  * @returns A page component
  */
 const Page: NextPage<PageType> = ({
   title,
   description,
-  ogImg,
-  twitterImg,
+  previewImg,
   children,
 }: PageType) => {
   const mainClass = 'page';
@@ -46,17 +43,17 @@ const Page: NextPage<PageType> = ({
             content={description}
           />
         )}
-        {ogImg && (
-          <meta
-            property="og:image"
-            content={ogImg}
-          />
-        )}
-        {twitterImg && (
-          <meta
-            property="twitter:image"
-            content={twitterImg}
-          />
+        {previewImg && (
+          <>
+            <meta
+              property="og:image"
+              content={previewImg}
+            />
+            <meta
+              property="twitter:image"
+              content={previewImg}
+            />
+          </>
         )}
       </Head>
       <Header
