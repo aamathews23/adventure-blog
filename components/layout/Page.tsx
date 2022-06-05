@@ -7,6 +7,9 @@ import styles from '../../styles/components/layout/page.module.scss';
 import Header from '../navigation/Header';
 import Footer from '../navigation/Footer';
 
+// Import content
+import { attributes as headerModel, react as HeaderContent } from '../../content/models/header.md';
+
 type PageType = {
   title?: string;
   description?: string;
@@ -35,6 +38,7 @@ const Page: NextPage<PageType> = ({
       className={styles[mainClass]}
       data-testid="page"
     >
+      <HeaderContent />
       <Head>
         {title && <title>{title}</title>}
         {description && (
@@ -57,8 +61,8 @@ const Page: NextPage<PageType> = ({
         )}
       </Head>
       <Header
-        title="Aaron&rsquo;s Adventures"
-        to="/"
+        title={headerModel.title}
+        to={headerModel.to}
       />
       {children && (
         <main

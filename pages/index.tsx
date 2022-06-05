@@ -7,8 +7,7 @@ const Home = () => (
     <Page
       title={attributes.title}
       description={attributes.description}
-      ogImg={attributes.ogImg}
-      twitterImg={attributes.twitterImg}
+      previewImg={attributes.previewImg}
     >
       <h1>Hello</h1>
     </Page>
