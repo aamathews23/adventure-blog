@@ -10,6 +10,8 @@ import Header from '../navigation/Header';
 type PageType = {
   title?: string;
   description?: string;
+  ogImg?: string;
+  twitterImg?: string;
   children?: ReactNode;
 };
 
@@ -18,12 +20,16 @@ type PageType = {
  *
  * @param {String} title the page title
  * @param {String} description the page description
+ * @param {String} ogImg the og image of the page
+ * @param {String} twitterImg the twitter image of the page
  * @param {ReactNode} children a list of react children
  * @returns A page component
  */
 const Page: NextPage<PageType> = ({
   title,
   description,
+  ogImg,
+  twitterImg,
   children,
 }: PageType) => {
   const mainClass = 'page';
@@ -38,6 +44,18 @@ const Page: NextPage<PageType> = ({
           <meta
             name="description"
             content={description}
+          />
+        )}
+        {ogImg && (
+          <meta
+            property="og:image"
+            content={ogImg}
+          />
+        )}
+        {twitterImg && (
+          <meta
+            property="twitter:image"
+            content={twitterImg}
           />
         )}
       </Head>
