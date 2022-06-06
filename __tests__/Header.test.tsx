@@ -4,6 +4,7 @@ import '@testing-library/jest-dom';
 
 const title = 'Title';
 const to = '/';
+const body = 'Body';
 
 describe('Header', () => {
   it('mounts', () => {
@@ -18,5 +19,13 @@ describe('Header', () => {
   it('renders the link', () => {
     const { getByText } = render(<Header title={title} to={to} />);
     expect(getByText(title).getAttribute('href')).toEqual(to);
+  });
+  it('renders the body when provided', () => {
+    const { getByText } = render(<Header title={title} to={to} body={body} />);
+    expect(getByText(body)).toBeInTheDocument();
+  });
+  it('does not render the body when not provided', () => {
+    const { queryByText } = render(<Header title={title} to={to} />);
+    expect(queryByText(body)).toBeNull();
   });
 });

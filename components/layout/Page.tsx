@@ -67,6 +67,7 @@ const Page: NextPage<PageType> = ({
       <Header
         title={header.title}
         to={header.to}
+        body={header.body}
       />
       {children && (
         <main

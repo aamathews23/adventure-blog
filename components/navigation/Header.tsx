@@ -7,9 +7,10 @@ import HeaderType from '../../types/Header';
  *
  * @param {String} title the header title
  * @param {String} to the header link
+ * @param {String} body the header body
  * @returns a header component
  */
-const Header = ({ title, to }: HeaderType) => {
+const Header = ({ title, to, body }: HeaderType) => {
   const mainClass = 'header';
   return (
     <header
@@ -21,6 +22,7 @@ const Header = ({ title, to }: HeaderType) => {
           <a className={styles[`${mainClass}__link`]}>{title}</a>
         </Link>
       </h1>
+      {body && <p className={styles[`${mainClass}__body`]}>{body}</p>}
     </header>
   );
 };

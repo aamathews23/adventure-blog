@@ -33,6 +33,7 @@ collections:
         fields:
           - { name: 'title', label: 'Title', widget: 'string', required: true }
           - { name: 'to', label: 'To Url', widget: 'string', required: true }
+          - { name: 'body', label: 'Body', widget: 'string' }
       - name: 'footer'
         label: 'Footer'
         file: 'content/models/footer.md'
