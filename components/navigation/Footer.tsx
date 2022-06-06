@@ -20,14 +20,6 @@ const Footer = ({ copyright, linkedinUrl, githubUrl }: FooterType) => {
       data-testid="footer"
     >
       <div>
-        <p
-          className={styles[`${mainClass}__copyright`]}
-          data-testid="footer-copyright"
-        >
-          {copyright}
-        </p>
-      </div>
-      <div>
         <Link href={linkedinUrl}>
           <a
             className={styles[`${mainClass}__icon`]}
@@ -46,6 +38,14 @@ const Footer = ({ copyright, linkedinUrl, githubUrl }: FooterType) => {
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </Link>
+      </div>
+      <div>
+        <p
+          className={styles[`${mainClass}__copyright`]}
+          data-testid="footer-copyright"
+        >
+          {copyright}
+        </p>
       </div>
     </footer>
   );

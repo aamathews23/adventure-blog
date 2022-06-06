@@ -1,0 +1,15 @@
+.grid {
+  display: grid;
+  row-gap: 48px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 48px;
+  }
+}

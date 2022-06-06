@@ -14,8 +14,11 @@ import {
   react as FooterContent,
 } from '../content/models/footer.md';
 
-const Home = (props: any) => {
-  console.log(props);
+// Import components
+import PostSection from '../components/posts/Section';
+
+const Home = ({ collection }: any) => {
+  console.log(collection);
   return (
     <>
       <HomeContent />
@@ -28,19 +31,30 @@ const Home = (props: any) => {
       >
         <HeaderContent />
         <FooterContent />
-        <h1>Hello</h1>
+        {collection &&
+          Object.keys(collection) &&
+          Object.keys(collection).length > 0 &&
+          Object.keys(collection).map((key, index) => (
+            <PostSection
+              key={index}
+              title={key.split('-')[1]}
+              posts={collection[key]}
+            />
+          ))}
       </Page>
     </>
   );
 };
 
 export async function getStaticProps() {
-  const posts = readdirSync(path.join('content', 'posts')).reduce(
+  const collection = readdirSync(path.join('content', 'posts')).reduce(
     (col, year) => {
       const data = readdirSync(path.join('content', 'posts', year))
-        .map((file) => readFileSync(path.join('content', 'posts', year, file)).toString())
+        .map((file) =>
+          readFileSync(path.join('content', 'posts', year, file)).toString(),
+        )
         .map((post) => matter(post).data);
-      
+
       return {
         ...col,
         [`year-${year}`]: data,
@@ -51,9 +65,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts,
+      collection,
     },
   };
-};
+}
 
 export default Home;
