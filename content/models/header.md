@@ -1,4 +1,4 @@
 ---
-title: "Aaron's Adventures"
-to: '/'
+title: Aaron’s Adventures
+to: /
 ---
