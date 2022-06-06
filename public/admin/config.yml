@@ -11,11 +11,27 @@ collections:
         label: 'Home'
         file: 'content/pages/home.md'
         fields:
-          - { name: 'title', label: 'Title', widget: 'string' }
-          - { name: 'description', label: 'Description', widget: 'string' }
+          - { name: 'title', label: 'Title', widget: 'string', required: true }
+          - { name: 'description', label: 'Description', widget: 'string', required: true }
           - {
               name: 'previewImg',
               label: 'Social Media Image',
               widget: 'image',
               allow_multiple: false,
             }
+  - name: 'models'
+    label: 'Models'
+    files:
+      - name: 'header'
+        label: 'Header'
+        file: 'content/models/header.md'
+        fields:
+          - { name: 'title', label: 'Title', widget: 'string', required: true }
+          - { name: 'to', label: 'To Url', widget: 'string', required: true }
+      - name: 'footer'
+        label: 'Footer'
+        file: 'content/models/footer.md'
+        fields:
+          - { name: 'copyright', label: 'Copyright', widget: 'string', required: true }
+          - { name: 'linkedinUrl', label: 'LinkedIn Url', widget: 'string', required: true }
+          - { name: 'githubUrl', label: 'Github Url', widget: 'string', required: true }

@@ -1,10 +1,6 @@
 import Link from 'next/link';
 import styles from '../../styles/components/navigation/header.module.scss';
-
-type HeaderType = {
-  title: string;
-  to: string;
-};
+import HeaderType from '../../types/Header';
 
 /**
  * Creates a header component to be used throughout the pages.

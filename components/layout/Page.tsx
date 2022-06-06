@@ -7,12 +7,15 @@ import styles from '../../styles/components/layout/page.module.scss';
 import Header from '../navigation/Header';
 import Footer from '../navigation/Footer';
 
-// Import content
-import { attributes as headerModel, react as HeaderContent } from '../../content/models/header.md';
+// Import types
+import HeaderType from '../../types/Header';
+import FooterType from '../../types/Footer';
 
 type PageType = {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
+  header: HeaderType;
+  footer: FooterType;
   previewImg?: string;
   children?: ReactNode;
 };
@@ -22,6 +25,8 @@ type PageType = {
  *
  * @param {String} title the page title
  * @param {String} description the page description
+ * @param {HeaderType} header the page header
+ * @param {FooterType} footer the page footer
  * @param {String} previewImg the social media preview image of the page
  * @param {ReactNode} children a list of react children
  * @returns A page component
@@ -29,6 +34,8 @@ type PageType = {
 const Page: NextPage<PageType> = ({
   title,
   description,
+  header,
+  footer,
   previewImg,
   children,
 }: PageType) => {
@@ -38,15 +45,12 @@ const Page: NextPage<PageType> = ({
       className={styles[mainClass]}
       data-testid="page"
     >
-      <HeaderContent />
       <Head>
-        {title && <title>{title}</title>}
-        {description && (
-          <meta
-            name="description"
-            content={description}
-          />
-        )}
+        <title>{title}</title>
+        <meta
+          name="description"
+          content={description}
+        />
         {previewImg && (
           <>
             <meta
@@ -61,8 +65,8 @@ const Page: NextPage<PageType> = ({
         )}
       </Head>
       <Header
-        title={headerModel.title}
-        to={headerModel.to}
+        title={header.title}
+        to={header.to}
       />
       {children && (
         <main
@@ -72,7 +76,11 @@ const Page: NextPage<PageType> = ({
           {children}
         </main>
       )}
-      <Footer />
+      <Footer
+        copyright={footer.copyright}
+        linkedinUrl={footer.linkedinUrl}
+        githubUrl={footer.githubUrl}
+      />
     </div>
   );
 };
