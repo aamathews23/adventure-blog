@@ -1,9 +1,14 @@
 .footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  &__copyright {
+    font-family: Karla, sans-serif;
+    margin-bottom: 16px;
+  }
 
   &__icon {
     color: #fff;
@@ -15,6 +20,14 @@
 
     &:not(:last-child) {
       margin-right: 32px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+
+    &__copyright {
+      margin-bottom: 0px;
     }
   }
 }
