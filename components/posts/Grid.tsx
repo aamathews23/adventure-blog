@@ -15,6 +15,7 @@ const Grid = ({ posts }: GridType) => (
         body={post.body}
         date={post.date}
         previewImg={post.previewImg}
+        previewImgAlt={post.previewImgAlt}
       />
     ))}
   </div>
