@@ -4,4 +4,6 @@ body: A beautiful river rushes down the snowy hillside.
 date: 05/12/2022
 previewImg: /img/example.jpg
 previewImgAlt: Example alt 2
+collection:
+  - '2022'
 ---
