@@ -18,10 +18,11 @@ import {
 import PostSection from '../components/posts/Section';
 
 const Home = ({ collection }: any) => {
-  console.log(collection);
   return (
     <>
+      <HeaderContent />
       <HomeContent />
+      <FooterContent />
       <Page
         title={attributes.title}
         description={attributes.description}
@@ -29,8 +30,6 @@ const Home = ({ collection }: any) => {
         footer={footerModel}
         previewImg={attributes.previewImg}
       >
-        <HeaderContent />
-        <FooterContent />
         {collection &&
           Object.keys(collection) &&
           Object.keys(collection).length > 0 &&
