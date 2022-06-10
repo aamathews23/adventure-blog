@@ -17,11 +17,14 @@ const Header = ({ title, to, body }: HeaderType) => {
       className={styles[mainClass]}
       data-testid="header"
     >
-      <h1 className={styles[`${mainClass}__title`]}>
-        <Link href={to}>
-          <a className={styles[`${mainClass}__link`]}>{title}</a>
-        </Link>
-      </h1>
+      <Link href={to}>
+        <a
+          className={styles[`${mainClass}__link`]}
+          data-testid="header-link"
+        >
+          <h1 className={styles[`${mainClass}__title`]}>{title}</h1>
+        </a>
+      </Link>
       {body && <p className={styles[`${mainClass}__body`]}>{body}</p>}
     </header>
   );

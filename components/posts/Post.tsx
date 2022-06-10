@@ -9,7 +9,10 @@ const loader = ({ src }: any) => {
 const Post = ({ title, body, date, previewImg, previewImgAlt }: PostType) => {
   const mainClass = 'post';
   return (
-    <div className={styles[mainClass]}>
+    <div
+      className={styles[mainClass]}
+      tabIndex={0}
+    >
       <figure className={styles[`${mainClass}__img`]}>
         <Image
           src={previewImg}

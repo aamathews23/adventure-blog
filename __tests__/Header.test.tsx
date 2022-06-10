@@ -17,8 +17,8 @@ describe('Header', () => {
     expect(getByText(title)).toBeInTheDocument();
   });
   it('renders the link', () => {
-    const { getByText } = render(<Header title={title} to={to} />);
-    expect(getByText(title).getAttribute('href')).toEqual(to);
+    const { getByTestId } = render(<Header title={title} to={to} />);
+    expect(getByTestId('header-link').getAttribute('href')).toEqual(to);
   });
   it('renders the body when provided', () => {
     const { getByText } = render(<Header title={title} to={to} body={body} />);

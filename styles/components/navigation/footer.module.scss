@@ -11,14 +11,28 @@
 
   &__icon {
     color: #fff;
+    height: 45px;
 
     svg {
       height: 45px;
       width: 45px;
+      overflow: hidden;
     }
 
     &:not(:last-child) {
       margin-right: 32px;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        transition: transform 300ms;
+        transform: scale(1.15);
+      }
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
