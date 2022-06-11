@@ -3,5 +3,4 @@ node_modules
 .gitignore
 package-lock.json
 package.json
-__tests__
 content

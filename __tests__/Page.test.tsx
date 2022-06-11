@@ -16,23 +16,49 @@ const footer = {
 
 describe('Page', () => {
   it('mounts', () => {
-    const { getByTestId } = render(<Page title={title} description={description} header={header} footer={footer} />);
+    const { getByTestId } = render(
+      <Page
+        title={title}
+        description={description}
+        header={header}
+        footer={footer}
+      />,
+    );
     const page = getByTestId('page');
     expect(page).toBeInTheDocument();
   });
   it('renders a header', () => {
-    const { getByTestId } = render(<Page title={title} description={description} header={header} footer={footer} />);
+    const { getByTestId } = render(
+      <Page
+        title={title}
+        description={description}
+        header={header}
+        footer={footer}
+      />,
+    );
     const pageHeader = getByTestId('header');
     expect(pageHeader).toBeInTheDocument();
   });
   it('renders a footer', () => {
-    const { getByTestId } = render(<Page title={title} description={description} header={header} footer={footer} />);
+    const { getByTestId } = render(
+      <Page
+        title={title}
+        description={description}
+        header={header}
+        footer={footer}
+      />,
+    );
     const pageFooter = getByTestId('footer');
     expect(pageFooter).toBeInTheDocument();
   });
   it('renders a child', () => {
     const { getByTestId, getByText } = render(
-      <Page title={title} description={description} header={header} footer={footer}>
+      <Page
+        title={title}
+        description={description}
+        header={header}
+        footer={footer}
+      >
         <h1>Hello</h1>
       </Page>,
     );
