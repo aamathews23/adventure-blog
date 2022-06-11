@@ -4,15 +4,10 @@ import matter from 'gray-matter';
 import Page from '../components/layout/Page';
 
 // Import content
-import { attributes, react as HomeContent } from '../content/pages/home.md';
 import {
-  attributes as headerModel,
-  react as HeaderContent,
-} from '../content/models/header.md';
-import {
-  attributes as footerModel,
-  react as FooterContent,
-} from '../content/models/footer.md';
+  attributes as homePageModel,
+  react as HomePageContent
+} from '../content/pages/home.md';
 
 // Import components
 import PostSection from '../components/posts/Section';
@@ -20,22 +15,20 @@ import PostSection from '../components/posts/Section';
 // Import types
 import CollectionType from '../types/Collection';
 
-type HomeType = {
+type HomePageType = {
   collections: CollectionType[];
 };
 
-const Home = ({ collections }: HomeType) => {
+const HomePage = ({ collections }: HomePageType) => {
   return (
     <>
-      <HeaderContent />
-      <HomeContent />
-      <FooterContent />
+      <HomePageContent />
       <Page
-        title={attributes.title}
-        description={attributes.description}
-        header={headerModel}
-        footer={footerModel}
-        previewImg={attributes.previewImg}
+        title={homePageModel.title}
+        description={homePageModel.description}
+        previewImg={homePageModel.previewImg}
+        header={homePageModel.header}
+        footer={homePageModel.footer}
       >
         {collections &&
           collections.length > 0 &&
@@ -74,4 +67,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Home;
+export default HomePage;
