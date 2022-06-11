@@ -14,7 +14,7 @@ import PostType from '../types/Post';
 
 type PostPageType = {
   post: PostType;
-}
+};
 
 const PostPage = ({ post }: PostPageType) => {
   return (
@@ -34,12 +34,11 @@ const PostPage = ({ post }: PostPageType) => {
 };
 
 export const getStaticPaths = async () => {
-  const paths = readdirSync(path.join('content', 'posts'))
-    .map((file) => ({
-      params: {
-        post: file.replace('.md', ''),
-      },
-    }));
+  const paths = readdirSync(path.join('content', 'posts')).map((file) => ({
+    params: {
+      post: file.replace('.md', ''),
+    },
+  }));
 
   return {
     paths,
@@ -48,7 +47,9 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params: { post } }: any) => {
-  const file = readFileSync(path.join('content', 'posts', `${post}.md`)).toString();
+  const file = readFileSync(
+    path.join('content', 'posts', `${post}.md`),
+  ).toString();
   const content = matter(file);
   return {
     props: {

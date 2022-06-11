@@ -28,8 +28,18 @@ collections:
             label: 'Header'
             widget: 'object'
             fields:
-              - { name: 'title', label: 'Title', widget: 'string', required: true }
-              - { name: 'to', label: 'To Url', widget: 'string', required: true }
+              - {
+                  name: 'title',
+                  label: 'Title',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  name: 'to',
+                  label: 'To Url',
+                  widget: 'string',
+                  required: true,
+                }
               - { name: 'body', label: 'Body', widget: 'string' }
           - name: 'footer'
             label: 'Footer'
@@ -62,8 +72,18 @@ collections:
             label: 'Header'
             widget: 'object'
             fields:
-              - { name: 'title', label: 'Title', widget: 'string', required: true }
-              - { name: 'to', label: 'To Url', widget: 'string', required: true }
+              - {
+                  name: 'title',
+                  label: 'Title',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  name: 'to',
+                  label: 'To Url',
+                  widget: 'string',
+                  required: true,
+                }
           - name: 'footer'
             label: 'Footer'
             widget: 'object'
@@ -85,7 +105,7 @@ collections:
                   label: 'Github Url',
                   widget: 'string',
                   required: true,
-                }  
+                }
   - name: 'posts'
     label: 'Posts'
     folder: 'content/posts'

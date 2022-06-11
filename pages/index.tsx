@@ -6,7 +6,7 @@ import Page from '../components/layout/Page';
 // Import content
 import {
   attributes as homePageModel,
-  react as HomePageContent
+  react as HomePageContent,
 } from '../content/pages/home.md';
 
 // Import components
