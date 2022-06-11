@@ -17,21 +17,41 @@ const posts: PostType[] = [
 
 describe('Section', () => {
   it('mounts', () => {
-    const { getByTestId } = render(<Section title={title} posts={posts} />);
+    const { getByTestId } = render(
+      <Section
+        title={title}
+        posts={posts}
+      />,
+    );
     const section = getByTestId('section');
     expect(section).toBeInTheDocument();
   });
   it('renders the title', () => {
-    const { getByText } = render(<Section title={title} posts={posts} />);
+    const { getByText } = render(
+      <Section
+        title={title}
+        posts={posts}
+      />,
+    );
     expect(getByText(title)).toBeInTheDocument();
   });
   it('renders the post grid when posts are given', () => {
-    const { getByTestId } = render(<Section title={title} posts={posts} />);
+    const { getByTestId } = render(
+      <Section
+        title={title}
+        posts={posts}
+      />,
+    );
     const grid = getByTestId('grid');
     expect(grid).toBeInTheDocument();
   });
   it('does not render the post grid when posts are not given', () => {
-    const { queryByTestId } = render(<Section title={title} posts={postsEmpty} />);
+    const { queryByTestId } = render(
+      <Section
+        title={title}
+        posts={postsEmpty}
+      />,
+    );
     const grid = queryByTestId('grid');
     expect(grid).toBeFalsy();
   });

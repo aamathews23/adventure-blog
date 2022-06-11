@@ -9,6 +9,9 @@ import {
   react as PostPageContent,
 } from '../content/pages/post.md';
 
+// Import components
+import Details from '../components/posts/Details';
+
 // Import types
 import PostType from '../types/Post';
 
@@ -22,12 +25,20 @@ const PostPage = ({ post }: PostPageType) => {
       <PostPageContent />
       <Page
         title={`${post.title} | ${postPageModel.title}`}
-        description={post.body}
+        description={post.body || ''}
         previewImg={post.previewImg}
         header={postPageModel.header}
         footer={postPageModel.footer}
       >
-        {post.title}
+        <Details
+          title={post.title}
+          date={post.date}
+          location={post.location}
+          locationUrl={post.locationUrl}
+          distance={post.distance}
+          duration={post.duration}
+          intensity={post.intensity}
+        />
       </Page>
     </>
   );

@@ -112,17 +112,22 @@ collections:
     create: true
     fields:
       - { name: 'title', label: 'Title', widget: 'string', required: true }
-      - { name: 'body', label: 'Body', widget: 'string', required: true }
+      - { name: 'body', label: 'Body', widget: 'string' }
       - { name: 'date', label: 'Date', widget: 'string', required: true }
+      - { name: 'location', label: 'Location', widget: 'string' }
+      - { name: 'locationUrl', label: 'Location Url', widget: 'string' }
+      - { name: 'distance', label: 'Distance', widget: 'string' }
+      - { name: 'duration', label: 'duration', widget: 'string' }
+      - {
+          name: 'intensity',
+          label: 'Intensity',
+          widget: 'select',
+          options: ['Easy', 'Moderate', 'Rigorous'],
+        }
       - {
           name: 'previewImg',
           label: 'Preview Img',
           widget: 'image',
           allow_multiple: false,
         }
-      - {
-          name: 'previewImgAlt',
-          label: 'Preview Image Alt',
-          widget: 'string',
-          required: true,
-        }
+      - { name: 'previewImgAlt', label: 'Preview Image Alt', widget: 'string' }
