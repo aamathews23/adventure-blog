@@ -21,7 +21,10 @@ const Details = ({
 }: PostType) => {
   const mainClass = 'details';
   return (
-    <section className={styles[mainClass]}>
+    <section
+      className={styles[mainClass]}
+      data-testid={mainClass}
+    >
       <h2 className={styles[`${mainClass}__title`]}>{title}</h2>
       <div className={styles[`${mainClass}__row`]}>
         {location && locationUrl && (
