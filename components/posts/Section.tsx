@@ -10,9 +10,12 @@ type SectionType = {
 const Section = ({ title, posts }: SectionType) => {
   const mainClass = 'section';
   return (
-    <section className={styles[mainClass]}>
+    <section
+      className={styles[mainClass]}
+      data-testid="section"
+    >
       <h2 className={styles[`${mainClass}__title`]}>{title}</h2>
-      <PostGrid posts={posts} />
+      {posts && posts.length > 0 && <PostGrid posts={posts} />}
     </section>
   );
 };

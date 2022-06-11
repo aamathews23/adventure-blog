@@ -7,7 +7,10 @@ type GridType = {
 };
 
 const Grid = ({ posts }: GridType) => (
-  <div className={styles.grid}>
+  <div
+    className={styles.grid}
+    data-testid="grid"
+  >
     {posts.map((post, key) => (
       <PostCard
         key={key}

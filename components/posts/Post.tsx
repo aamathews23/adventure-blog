@@ -12,6 +12,7 @@ const Post = ({ title, body, date, previewImg, previewImgAlt }: PostType) => {
     <div
       className={styles[mainClass]}
       tabIndex={0}
+      data-testid="post"
     >
       <figure className={styles[`${mainClass}__img`]}>
         <Image
