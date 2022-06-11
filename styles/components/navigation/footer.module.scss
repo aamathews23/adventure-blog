@@ -3,23 +3,36 @@
   flex-direction: column;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
 
   &__copyright {
     font-family: Karla, sans-serif;
-    margin-bottom: 16px;
+    margin: 32px 0;
   }
 
   &__icon {
     color: #fff;
+    height: 45px;
 
     svg {
       height: 45px;
       width: 45px;
+      overflow: hidden;
     }
 
     &:not(:last-child) {
       margin-right: 32px;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        transition: transform 300ms;
+        transform: scale(1.15);
+      }
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 

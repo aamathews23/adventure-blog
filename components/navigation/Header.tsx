@@ -7,20 +7,25 @@ import HeaderType from '../../types/Header';
  *
  * @param {String} title the header title
  * @param {String} to the header link
+ * @param {String} body the header body
  * @returns a header component
  */
-const Header = ({ title, to }: HeaderType) => {
+const Header = ({ title, to, body }: HeaderType) => {
   const mainClass = 'header';
   return (
     <header
       className={styles[mainClass]}
       data-testid="header"
     >
-      <h1 className={styles[`${mainClass}__title`]}>
-        <Link href={to}>
-          <a className={styles[`${mainClass}__link`]}>{title}</a>
-        </Link>
-      </h1>
+      <Link href={to}>
+        <a
+          className={styles[`${mainClass}__link`]}
+          data-testid="header-link"
+        >
+          <h1 className={styles[`${mainClass}__title`]}>{title}</h1>
+        </a>
+      </Link>
+      {body && <p className={styles[`${mainClass}__body`]}>{body}</p>}
     </header>
   );
 };

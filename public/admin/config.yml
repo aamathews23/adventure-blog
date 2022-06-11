@@ -33,6 +33,7 @@ collections:
         fields:
           - { name: 'title', label: 'Title', widget: 'string', required: true }
           - { name: 'to', label: 'To Url', widget: 'string', required: true }
+          - { name: 'body', label: 'Body', widget: 'string' }
       - name: 'footer'
         label: 'Footer'
         file: 'content/models/footer.md'
@@ -55,3 +56,23 @@ collections:
               widget: 'string',
               required: true,
             }
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'content/posts'
+    create: true
+    fields:
+      - { name: 'title', label: 'Title', widget: 'string', required: true }
+      - { name: 'body', label: 'Body', widget: 'string', required: true }
+      - { name: 'date', label: 'Date', widget: 'string', required: true }
+      - {
+          name: 'previewImg',
+          label: 'Preview Img',
+          widget: 'image',
+          allow_multiple: false,
+        }
+      - {
+          name: 'previewImgAlt',
+          label: 'Preview Image Alt',
+          widget: 'string',
+          required: true,
+        }
