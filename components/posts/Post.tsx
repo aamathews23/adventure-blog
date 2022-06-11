@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import PostType from '../../types/Post';
 import styles from '../../styles/components/posts/post.module.scss';
+import { useRouter } from 'next/router';
 
 const loader = ({ src }: any) => {
   return src;
@@ -8,15 +9,21 @@ const loader = ({ src }: any) => {
 
 const Post = ({ title, body, date, previewImg, previewImgAlt }: PostType) => {
   const mainClass = 'post';
+  const router = useRouter();
+  const handlePostClick = (e: any) => {
+    e.preventDefault();
+    router.push(title.toLowerCase().replaceAll(' ', '-'));
+  };
   return (
     <div
       className={styles[mainClass]}
       tabIndex={0}
       data-testid="post"
+      onClick={handlePostClick}
     >
       <figure className={styles[`${mainClass}__img`]}>
         <Image
-          src={previewImg}
+          src={previewImg || ''}
           alt={previewImgAlt}
           layout="fill"
           objectFit="cover"

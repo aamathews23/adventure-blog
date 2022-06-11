@@ -1,9 +1,14 @@
 type Post = {
   title: string;
-  body: string;
   date: string;
-  previewImg: string;
-  previewImgAlt: string;
+  body?: string;
+  previewImg?: string;
+  previewImgAlt?: string;
+  location?: string;
+  locationUrl?: string;
+  distance?: string;
+  duration?: string;
+  intensity?: string;
 };
 
 export default Post;
