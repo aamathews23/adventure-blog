@@ -1,11 +1,8 @@
 ---
 title: "Aaron's Adventures"
-description: 'A small blog about my adventures in the Pacific Northwest.'
-previewImg: '/img/example.jpg'
 header:
   title: Aaron’s Adventures
   to: /
-  body: A log of all the adventures I’ve been on. Organized by year. Enjoy!
 footer:
   copyright: '2022 Aaron Mathews, All rights reserved.'
   linkedinUrl: 'https://www.linkedin.com/in/aaron-mathews-953408150/'
