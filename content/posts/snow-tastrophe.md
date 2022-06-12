@@ -11,7 +11,6 @@ previewImg: /img/example.jpg
 previewImgAlt: Example alt 1
 collection:
   - "2022"
-postImages:
 ---
 ## Dirty Harry’s Peak
 

@@ -1,8 +1,11 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: public/img
-public_folder: img
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dmrjua4dg
+    api_key: 481127667714968
 collections:
   - name: 'pages'
     label: 'Pages'
