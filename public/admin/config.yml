@@ -131,10 +131,4 @@ collections:
           allow_multiple: false,
         }
       - { name: 'previewImgAlt', label: 'Preview Image Alt', widget: 'string' }
-      - {
-          name: 'postImages',
-          label: 'Blog Post Images',
-          widget: 'image',
-          allow_multiple: true,
-        }
       - { name: 'body', 'Blog Post Content', widget: 'markdown' }
