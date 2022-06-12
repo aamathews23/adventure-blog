@@ -2,6 +2,7 @@ import { readdirSync, readFileSync } from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 import Page from '../components/layout/Page';
+import styles from '../styles/pages/post.module.scss';
 
 // Import content
 import {
@@ -11,15 +12,18 @@ import {
 
 // Import components
 import Details from '../components/posts/Details';
+import Markdown from '../components/posts/Markdown';
 
 // Import types
 import PostType from '../types/Post';
 
 type PostPageType = {
   post: PostType;
+  content?: string;
 };
 
-const PostPage = ({ post }: PostPageType) => {
+const PostPage = ({ post, content }: PostPageType) => {
+  const mainClass = 'post';
   return (
     <>
       <PostPageContent />
@@ -30,15 +34,22 @@ const PostPage = ({ post }: PostPageType) => {
         header={postPageModel.header}
         footer={postPageModel.footer}
       >
-        <Details
-          title={post.title}
-          date={post.date}
-          location={post.location}
-          locationUrl={post.locationUrl}
-          distance={post.distance}
-          duration={post.duration}
-          intensity={post.intensity}
-        />
+        <div className={styles[mainClass]}>
+          <div className={styles[`${mainClass}__details`]}>
+            <Details
+              title={post.title}
+              date={post.date}
+              location={post.location}
+              locationUrl={post.locationUrl}
+              distance={post.distance}
+              duration={post.duration}
+              intensity={post.intensity}
+            />
+          </div>
+          <div className={styles[`${mainClass}__content`]}>
+            {content && <Markdown content={content} />}
+          </div>
+        </div>
       </Page>
     </>
   );
@@ -62,9 +73,11 @@ export const getStaticProps = async ({ params: { post } }: any) => {
     path.join('content', 'posts', `${post}.md`),
   ).toString();
   const content = matter(file);
+
   return {
     props: {
       post: content.data,
+      content: content.content,
     },
   };
 };
