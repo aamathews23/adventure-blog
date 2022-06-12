@@ -1,5 +1,5 @@
 ---
-title: Dirty Harry’s Peak
+title: Snow-tastrophe
 cardBody: A long hike up a snowy mountain...
 date: 05/07/2022
 location: Dirty Harry’s Peak
@@ -11,6 +11,7 @@ previewImg: /img/example.jpg
 previewImgAlt: Example alt 1
 collection:
   - "2022"
+postImages:
 ---
 ## Dirty Harry’s Peak
 
