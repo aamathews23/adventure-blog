@@ -11,4 +11,5 @@ duration: 5 hours
 intensity: Rigorous
 collection:
   - '2022'
+content: ''
 ---

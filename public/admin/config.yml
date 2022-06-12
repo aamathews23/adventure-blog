@@ -131,3 +131,4 @@ collections:
           allow_multiple: false,
         }
       - { name: 'previewImgAlt', label: 'Preview Image Alt', widget: 'string' }
+      - { name: 'content', 'Blog Post Content', widget: 'markdown' }

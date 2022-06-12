@@ -1,0 +1,90 @@
+.markdown {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Karla, sans-serif;
+    width: fit-content;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  h4 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  h5 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  h6 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  p,
+  a,
+  li {
+    font-family: Inconsolata, sans-serif;
+    font-size: 16px;
+  }
+
+  p,
+  img,
+  blockquote {
+    margin-bottom: 16px;
+  }
+
+  ul,
+  ol {
+    list-style-position: inside;
+  }
+
+  p {
+    line-height: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+
+    & li {
+      margin-left: 16px;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  a {
+    color: #fff;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      border-radius: 4px;
+      outline: 2px solid #fff;
+      outline-offset: 4px;
+    }
+  }
+}
