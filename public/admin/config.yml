@@ -1,8 +1,11 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: public/img
-public_folder: img
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dmrjua4dg
+    api_key: 481127667714968
 collections:
   - name: 'pages'
     label: 'Pages'
@@ -112,7 +115,7 @@ collections:
     create: true
     fields:
       - { name: 'title', label: 'Title', widget: 'string', required: true }
-      - { name: 'body', label: 'Body', widget: 'string' }
+      - { name: 'cardBody', label: 'Card Body', widget: 'string' }
       - { name: 'date', label: 'Date', widget: 'string', required: true }
       - { name: 'location', label: 'Location', widget: 'string' }
       - { name: 'locationUrl', label: 'Location Url', widget: 'string' }
@@ -131,4 +134,4 @@ collections:
           allow_multiple: false,
         }
       - { name: 'previewImgAlt', label: 'Preview Image Alt', widget: 'string' }
-      - { name: 'content', 'Blog Post Content', widget: 'markdown' }
+      - { name: 'body', 'Blog Post Content', widget: 'markdown' }

@@ -29,7 +29,7 @@ const PostPage = ({ post, content }: PostPageType) => {
       <PostPageContent />
       <Page
         title={`${post.title} | ${postPageModel.title}`}
-        description={post.body || ''}
+        description={post.cardBody || ''}
         previewImg={post.previewImg}
         header={postPageModel.header}
         footer={postPageModel.footer}

@@ -1,7 +1,7 @@
 type Post = {
   title: string;
   date: string;
-  body?: string;
+  cardBody?: string;
   previewImg?: string;
   previewImgAlt?: string;
   location?: string;

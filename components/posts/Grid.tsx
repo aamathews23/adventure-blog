@@ -15,7 +15,7 @@ const Grid = ({ posts }: GridType) => (
       <PostCard
         key={key}
         title={post.title}
-        body={post.body}
+        cardBody={post.cardBody}
         date={post.date}
         previewImg={post.previewImg}
         previewImgAlt={post.previewImgAlt}

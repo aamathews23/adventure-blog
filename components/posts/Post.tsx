@@ -7,7 +7,13 @@ const loader = ({ src }: any) => {
   return src;
 };
 
-const Post = ({ title, body, date, previewImg, previewImgAlt }: PostType) => {
+const Post = ({
+  title,
+  cardBody,
+  date,
+  previewImg,
+  previewImgAlt,
+}: PostType) => {
   const mainClass = 'post';
   const router = useRouter();
   const handlePostClick = (e: any) => {
@@ -36,7 +42,7 @@ const Post = ({ title, body, date, previewImg, previewImgAlt }: PostType) => {
         <h3 className={styles[`${mainClass}__title`]}>{title}</h3>
         <p className={styles[`${mainClass}__date`]}>{date}</p>
       </header>
-      <p className={styles[`${mainClass}__body`]}>{body}</p>
+      <p className={styles[`${mainClass}__body`]}>{cardBody}</p>
     </div>
   );
 };
