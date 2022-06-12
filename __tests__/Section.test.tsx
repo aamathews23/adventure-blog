@@ -8,7 +8,7 @@ const postsEmpty: PostType[] = [];
 const posts: PostType[] = [
   {
     title: 'Post 1',
-    body: 'Body 1',
+    cardBody: 'Body 1',
     date: '05/12/2022',
     previewImg: 'example.jpg',
     previewImgAlt: 'alt text',

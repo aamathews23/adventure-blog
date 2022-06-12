@@ -13,7 +13,7 @@ describe('Post', () => {
     const { getByTestId } = render(
       <Post
         title={title}
-        body={body}
+        cardBody={body}
         date={date}
         previewImg={previewImg}
         previewImgAlt={previewImgAlt}
@@ -26,7 +26,7 @@ describe('Post', () => {
     const { getByText } = render(
       <Post
         title={title}
-        body={body}
+        cardBody={body}
         date={date}
         previewImg={previewImg}
         previewImgAlt={previewImgAlt}
@@ -38,7 +38,7 @@ describe('Post', () => {
     const { getByText } = render(
       <Post
         title={title}
-        body={body}
+        cardBody={body}
         date={date}
         previewImg={previewImg}
         previewImgAlt={previewImgAlt}
@@ -50,7 +50,7 @@ describe('Post', () => {
     const { getByText } = render(
       <Post
         title={title}
-        body={body}
+        cardBody={body}
         date={date}
         previewImg={previewImg}
         previewImgAlt={previewImgAlt}
@@ -62,7 +62,7 @@ describe('Post', () => {
     const { getByAltText } = render(
       <Post
         title={title}
-        body={body}
+        cardBody={body}
         date={date}
         previewImg={previewImg}
         previewImgAlt={previewImgAlt}
