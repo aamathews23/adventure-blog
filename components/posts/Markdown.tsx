@@ -10,6 +10,7 @@ const Markdown = ({ content }: MarkdownType) => {
   return (
     <section
       className={styles.markdown}
+      data-testid="markdown"
       dangerouslySetInnerHTML={{ __html: md.render(content) }}
     />
   );
