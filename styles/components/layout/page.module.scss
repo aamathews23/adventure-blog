@@ -4,6 +4,13 @@
   max-width: 1440px;
   margin: auto;
 
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media screen and (min-width: 768px) {
     padding: 48px 32px;
   }
