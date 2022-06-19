@@ -11,10 +11,10 @@ import {
 
 // Import components
 import PostSection from '../components/posts/Section';
+import NotFound from '../components/global/NotFound';
 
 // Import types
 import CollectionType from '../types/Collection';
-import NotFound from '../components/global/NotFound';
 
 type HomePageType = {
   collections: CollectionType[];
