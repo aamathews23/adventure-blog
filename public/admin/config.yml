@@ -115,6 +115,68 @@ collections:
                   widget: 'string',
                   required: true,
                 }
+      - name: '404'
+        label: '404'
+        file: 'content/pages/404.md'
+        fields:
+          - { name: 'title', label: 'Title', widget: 'string', required: true }
+          - {
+              name: 'description',
+              label: 'Description',
+              widget: 'string',
+              required: true,
+            }
+          - {
+              name: 'previewImg',
+              label: 'Social Media Image',
+              widget: 'image',
+              allow_multiple: false,
+            }
+          - name: 'header'
+            label: 'Header'
+            widget: 'object'
+            fields:
+              - {
+                  name: 'title',
+                  label: 'Title',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  name: 'to',
+                  label: 'To Url',
+                  widget: 'string',
+                  required: true,
+                }
+              - { name: 'body', label: 'Body', widget: 'string' }
+          - name: 'footer'
+            label: 'Footer'
+            widget: 'object'
+            fields:
+              - {
+                  name: 'copyright',
+                  label: 'Copyright',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  name: 'linkedinUrl',
+                  label: 'LinkedIn Url',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  name: 'githubUrl',
+                  label: 'Github Url',
+                  widget: 'string',
+                  required: true,
+                }
+          - {
+              name: 'notFound',
+              label: 'Not Found Error',
+              widget: 'string',
+              required: true,
+            }
   - name: 'posts'
     label: 'Posts'
     folder: 'content/posts'

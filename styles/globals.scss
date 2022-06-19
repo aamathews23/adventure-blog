@@ -12,3 +12,17 @@ body,
   margin: 0;
   box-sizing: border-box;
 }
+
+a {
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    border-radius: 4px;
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+  }
+}
