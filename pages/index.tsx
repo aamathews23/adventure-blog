@@ -14,6 +14,7 @@ import PostSection from '../components/posts/Section';
 
 // Import types
 import CollectionType from '../types/Collection';
+import NotFound from '../components/global/NotFound';
 
 type HomePageType = {
   collections: CollectionType[];
@@ -30,15 +31,17 @@ const HomePage = ({ collections }: HomePageType) => {
         header={homePageModel.header}
         footer={homePageModel.footer}
       >
-        {collections &&
-          collections.length > 0 &&
+        {collections && collections.length > 0 ? (
           collections.map((collection, index) => (
             <PostSection
               key={index}
               title={collection.title}
               posts={collection.posts}
             />
-          ))}
+          ))
+        ) : (
+          <NotFound text={homePageModel.notFound} />
+        )}
       </Page>
     </>
   );

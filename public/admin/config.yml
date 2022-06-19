@@ -66,6 +66,12 @@ collections:
                   widget: 'string',
                   required: true,
                 }
+          - {
+              name: 'notFound',
+              label: 'Not Found Error',
+              widget: 'string',
+              required: true,
+            }
       - name: 'post'
         label: 'Post'
         file: 'content/pages/post.md'
