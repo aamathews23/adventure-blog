@@ -1,5 +1,11 @@
-import Link from '../global/Link';
+// Styles
 import styles from '../../styles/components/navigation/header.module.scss';
+
+// Components
+import Link from '../global/Link';
+import Text from '../global/Text';
+
+// Types
 import HeaderType from '../../types/Header';
 
 /**
@@ -21,9 +27,9 @@ const Header = ({ title, to, body }: HeaderType) => {
         to={to}
         className={styles[`${mainClass}__title`]}
       >
-        <h1>{title}</h1>
+        <Text tag="h1">{title}</Text>
       </Link>
-      {body && <p className={styles[`${mainClass}__body`]}>{body}</p>}
+      {body && <Text className={styles[`${mainClass}__body`]}>{body}</Text>}
     </header>
   );
 };

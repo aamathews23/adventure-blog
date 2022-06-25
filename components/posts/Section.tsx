@@ -1,6 +1,11 @@
-import PostType from '../../types/Post';
-import PostGrid from './Grid';
+// Styles
 import styles from '../../styles/components/posts/section.module.scss';
+
+// Components
+import PostGrid from './Grid';
+import Text from '../global/Text';
+// Types
+import PostType from '../../types/Post';
 
 type SectionType = {
   title: string;
@@ -14,7 +19,12 @@ const Section = ({ title, posts }: SectionType) => {
       className={styles[mainClass]}
       data-testid="section"
     >
-      <h2 className={styles[`${mainClass}__title`]}>{title}</h2>
+      <Text
+        tag={'h2'}
+        className={styles[`${mainClass}__title`]}
+      >
+        {title}
+      </Text>
       {posts && posts.length > 0 && <PostGrid posts={posts} />}
     </section>
   );

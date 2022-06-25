@@ -1,6 +1,11 @@
-import PostType from '../../types/Post';
-import PostCard from './Post';
+// Styles
 import styles from '../../styles/components/posts/grid.module.scss';
+
+// Components
+import PostCard from './Post';
+
+// Types
+import PostType from '../../types/Post';
 
 type GridType = {
   posts: PostType[];

@@ -1,6 +1,9 @@
 import { Remarkable } from 'remarkable';
+
+// Styles
 import styles from '../../styles/components/posts/markdown.module.scss';
 
+// Types
 type MarkdownType = {
   content: string;
 };

@@ -1,7 +1,10 @@
 import NextLink from 'next/link';
 import React from 'react';
+
+// Styles
 import styles from '../../styles/components/global/link.module.scss';
 
+// Types
 type LinkType = {
   to: string;
   className?: string;
