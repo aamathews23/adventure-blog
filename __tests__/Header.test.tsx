@@ -26,15 +26,6 @@ describe('Header', () => {
     );
     expect(getByText(title)).toBeInTheDocument();
   });
-  it('renders the link', () => {
-    const { getByTestId } = render(
-      <Header
-        title={title}
-        to={to}
-      />,
-    );
-    expect(getByTestId('header-link').getAttribute('href')).toEqual(to);
-  });
   it('renders the body when provided', () => {
     const { getByText } = render(
       <Header
