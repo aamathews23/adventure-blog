@@ -1,7 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
+
+// Styles
 import styles from '../../styles/components/navigation/footer.module.scss';
+
+// Components
+import Link from 'next/link';
+import Text from '../global/Text';
+
+// Types
 import FooterType from '../../types/Footer';
 
 /**
@@ -42,12 +49,12 @@ const Footer = ({ copyright, linkedinUrl, githubUrl }: FooterType) => {
         </Link>
       </div>
       <div>
-        <p
+        <Text
           className={styles[`${mainClass}__copyright`]}
           data-testid="footer-copyright"
         >
           {copyright}
-        </p>
+        </Text>
       </div>
     </footer>
   );

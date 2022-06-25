@@ -6,9 +6,16 @@ import {
   faStopwatch,
   faCalendar,
 } from '@fortawesome/free-solid-svg-icons';
-import Link from '../global/Link';
-import PostType from '../../types/Post';
+
+// Styles
 import styles from '../../styles/components/posts/details.module.scss';
+
+// Components
+import Link from '../global/Link';
+import Text from '../global/Text';
+
+// Types
+import PostType from '../../types/Post';
 
 const Details = ({
   title,
@@ -25,40 +32,45 @@ const Details = ({
       className={styles[mainClass]}
       data-testid={mainClass}
     >
-      <h2 className={styles[`${mainClass}__title`]}>{title}</h2>
+      <Text
+        tag="h2"
+        className={styles[`${mainClass}__title`]}
+      >
+        {title}
+      </Text>
       <div className={styles[`${mainClass}__row`]}>
         {location && locationUrl && (
           <Link
             to={locationUrl}
-            className={styles[`${mainClass}__location`]}
+            className={styles[`${mainClass}__item`]}
           >
             <FontAwesomeIcon icon={faLocationPin} />
             {location}
           </Link>
         )}
-        <p className={styles[`${mainClass}__date`]}>
+        <Text className={styles[`${mainClass}__item`]}>
           <FontAwesomeIcon icon={faCalendar} />
           {date}
-        </p>
+        </Text>
       </div>
       <div className={styles[`${mainClass}__row`]}>
         {distance && (
-          <p className={styles[`${mainClass}__distance`]}>
+          <Text className={styles[`${mainClass}__item`]}>
             <FontAwesomeIcon icon={faMap} />
             {distance}
-          </p>
+          </Text>
         )}
         {duration && (
-          <p className={styles[`${mainClass}__duration`]}>
+          <Text className={styles[`${mainClass}__item`]}>
             <FontAwesomeIcon icon={faStopwatch} />
             {duration}
-          </p>
+          </Text>
         )}
         {intensity && (
-          <p className={styles[`${mainClass}__intensity`]}>
+          <Text className={styles[`${mainClass}__item`]}>
             <FontAwesomeIcon icon={faBoltLightning} />
             {intensity}
-          </p>
+          </Text>
         )}
       </div>
     </section>

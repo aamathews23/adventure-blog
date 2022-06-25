@@ -29,9 +29,6 @@
   }
 
   &__title {
-    font-family: Karla, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
     margin-bottom: 8px;
     width: fit-content;
 
@@ -54,8 +51,7 @@
 
   &__date,
   &__body {
-    font-family: Inconsolata, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   &__img {

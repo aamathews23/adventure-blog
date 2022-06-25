@@ -1,12 +1,11 @@
 import NextLink from 'next/link';
 import React from 'react';
+
+// Styles
 import styles from '../../styles/components/global/link.module.scss';
 
-type LinkType = {
-  to: string;
-  className?: string;
-  children?: React.ReactNode;
-};
+// Types
+import LinkType from '../../types/Link';
 
 /**
  * Creates a link component to be used throughout the app.

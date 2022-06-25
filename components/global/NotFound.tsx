@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonHiking } from '@fortawesome/free-solid-svg-icons';
+
+// Styles
 import styles from '../../styles/components/global/not-found.module.scss';
 
-type NotFoundType = {
-  text: string;
-};
+// Components
+import Text from '../global/Text';
+
+// Types
+import NotFoundType from '../../types/NotFound';
 
 /**
  * Creates a not found component to be used throughout the pages.
@@ -23,7 +27,7 @@ const NotFound = ({ text }: NotFoundType) => {
         className={styles[`${mainClass}__icon`]}
         icon={faPersonHiking}
       />
-      <p
+      <Text
         className={styles[`${mainClass}__text`]}
         dangerouslySetInnerHTML={{ __html: text }}
       />

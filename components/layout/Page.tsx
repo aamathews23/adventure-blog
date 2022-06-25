@@ -1,24 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { ReactNode } from 'react';
+
+// Styles
 import styles from '../../styles/components/layout/page.module.scss';
 
-// Import components
+// Components
 import Header from '../navigation/Header';
 import Footer from '../navigation/Footer';
 
-// Import types
-import HeaderType from '../../types/Header';
-import FooterType from '../../types/Footer';
-
-type PageType = {
-  title: string;
-  description: string;
-  header: HeaderType;
-  footer: FooterType;
-  previewImg?: string;
-  children?: ReactNode;
-};
+// Types
+import PageType from '../../types/Page';
 
 /**
  * Creates and configures a page component for the Next app.

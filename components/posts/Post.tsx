@@ -1,7 +1,14 @@
 import Image from 'next/image';
-import PostType from '../../types/Post';
-import styles from '../../styles/components/posts/post.module.scss';
 import { useRouter } from 'next/router';
+
+// Styles
+import styles from '../../styles/components/posts/post.module.scss';
+
+// Components
+import Text from '../global/Text';
+
+// Types
+import PostType from '../../types/Post';
 
 const loader = ({ src }: any) => {
   return src;
@@ -39,10 +46,15 @@ const Post = ({
         />
       </figure>
       <header className={styles[`${mainClass}__header`]}>
-        <h3 className={styles[`${mainClass}__title`]}>{title}</h3>
-        <p className={styles[`${mainClass}__date`]}>{date}</p>
+        <Text
+          tag={'h3'}
+          className={styles[`${mainClass}__title`]}
+        >
+          {title}
+        </Text>
+        <Text className={styles[`${mainClass}__date`]}>{date}</Text>
       </header>
-      <p className={styles[`${mainClass}__body`]}>{cardBody}</p>
+      <Text className={styles[`${mainClass}__body`]}>{cardBody}</Text>
     </div>
   );
 };
