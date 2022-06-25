@@ -6,7 +6,7 @@ import {
   faStopwatch,
   faCalendar,
 } from '@fortawesome/free-solid-svg-icons';
-import Link from 'next/link';
+import Link from '../global/Link';
 import PostType from '../../types/Post';
 import styles from '../../styles/components/posts/details.module.scss';
 
@@ -28,11 +28,12 @@ const Details = ({
       <h2 className={styles[`${mainClass}__title`]}>{title}</h2>
       <div className={styles[`${mainClass}__row`]}>
         {location && locationUrl && (
-          <Link href={locationUrl}>
-            <a className={styles[`${mainClass}__location`]}>
-              <FontAwesomeIcon icon={faLocationPin} />
-              {location}
-            </a>
+          <Link
+            to={locationUrl}
+            className={styles[`${mainClass}__location`]}
+          >
+            <FontAwesomeIcon icon={faLocationPin} />
+            {location}
           </Link>
         )}
         <p className={styles[`${mainClass}__date`]}>

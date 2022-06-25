@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../global/Link';
 import styles from '../../styles/components/navigation/header.module.scss';
 import HeaderType from '../../types/Header';
 
@@ -17,13 +17,11 @@ const Header = ({ title, to, body }: HeaderType) => {
       className={styles[mainClass]}
       data-testid="header"
     >
-      <Link href={to}>
-        <a
-          className={styles[`${mainClass}__link`]}
-          data-testid="header-link"
-        >
-          <h1 className={styles[`${mainClass}__title`]}>{title}</h1>
-        </a>
+      <Link
+        to={to}
+        className={styles[`${mainClass}__title`]}
+      >
+        <h1>{title}</h1>
       </Link>
       {body && <p className={styles[`${mainClass}__body`]}>{body}</p>}
     </header>
