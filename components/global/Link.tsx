@@ -5,11 +5,7 @@ import React from 'react';
 import styles from '../../styles/components/global/link.module.scss';
 
 // Types
-type LinkType = {
-  to: string;
-  className?: string;
-  children?: React.ReactNode;
-};
+import LinkType from '../../types/Link';
 
 /**
  * Creates a link component to be used throughout the app.

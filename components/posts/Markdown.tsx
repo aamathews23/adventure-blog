@@ -4,9 +4,7 @@ import { Remarkable } from 'remarkable';
 import styles from '../../styles/components/posts/markdown.module.scss';
 
 // Types
-type MarkdownType = {
-  content: string;
-};
+import MarkdownType from '../../types/Markdown';
 
 const Markdown = ({ content }: MarkdownType) => {
   const md = new Remarkable();

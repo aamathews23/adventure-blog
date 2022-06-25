@@ -2,13 +2,7 @@
 import styles from '../../styles/components/global/text.module.scss';
 
 // Types
-type TextType = {
-  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'li';
-  className?: string;
-  children?: React.ReactNode;
-  dangerouslySetInnerHTML?: { __html: string };
-  'data-testid'?: string;
-};
+import TextType from '../../types/Text';
 
 const Text = ({
   tag = 'p',

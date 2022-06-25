@@ -4,13 +4,9 @@ import styles from '../../styles/components/posts/section.module.scss';
 // Components
 import PostGrid from './Grid';
 import Text from '../global/Text';
-// Types
-import PostType from '../../types/Post';
 
-type SectionType = {
-  title: string;
-  posts: PostType[];
-};
+// Types
+import SectionType from '../../types/Section';
 
 const Section = ({ title, posts }: SectionType) => {
   const mainClass = 'section';
