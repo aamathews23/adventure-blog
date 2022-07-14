@@ -55,11 +55,13 @@ const Page: NextPage<PageType> = ({
           </>
         )}
       </Head>
-      <Header
-        title={header.title}
-        to={header.to}
-        body={header.body}
-      />
+      {header && (
+        <Header
+          title={header.title}
+          to={header.to}
+          body={header.body}
+        />
+      )}
       {children && (
         <main
           className={styles[`${mainClass}__body`]}
@@ -68,11 +70,13 @@ const Page: NextPage<PageType> = ({
           {children}
         </main>
       )}
-      <Footer
-        copyright={footer.copyright}
-        linkedinUrl={footer.linkedinUrl}
-        githubUrl={footer.githubUrl}
-      />
+      {footer && (
+        <Footer
+          copyright={footer.copyright}
+          linkedinUrl={footer.linkedinUrl}
+          githubUrl={footer.githubUrl}
+        />
+      )}
     </div>
   );
 };
