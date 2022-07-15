@@ -25,7 +25,7 @@ const Post = ({
   const router = useRouter();
   const handlePostClick = (e: any) => {
     e.preventDefault();
-    router.push(title.toLowerCase().replaceAll(' ', '-'));
+    router.push(`blog/${title.toLowerCase().replaceAll(' ', '-')}`);
   };
   return (
     <div

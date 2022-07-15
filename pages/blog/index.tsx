@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 import {
   attributes as homePageModel,
   react as HomePageContent,
-} from '../../content/pages/home.md';
+} from '../../content/pages/blog.md';
 
 // Import components
 import Page from '../../components/layout/Page';
