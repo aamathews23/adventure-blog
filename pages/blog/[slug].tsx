@@ -1,21 +1,23 @@
 import { readdirSync, readFileSync } from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-import Page from '../components/layout/Page';
-import styles from '../styles/pages/post.module.scss';
+
+// Import styles
+import styles from '../../styles/pages/post.module.scss';
 
 // Import content
 import {
   attributes as postPageModel,
   react as PostPageContent,
-} from '../content/pages/post.md';
+} from '../../content/pages/post.md';
 
 // Import components
-import Details from '../components/posts/Details';
-import Markdown from '../components/posts/Markdown';
+import Page from '../../components/layout/Page';
+import Details from '../../components/posts/Details';
+import Markdown from '../../components/posts/Markdown';
 
 // Import types
-import PostType from '../types/Post';
+import PostType from '../../types/Post';
 
 type PostPageType = {
   post: PostType;
@@ -58,7 +60,7 @@ const PostPage = ({ post, content }: PostPageType) => {
 export const getStaticPaths = async () => {
   const paths = readdirSync(path.join('content', 'posts')).map((file) => ({
     params: {
-      post: file.replace('.md', ''),
+      slug: file.replace('.md', ''),
     },
   }));
 
@@ -68,9 +70,9 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params: { post } }: any) => {
+export const getStaticProps = async ({ params: { slug } }: any) => {
   const file = readFileSync(
-    path.join('content', 'posts', `${post}.md`),
+    path.join('content', 'posts', `${slug}.md`),
   ).toString();
   const content = matter(file);
 
