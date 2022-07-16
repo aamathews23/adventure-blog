@@ -1,0 +1,8 @@
+@import '../mixins.scss';
+
+.home {
+  &__title {
+    @include heading-1;
+    margin-top: 64px;
+  }
+}
