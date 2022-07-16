@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -6,8 +8,7 @@
   height: 96px;
 
   &__copyright {
-    font-size: 16px;
-    font-family: Karla, sans-serif;
+    @include text;
     color: #53d670;
     margin-top: 24px;
   }

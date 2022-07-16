@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .drawer-menu {
   svg {
     height: 24px;
@@ -31,6 +33,10 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 24px;
+  }
+
+  &__drawer-title {
+    @include heading-3;
   }
 
   &__button {

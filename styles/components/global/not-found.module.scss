@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .not-found {
   display: flex;
   flex-direction: column;
@@ -17,6 +19,7 @@
   }
 
   &__text {
+    @include text;
     font-size: 20px;
     text-align: center;
   }

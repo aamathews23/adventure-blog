@@ -16,7 +16,7 @@ const Section = ({ title, posts }: SectionType) => {
       data-testid="section"
     >
       <Text
-        tag={'h2'}
+        tag="h2"
         className={styles[`${mainClass}__title`]}
       >
         {title}

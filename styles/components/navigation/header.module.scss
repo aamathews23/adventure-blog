@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .header {
   display: flex;
   flex-direction: row;
@@ -6,8 +8,7 @@
   height: 48px;
 
   &__title {
-    font-weight: bold;
-    font-size: 24px !important;
+    @include heading-3;
     color: #53d670;
   }
 

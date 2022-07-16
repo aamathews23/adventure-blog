@@ -1,9 +1,13 @@
+@import '../../mixins.scss';
+
 .details {
   &__title {
+    @include heading-2;
     margin-bottom: 16px;
   }
 
   &__item {
+    @include text;
     svg {
       margin-right: 8px;
     }
