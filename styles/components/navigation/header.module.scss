@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 48px;
 
   &__title {
     font-weight: bold;
@@ -22,5 +23,9 @@
     &__list-menu {
       display: initial;
     }
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 64px;
   }
 }
