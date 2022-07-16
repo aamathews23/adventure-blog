@@ -55,13 +55,7 @@ const Page: NextPage<PageType> = ({
           </>
         )}
       </Head>
-      {header && (
-        <Header
-          title={header.title}
-          to={header.to}
-          body={header.body}
-        />
-      )}
+      {header && <Header />}
       {children && (
         <main
           className={styles[`${mainClass}__body`]}

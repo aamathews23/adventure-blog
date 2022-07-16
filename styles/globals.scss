@@ -26,3 +26,9 @@ a {
     outline-offset: 4px;
   }
 }
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
