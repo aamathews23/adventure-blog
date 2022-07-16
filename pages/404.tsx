@@ -17,7 +17,6 @@ const NotFoundPage = () => {
         title={notFoundModel.title}
         description={notFoundModel.description}
         previewImg={notFoundModel.previewImg}
-        footer={notFoundModel.footer}
       >
         <NotFound text={notFoundModel.notFound} />
       </Page>

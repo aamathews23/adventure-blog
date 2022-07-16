@@ -44,28 +44,6 @@ collections:
               widget: 'image',
               allow_multiple: false,
             }
-          - name: 'footer'
-            label: 'Footer'
-            widget: 'object'
-            fields:
-              - {
-                  name: 'copyright',
-                  label: 'Copyright',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  name: 'linkedinUrl',
-                  label: 'LinkedIn Url',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  name: 'githubUrl',
-                  label: 'Github Url',
-                  widget: 'string',
-                  required: true,
-                }
           - {
               name: 'notFound',
               label: 'Not Found Error',
@@ -77,28 +55,6 @@ collections:
         file: 'content/pages/post.md'
         fields:
           - { name: 'title', label: 'Title', widget: 'string', required: true }
-          - name: 'footer'
-            label: 'Footer'
-            widget: 'object'
-            fields:
-              - {
-                  name: 'copyright',
-                  label: 'Copyright',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  name: 'linkedinUrl',
-                  label: 'LinkedIn Url',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  name: 'githubUrl',
-                  label: 'Github Url',
-                  widget: 'string',
-                  required: true,
-                }
       - name: '404'
         label: '404'
         file: 'content/pages/404.md'
@@ -116,28 +72,6 @@ collections:
               widget: 'image',
               allow_multiple: false,
             }
-          - name: 'footer'
-            label: 'Footer'
-            widget: 'object'
-            fields:
-              - {
-                  name: 'copyright',
-                  label: 'Copyright',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  name: 'linkedinUrl',
-                  label: 'LinkedIn Url',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  name: 'githubUrl',
-                  label: 'Github Url',
-                  widget: 'string',
-                  required: true,
-                }
           - {
               name: 'notFound',
               label: 'Not Found Error',
