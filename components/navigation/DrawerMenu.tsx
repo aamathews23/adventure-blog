@@ -83,7 +83,12 @@ const DrawerMenu = () => {
             data-testid={`${mainClass}-drawer`}
           >
             <header className={styles[`${mainClass}__drawer-header`]}>
-              <Text tag="h3">Where to next?</Text>
+              <Text
+                className={styles[`${mainClass}__drawer-title`]}
+                tag="h3"
+              >
+                Where to next?
+              </Text>
               <div
                 className={styles[`${mainClass}__button`]}
                 role="button"

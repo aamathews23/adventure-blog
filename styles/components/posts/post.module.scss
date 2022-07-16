@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .post {
   width: 100%;
   background-color: #313135;
@@ -29,6 +31,7 @@
   }
 
   &__title {
+    @include heading-3;
     margin-bottom: 8px;
     width: fit-content;
 
@@ -51,7 +54,7 @@
 
   &__date,
   &__body {
-    font-size: 20px;
+    @include text;
   }
 
   &__img {
@@ -61,5 +64,12 @@
     width: 100%;
     min-height: 343px;
     margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    &__date,
+    &__body {
+      font-size: 20px;
+    }
   }
 }

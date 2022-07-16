@@ -47,7 +47,7 @@ const Post = ({
       </figure>
       <header className={styles[`${mainClass}__header`]}>
         <Text
-          tag={'h3'}
+          tag="h3"
           className={styles[`${mainClass}__title`]}
         >
           {title}

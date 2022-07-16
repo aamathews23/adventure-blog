@@ -1,4 +1,5 @@
-import Page from '../components/layout/Page';
+// Import styles
+import styles from '../styles/pages/home.module.scss';
 
 // Import content
 import {
@@ -7,9 +8,11 @@ import {
 } from '../content/pages/home.md';
 
 // Import components
+import Page from '../components/layout/Page';
 import Text from '../components/global/Text';
 
 const HomePage = () => {
+  const mainClass = 'home';
   return (
     <>
       <HomePageContent />
@@ -18,7 +21,12 @@ const HomePage = () => {
         description={homePageModel.description}
         previewImg={homePageModel.previewImg}
       >
-        <Text tag="h1">Coming soon...</Text>
+        <Text
+          tag="h1"
+          className={styles[`${mainClass}__title`]}
+        >
+          Coming soon...
+        </Text>
       </Page>
     </>
   );
