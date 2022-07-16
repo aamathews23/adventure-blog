@@ -28,7 +28,6 @@ const HomePage = ({ collections }: HomePageType) => {
         title={homePageModel.title}
         description={homePageModel.description}
         previewImg={homePageModel.previewImg}
-        footer={homePageModel.footer}
       >
         {collections && collections.length > 0 ? (
           collections.map((collection, index) => (

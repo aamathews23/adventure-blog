@@ -33,7 +33,6 @@ const PostPage = ({ post, content }: PostPageType) => {
         title={`${post.title} | ${postPageModel.title}`}
         description={post.cardBody || ''}
         previewImg={post.previewImg}
-        footer={postPageModel.footer}
       >
         <div className={styles[mainClass]}>
           <div className={styles[`${mainClass}__details`]}>
