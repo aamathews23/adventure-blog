@@ -8,18 +8,12 @@ import styles from '../../styles/components/navigation/footer.module.scss';
 import Link from 'next/link';
 import Text from '../global/Text';
 
-// Types
-import FooterType from '../../types/Footer';
-
 /**
  * Creates a footer component to be used throughout the pages.
  *
- * @param {String} copyright the copy right text
- * @param {String} linkedinUrl the url to the linkedin account
- * @param {String} githubUrl the url to the github account
  * @returns a footer component
  */
-const Footer = ({ copyright, linkedinUrl, githubUrl }: FooterType) => {
+const Footer = () => {
   const mainClass = 'footer';
   return (
     <footer
@@ -27,7 +21,7 @@ const Footer = ({ copyright, linkedinUrl, githubUrl }: FooterType) => {
       data-testid="footer"
     >
       <div>
-        <Link href={linkedinUrl}>
+        <Link href="https://www.linkedin.com/in/aaron-mathews-953408150/">
           <a
             className={styles[`${mainClass}__icon`]}
             data-testid="footer-linkedin"
@@ -37,7 +31,7 @@ const Footer = ({ copyright, linkedinUrl, githubUrl }: FooterType) => {
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </Link>
-        <Link href={githubUrl}>
+        <Link href="https://github.com/aamathews23">
           <a
             className={styles[`${mainClass}__icon`]}
             data-testid="footer-github"
@@ -53,7 +47,7 @@ const Footer = ({ copyright, linkedinUrl, githubUrl }: FooterType) => {
           className={styles[`${mainClass}__copyright`]}
           data-testid="footer-copyright"
         >
-          {copyright}
+          Designed and built by Aaron Mathews
         </Text>
       </div>
     </footer>

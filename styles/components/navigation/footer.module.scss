@@ -3,31 +3,34 @@
   flex-direction: column;
   width: 100%;
   justify-content: space-between;
-  padding-bottom: 32px;
+  align-items: center;
 
   &__copyright {
-    margin: 32px 0;
+    font-size: 16px;
+    font-family: Karla, sans-serif;
+    color: #53d670;
+    margin-top: 24px;
   }
 
   &__icon {
     color: #fff;
-    height: 45px;
+    height: 24px;
 
     svg {
-      height: 45px;
-      width: 45px;
+      height: 24px;
+      width: 24px;
       overflow: hidden;
     }
 
     &:not(:last-child) {
-      margin-right: 32px;
+      margin-right: 16px;
     }
 
     &:hover,
     &:focus {
       svg {
         transition: transform 300ms;
-        transform: scale(1.15);
+        transform: scale(1.25);
       }
     }
 
@@ -42,6 +45,17 @@
 
     &__copyright {
       margin: 0px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    svg {
+      height: 32px;
+      width: 32px;
+    }
+
+    &__copyright {
+      font-size: 24px;
     }
   }
 }

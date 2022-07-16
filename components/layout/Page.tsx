@@ -16,7 +16,6 @@ import PageType from '../../types/Page';
  *
  * @param {String} title the page title
  * @param {String} description the page description
- * @param {FooterType} footer the page footer
  * @param {String} previewImg the social media preview image of the page
  * @param {ReactNode} children a list of react children
  * @returns A page component
@@ -24,7 +23,6 @@ import PageType from '../../types/Page';
 const Page: NextPage<PageType> = ({
   title,
   description,
-  footer,
   previewImg,
   children,
 }: PageType) => {
@@ -62,13 +60,7 @@ const Page: NextPage<PageType> = ({
           {children}
         </main>
       )}
-      {footer && (
-        <Footer
-          copyright={footer.copyright}
-          linkedinUrl={footer.linkedinUrl}
-          githubUrl={footer.githubUrl}
-        />
-      )}
+      <Footer />
     </div>
   );
 };
