@@ -16,7 +16,6 @@ import PageType from '../../types/Page';
  *
  * @param {String} title the page title
  * @param {String} description the page description
- * @param {HeaderType} header the page header
  * @param {FooterType} footer the page footer
  * @param {String} previewImg the social media preview image of the page
  * @param {ReactNode} children a list of react children
@@ -25,7 +24,6 @@ import PageType from '../../types/Page';
 const Page: NextPage<PageType> = ({
   title,
   description,
-  header,
   footer,
   previewImg,
   children,
@@ -55,13 +53,7 @@ const Page: NextPage<PageType> = ({
           </>
         )}
       </Head>
-      {header && (
-        <Header
-          title={header.title}
-          to={header.to}
-          body={header.body}
-        />
-      )}
+      <Header />
       {children && (
         <main
           className={styles[`${mainClass}__body`]}
