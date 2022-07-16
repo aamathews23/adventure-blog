@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,6 +12,13 @@ import Text from '../global/Text';
 const DrawerMenu = () => {
   const mainClass = 'drawer-menu';
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (typeof document !== 'undefined' && document) {
+      const body = document.querySelector('body');
+      body?.classList.remove('no-scroll');
+    }
+  }, []);
 
   // Opens the drawer
   const handleOpen = () => {

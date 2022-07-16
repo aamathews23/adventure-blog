@@ -44,23 +44,6 @@ collections:
               widget: 'image',
               allow_multiple: false,
             }
-          - name: 'header'
-            label: 'Header'
-            widget: 'object'
-            fields:
-              - {
-                  name: 'title',
-                  label: 'Title',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  name: 'to',
-                  label: 'To Url',
-                  widget: 'string',
-                  required: true,
-                }
-              - { name: 'body', label: 'Body', widget: 'string' }
           - name: 'footer'
             label: 'Footer'
             widget: 'object'
@@ -94,22 +77,6 @@ collections:
         file: 'content/pages/post.md'
         fields:
           - { name: 'title', label: 'Title', widget: 'string', required: true }
-          - name: 'header'
-            label: 'Header'
-            widget: 'object'
-            fields:
-              - {
-                  name: 'title',
-                  label: 'Title',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  name: 'to',
-                  label: 'To Url',
-                  widget: 'string',
-                  required: true,
-                }
           - name: 'footer'
             label: 'Footer'
             widget: 'object'
@@ -149,23 +116,6 @@ collections:
               widget: 'image',
               allow_multiple: false,
             }
-          - name: 'header'
-            label: 'Header'
-            widget: 'object'
-            fields:
-              - {
-                  name: 'title',
-                  label: 'Title',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  name: 'to',
-                  label: 'To Url',
-                  widget: 'string',
-                  required: true,
-                }
-              - { name: 'body', label: 'Body', widget: 'string' }
           - name: 'footer'
             label: 'Footer'
             widget: 'object'
