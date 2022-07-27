@@ -9,7 +9,7 @@ import {
 
 // Import components
 import Page from '../components/layout/Page';
-import Text from '../components/global/Text';
+import Intro from '../components/home/Intro';
 
 const HomePage = () => {
   const mainClass = 'home';
@@ -21,12 +21,10 @@ const HomePage = () => {
         description={homePageModel.description}
         previewImg={homePageModel.previewImg}
       >
-        <Text
-          tag="h1"
-          className={styles[`${mainClass}__title`]}
-        >
-          Coming soon...
-        </Text>
+        <Intro
+          title={homePageModel.intro.title}
+          body={homePageModel.intro.body}
+        />
       </Page>
     </>
   );
