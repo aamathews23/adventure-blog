@@ -1,0 +1,43 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 144px - 32px);
+
+  &__content {
+    max-width: 343px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-family: Karla, sans-serif;
+    margin-bottom: 24px;
+  }
+
+  &__body {
+    font-size: 16px;
+    font-family: Inconsolata, monospace;
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: calc(100vh - 112px - 32px);
+
+    &__content {
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: calc(100vh - 128px - 64px);
+
+    &__content {
+      max-width: 405px;
+    }
+
+    &__title {
+      font-size: 64px;
+    }
+  }
+}
