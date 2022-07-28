@@ -10,6 +10,7 @@ import {
 // Import components
 import Page from '../components/layout/Page';
 import Intro from '../components/home/Intro';
+import About from '../components/home/About';
 
 const HomePage = () => {
   const mainClass = 'home';
@@ -24,6 +25,12 @@ const HomePage = () => {
         <Intro
           title={homePageModel.intro.title}
           body={homePageModel.intro.body}
+        />
+        <About
+          title={homePageModel.about.title}
+          body={homePageModel.about.body}
+          skills={homePageModel.about.skills}
+          image={homePageModel.about.image}
         />
       </Page>
     </>
