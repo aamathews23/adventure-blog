@@ -1,0 +1,43 @@
+.job {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Karla, sans-serif;
+    font-size: 16px;
+
+    &::before {
+      display: inline-block;
+      content: '';
+      width: 24px;
+      height: 24px;
+      border: 1px solid #53d670;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    &--active {
+      &::before {
+        background-color: #53d670;
+      }
+    }
+  }
+
+  &__duration,
+  &__description {
+    font-family: Inconsolata, monospace;
+    font-size: 16px;
+    margin-left: 13px;
+    padding-top: 16px;
+    padding-left: 22px;
+    border-left: 1px solid #53d670;
+  }
+
+  &__description {
+    padding-bottom: 32px;
+  }
+}

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 144px - 32px);
+  height: 75vh;
 
   &__content {
     max-width: 343px;
@@ -22,16 +22,12 @@
   }
 
   @media screen and (min-width: 768px) {
-    height: calc(100vh - 112px - 32px);
-
     &__content {
       text-align: center;
     }
   }
 
   @media screen and (min-width: 1440px) {
-    height: calc(100vh - 128px - 64px);
-
     &__content {
       max-width: 405px;
     }
