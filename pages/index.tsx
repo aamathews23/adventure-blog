@@ -11,6 +11,7 @@ import {
 import Page from '../components/layout/Page';
 import Intro from '../components/home/Intro';
 import About from '../components/home/About';
+import Work from '../components/home/Work';
 
 const HomePage = () => {
   const mainClass = 'home';
@@ -31,6 +32,10 @@ const HomePage = () => {
           body={homePageModel.about.body}
           skills={homePageModel.about.skills}
           image={homePageModel.about.image}
+        />
+        <Work
+          title={homePageModel.work.title}
+          jobs={homePageModel.work.jobs}
         />
       </Page>
     </>
