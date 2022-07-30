@@ -12,6 +12,7 @@ import Page from '../components/layout/Page';
 import Intro from '../components/home/Intro';
 import About from '../components/home/About';
 import Work from '../components/home/Work';
+import Grid from '../components/home/Grid';
 
 const HomePage = () => {
   const mainClass = 'home';
@@ -36,6 +37,10 @@ const HomePage = () => {
         <Work
           title={homePageModel.work.title}
           jobs={homePageModel.work.jobs}
+        />
+        <Grid
+          title={homePageModel.blog.title}
+          posts={homePageModel.blog.posts}
         />
       </Page>
     </>
