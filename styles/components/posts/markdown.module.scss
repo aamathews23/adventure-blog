@@ -73,18 +73,4 @@
     width: 100%;
     border-radius: 8px;
   }
-
-  a {
-    color: #fff;
-
-    &:hover {
-      text-decoration: none;
-    }
-
-    &:focus {
-      border-radius: 4px;
-      outline: 2px solid #fff;
-      outline-offset: 4px;
-    }
-  }
 }
