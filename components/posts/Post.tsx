@@ -34,17 +34,19 @@ const Post = ({
       data-testid="post"
       onClick={handlePostClick}
     >
-      <figure className={styles[`${mainClass}__img`]}>
-        <Image
-          src={previewImg || ''}
-          alt={previewImgAlt}
-          layout="fill"
-          objectFit="cover"
-          loader={loader}
-          unoptimized
-          priority
-        />
-      </figure>
+      {previewImg && previewImgAlt && (
+        <figure className={styles[`${mainClass}__img`]}>
+          <Image
+            src={previewImg}
+            alt={previewImgAlt}
+            layout="fill"
+            objectFit="cover"
+            loader={loader}
+            unoptimized
+            priority
+          />
+        </figure>
+      )}
       <header className={styles[`${mainClass}__header`]}>
         <Text
           tag="h3"

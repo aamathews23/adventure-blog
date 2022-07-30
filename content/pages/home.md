@@ -33,4 +33,22 @@ work:
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas, diam id iaculis congue, eros quam pulvinar orci, vel imperdiet est enim a enim. Sed id consectetur massa. Aenean et semper nisi. Cras nisi elit, accumsan nec interdum aliquam, dapibus in dolor. Sed nisi dolor, ultrices non nunc ut, aliquet volutpat arcu. Donec et arcu mattis, dapibus ligula a, blandit nisl. Cras imperdiet est ac commodo faucibus.',
         isActive: false,
       }
+blog:
+  title: 'Blog'
+  posts:
+    - title: Snow-tastrophe
+      cardBody: A long hike up a snowy mountain...
+      date: 05/07/2022
+      previewImg: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
+      previewImgAlt: a snowy peak rising from a valley
+    - title: Snow-tastrophe
+      cardBody: A long hike up a snowy mountain...
+      date: 05/07/2022
+      previewImg: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
+      previewImgAlt: a snowy peak rising from a valley
+    - title: Snow-tastrophe
+      cardBody: A long hike up a snowy mountain...
+      date: 05/07/2022
+      previewImg: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
+      previewImgAlt: a snowy peak rising from a valley
 ---
