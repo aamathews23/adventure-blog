@@ -13,6 +13,7 @@ import Intro from '../components/home/Intro';
 import About from '../components/home/About';
 import Work from '../components/home/Work';
 import Grid from '../components/home/Grid';
+import Contact from '../components/home/Contact';
 
 const HomePage = () => {
   const mainClass = 'home';
@@ -41,6 +42,10 @@ const HomePage = () => {
         <Grid
           title={homePageModel.blog.title}
           posts={homePageModel.blog.posts}
+        />
+        <Contact
+          title={homePageModel.contact.title}
+          body={homePageModel.contact.body}
         />
       </Page>
     </>

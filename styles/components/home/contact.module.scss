@@ -1,0 +1,38 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+
+  &__content {
+    max-width: 343px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-family: Karla, sans-serif;
+    margin-bottom: 16px;
+  }
+
+  &__body {
+    font-size: 16px;
+    font-family: Inconsolata, monospace;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__content {
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    &__content {
+      max-width: 405px;
+    }
+
+    &__title {
+      font-size: 48px;
+    }
+  }
+}
