@@ -119,6 +119,13 @@ collections:
                       widget: 'string',
                       required: true,
                     }
+                  - {
+                      name: 'isActive',
+                      label: 'Is Current Job?',
+                      widgeth: 'boolean',
+                      required: true,
+                      default: false,
+                    }
       - name: 'blog'
         label: 'Blog'
         file: 'content/pages/blog.md'

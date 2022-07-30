@@ -31,5 +31,6 @@ work:
         title: 'Fullstack Engineer &#64;&nbsp;<span style="color: #53D670;">Costco</span>',
         duration: 'November 2018 - October 2021',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas, diam id iaculis congue, eros quam pulvinar orci, vel imperdiet est enim a enim. Sed id consectetur massa. Aenean et semper nisi. Cras nisi elit, accumsan nec interdum aliquam, dapibus in dolor. Sed nisi dolor, ultrices non nunc ut, aliquet volutpat arcu. Donec et arcu mattis, dapibus ligula a, blandit nisl. Cras imperdiet est ac commodo faucibus.',
+        isActive: false,
       }
 ---
