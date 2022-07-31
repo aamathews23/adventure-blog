@@ -2,7 +2,7 @@
 import styles from '../../styles/components/posts/grid.module.scss';
 
 // Components
-import PostCard from './Post';
+import Card from '../global/Card';
 
 // Types
 import GridType from '../../types/Grid';
@@ -13,13 +13,13 @@ const Grid = ({ posts }: GridType) => (
     data-testid="grid"
   >
     {posts.map((post, key) => (
-      <PostCard
+      <Card
         key={key}
         title={post.title}
-        cardBody={post.cardBody}
+        body={post.body}
         date={post.date}
-        previewImg={post.previewImg}
-        previewImgAlt={post.previewImgAlt}
+        type={post.type}
+        image={post.image}
       />
     ))}
   </div>

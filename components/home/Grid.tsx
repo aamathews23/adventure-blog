@@ -1,6 +1,6 @@
 import styles from '../../styles/components/home/grid.module.scss';
 import Text from '../global/Text';
-import Post from '../posts/Post';
+import Card from '../global/Card';
 import HomeGridType from '../../types/HomeGrid';
 
 const Grid = ({ title, posts }: HomeGridType) => {
@@ -24,13 +24,13 @@ const Grid = ({ title, posts }: HomeGridType) => {
         {posts &&
           posts.length > 0 &&
           posts.map((post, index) => (
-            <Post
+            <Card
               key={index}
               title={post.title}
-              cardBody={post.cardBody}
+              body={post.body}
               date={post.date}
-              previewImg={post.previewImg}
-              previewImgAlt={post.previewImgAlt}
+              type={post.type}
+              image={post.image}
             />
           ))}
       </div>
