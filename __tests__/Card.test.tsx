@@ -1,75 +1,72 @@
 import { render } from '@testing-library/react';
-import Post from '../components/posts/Post';
+import Card from '../components/global/Card';
 import '@testing-library/jest-dom';
 
 const title = 'Post 1';
 const body = 'Body 1';
 const date = '05/12/2022';
-const previewImg = 'example.jpg';
-const previewImgAlt = 'alt text';
+const image = {
+  src: 'example.jpg',
+  alt: 'alt text',
+};
 
-describe('Post', () => {
+describe('Card', () => {
   it('mounts', () => {
     const { getByTestId } = render(
-      <Post
+      <Card
         title={title}
-        cardBody={body}
+        body={body}
         date={date}
-        previewImg={previewImg}
-        previewImgAlt={previewImgAlt}
+        image={image}
       />,
     );
-    const post = getByTestId('post');
-    expect(post).toBeInTheDocument();
+    const card = getByTestId('card');
+    expect(card).toBeInTheDocument();
   });
   it('renders the title', () => {
     const { getByText } = render(
-      <Post
+      <Card
         title={title}
-        cardBody={body}
+        body={body}
         date={date}
-        previewImg={previewImg}
-        previewImgAlt={previewImgAlt}
+        image={image}
       />,
     );
     expect(getByText(title)).toBeInTheDocument();
   });
   it('render the body', () => {
     const { getByText } = render(
-      <Post
+      <Card
         title={title}
-        cardBody={body}
+        body={body}
         date={date}
-        previewImg={previewImg}
-        previewImgAlt={previewImgAlt}
+        image={image}
       />,
     );
     expect(getByText(body)).toBeInTheDocument();
   });
   it('renders the date', () => {
     const { getByText } = render(
-      <Post
+      <Card
         title={title}
-        cardBody={body}
+        body={body}
         date={date}
-        previewImg={previewImg}
-        previewImgAlt={previewImgAlt}
+        image={image}
       />,
     );
     expect(getByText(date)).toBeInTheDocument();
   });
   it('renders the image', () => {
     const { getByAltText } = render(
-      <Post
+      <Card
         title={title}
-        cardBody={body}
+        body={body}
         date={date}
-        previewImg={previewImg}
-        previewImgAlt={previewImgAlt}
+        image={image}
       />,
     );
-    const image = getByAltText(previewImgAlt);
-    expect(image).toBeInTheDocument();
-    expect(image.getAttribute('src')).toEqual(previewImg);
+    const img = getByAltText(image.alt);
+    expect(img).toBeInTheDocument();
+    expect(img.getAttribute('src')).toEqual(image.src);
   });
 });

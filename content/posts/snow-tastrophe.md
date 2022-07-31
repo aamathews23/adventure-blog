@@ -1,14 +1,16 @@
 ---
 title: Snow-tastrophe
-cardBody: A long hike up a snowy mountain...
+body: A long hike up a snowy mountain...
 date: 05/07/2022
+type: blog
+image:
+  src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
+  alt: a snowy peak rising from a valley
 location: Dirty Harry’s Peak
 locationUrl: https://www.wta.org/go-hiking/hikes/dirty-harrys-peak
 distance: 9 miles
 duration: 5 hours
 intensity: Rigorous
-previewImg: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
-previewImgAlt: a snowy peak rising from a valley
 collection:
   - "2022"
 ---
