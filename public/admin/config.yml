@@ -149,29 +149,36 @@ collections:
                       required: true,
                     }
                   - {
-                      name: 'cardBody',
+                      name: 'body',
                       label: 'Body',
                       widget: 'string',
                       required: true,
                     }
+                  - { name: 'date', label: 'Date', widget: 'string' }
                   - {
-                      name: 'date',
-                      label: 'Date',
+                      name: 'type',
+                      label: 'Type',
                       widget: 'string',
-                      required: true,
+                      default: 'blog',
                     }
-                  - {
-                      name: 'previewImg',
-                      label: 'Image',
-                      widget: 'image',
-                      required: true,
-                    }
-                  - {
-                      name: 'previewImgAlt',
-                      label: 'Image Alt',
-                      widget: 'string',
-                      required: true,
-                    }
+                  - name: 'image'
+                    label: 'Image'
+                    widget: 'object'
+                    required: true
+                    fields:
+                      - {
+                          name: 'src',
+                          label: 'Image Source',
+                          widget: 'image',
+                          allow_multiple: false,
+                          required: true,
+                        }
+                      - {
+                          name: 'alt',
+                          label: 'Image Alt',
+                          widget: 'string',
+                          required: true,
+                        }
           - name: 'contact'
             label: 'Contact'
             widget: 'object'
@@ -246,8 +253,21 @@ collections:
     create: true
     fields:
       - { name: 'title', label: 'Title', widget: 'string', required: true }
-      - { name: 'cardBody', label: 'Card Body', widget: 'string' }
-      - { name: 'date', label: 'Date', widget: 'string', required: true }
+      - { name: 'body', label: 'Body', widget: 'string', required: true }
+      - {
+          name: 'date',
+          label: 'Date',
+          widget: 'date',
+          format: 'MM/DD/YYYY',
+          required: true,
+        }
+      - {
+          name: 'type',
+          label: 'Type',
+          widget: 'string',
+          default: 'blog',
+          required: true,
+        }
       - { name: 'location', label: 'Location', widget: 'string' }
       - { name: 'locationUrl', label: 'Location Url', widget: 'string' }
       - { name: 'distance', label: 'Distance', widget: 'string' }
@@ -258,11 +278,22 @@ collections:
           widget: 'select',
           options: ['Easy', 'Moderate', 'Rigorous'],
         }
-      - {
-          name: 'previewImg',
-          label: 'Preview Img',
-          widget: 'image',
-          allow_multiple: false,
-        }
-      - { name: 'previewImgAlt', label: 'Preview Image Alt', widget: 'string' }
+      - name: 'image'
+        label: 'Image'
+        widget: 'object'
+        required: true
+        fields:
+          - {
+              name: 'src',
+              label: 'Image Source',
+              widget: 'image',
+              allow_multiple: false,
+              required: true,
+            }
+          - {
+              name: 'alt',
+              label: 'Image Alt',
+              widget: 'string',
+              required: true,
+            }
       - { name: 'body', 'Blog Post Content', widget: 'markdown' }
