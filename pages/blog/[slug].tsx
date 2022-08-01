@@ -31,14 +31,14 @@ const PostPage = ({ post, content }: PostPageType) => {
       <PostPageContent />
       <Page
         title={`${post.title} | ${postPageModel.title}`}
-        description={post.body}
+        description={post.cardBody}
         previewImg={post.image.src}
       >
         <div className={styles[mainClass]}>
           <div className={styles[`${mainClass}__details`]}>
             <Details
               title={post.title}
-              body={post.body}
+              cardBody={post.cardBody}
               date={post.date}
               image={post.image}
               location={post.location}

@@ -14,7 +14,7 @@ const loader = ({ src }: any) => {
   return src;
 };
 
-const Card = ({ title, body, type, date, image }: CardType) => {
+const Card = ({ title, cardBody, type, date, image }: CardType) => {
   const mainClass = 'card';
   const router = useRouter();
   const handlePostClick = (e: any) => {
@@ -50,7 +50,7 @@ const Card = ({ title, body, type, date, image }: CardType) => {
         </Text>
         {date && <Text className={styles[`${mainClass}__date`]}>{date}</Text>}
       </header>
-      <Text className={styles[`${mainClass}__body`]}>{body}</Text>
+      <Text className={styles[`${mainClass}__body`]}>{cardBody}</Text>
     </div>
   );
 };
