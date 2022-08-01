@@ -44,6 +44,24 @@ collections:
                   widget: 'string',
                   required: true,
                 }
+              - name: 'cta'
+                label: 'CTA'
+                widget: 'object'
+                required: true
+                fields:
+                  - {
+                      name: 'label',
+                      label: 'label',
+                      widget: 'string',
+                      required: true,
+                    }
+                  - {
+                      name: 'tag',
+                      label: 'Tag',
+                      widget: 'string',
+                      default: 'button',
+                    }
+                  - { name: 'anchor', label: 'Anchor', widget: 'string' }
           - name: 'about'
             label: 'About'
             widget: 'object'

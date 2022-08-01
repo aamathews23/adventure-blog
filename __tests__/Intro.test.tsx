@@ -4,6 +4,9 @@ import '@testing-library/jest-dom';
 
 const title = 'Test title';
 const body = 'Test body';
+const cta = {
+  label: 'Test cta',
+};
 
 describe('Intro', () => {
   it('mounts', () => {
@@ -11,6 +14,7 @@ describe('Intro', () => {
       <Intro
         title={title}
         body={body}
+        cta={cta}
       />,
     );
     const intro = getByTestId('intro');
@@ -21,6 +25,7 @@ describe('Intro', () => {
       <Intro
         title={title}
         body={body}
+        cta={cta}
       />,
     );
     expect(getByText(title)).toBeInTheDocument();
@@ -30,8 +35,19 @@ describe('Intro', () => {
       <Intro
         title={title}
         body={body}
+        cta={cta}
       />,
     );
     expect(getByText(body)).toBeInTheDocument();
+  });
+  it('has the cta', () => {
+    const { getByText } = render(
+      <Intro
+        title={title}
+        body={body}
+        cta={cta}
+      />,
+    );
+    expect(getByText(cta.label)).toBeInTheDocument();
   });
 });

@@ -24,6 +24,7 @@ const HomePage = () => {
         <Intro
           title={homePageModel.intro.title}
           body={homePageModel.intro.body}
+          cta={homePageModel.intro.cta}
         />
         <About
           title={homePageModel.about.title}
