@@ -1,6 +1,6 @@
-# Adventure Blog
+# Portfolio
 
-This is my personal blog app.
+This is my personal portfolio and blog app.
 
 ## Technologies
 
@@ -9,3 +9,5 @@ This is my personal blog app.
 - [NextJS](https://nextjs.org/)
 - [Netlify](https://www.netlify.com/)
 - [Netlify CMS](https://www.netlifycms.org/)
+- [Jest](https://jestjs.io/)
+- [Sass](https://sass-lang.com/)
