@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Page from '../components/layout/Page';
+import Page from '../../components/layout/Page';
 import '@testing-library/jest-dom';
 
 const title = 'Page title';
@@ -20,8 +20,6 @@ describe('Page', () => {
       <Page
         title={title}
         description={description}
-        header={header}
-        footer={footer}
       />,
     );
     const page = getByTestId('page');
@@ -32,8 +30,6 @@ describe('Page', () => {
       <Page
         title={title}
         description={description}
-        header={header}
-        footer={footer}
       />,
     );
     const pageHeader = getByTestId('header');
@@ -44,8 +40,6 @@ describe('Page', () => {
       <Page
         title={title}
         description={description}
-        header={header}
-        footer={footer}
       />,
     );
     const pageFooter = getByTestId('footer');
@@ -56,8 +50,6 @@ describe('Page', () => {
       <Page
         title={title}
         description={description}
-        header={header}
-        footer={footer}
       >
         <h1>Hello</h1>
       </Page>,

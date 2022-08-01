@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Job from '../components/home/Job';
+import Job from '../../components/home/Job';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
@@ -13,6 +13,7 @@ describe('Job', () => {
         title={title}
         duration={duration}
         description={description}
+        isActive={false}
       />,
     );
     const job = getByTestId('job');
@@ -24,6 +25,7 @@ describe('Job', () => {
         title={title}
         duration={duration}
         description={description}
+        isActive={false}
       />,
     );
     expect(getByText(title)).toBeInTheDocument();
@@ -34,6 +36,7 @@ describe('Job', () => {
         title={title}
         duration={duration}
         description={description}
+        isActive={false}
       />,
     );
     expect(getByText(duration)).toBeInTheDocument();
@@ -44,6 +47,7 @@ describe('Job', () => {
         title={title}
         duration={duration}
         description={description}
+        isActive={false}
       />,
     );
     expect(getByText(description)).toBeInTheDocument();

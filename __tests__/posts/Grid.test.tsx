@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import Grid from '../components/posts/Grid';
-import PostType from '../types/Post';
+import Grid from '../../components/posts/Grid';
+import PostType from '../../types/posts/Post';
 import '@testing-library/jest-dom';
 
 const posts: PostType[] = [];

@@ -1,7 +1,7 @@
 import styles from '../../styles/components/home/contact.module.scss';
 import Text from '../global/Text';
 import Button from '../global/Button';
-import ContactType from '../../types/Contact';
+import ContactType from '../../types/home/Contact';
 
 const Contact = ({ title, body, cta }: ContactType) => {
   const mainClass = 'contact';

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import NotFound from '../components/global/NotFound';
+import NotFound from '../../components/global/NotFound';
 import '@testing-library/jest-dom';
 
 const text = 'Hello world';

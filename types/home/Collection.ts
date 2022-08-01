@@ -1,4 +1,4 @@
-import PostType from './Post';
+import PostType from '../posts/Post';
 
 type Collection = {
   title: string;

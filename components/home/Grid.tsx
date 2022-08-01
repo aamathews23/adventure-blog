@@ -1,7 +1,7 @@
 import styles from '../../styles/components/home/grid.module.scss';
 import Text from '../global/Text';
 import Card from '../global/Card';
-import HomeGridType from '../../types/HomeGrid';
+import HomeGridType from '../../types/home/Grid';
 import Button from '../global/Button';
 
 const Grid = ({ title, cta, posts }: HomeGridType) => {

@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react';
-import DrawerMenu from '../components/navigation/DrawerMenu';
+import DrawerMenu from '../../components/navigation/DrawerMenu';
 import '@testing-library/jest-dom';
 
 describe('DrawerMenu', () => {

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Text from '../components/global/Text';
+import Text from '../../components/global/Text';
 import '@testing-library/jest-dom';
 
 const text = 'Click me!';

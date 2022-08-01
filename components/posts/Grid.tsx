@@ -5,7 +5,7 @@ import styles from '../../styles/components/posts/grid.module.scss';
 import Card from '../global/Card';
 
 // Types
-import GridType from '../../types/Grid';
+import GridType from '../../types/posts/Grid';
 
 const Grid = ({ posts }: GridType) => (
   <div

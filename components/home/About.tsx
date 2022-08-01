@@ -6,7 +6,7 @@ import Text from '../global/Text';
 import styles from '../../styles/components/home/about.module.scss';
 
 // Types
-import AboutType from '../../types/About';
+import AboutType from '../../types/home/About';
 
 const loader = ({ src }: any) => {
   return src;

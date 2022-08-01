@@ -1,5 +1,5 @@
 import styles from '../../styles/components/global/button.module.scss';
-import ButtonType from '../../types/Button';
+import ButtonType from '../../types/global/Button';
 
 const Button = ({ label, tag = 'button', anchor }: ButtonType) => {
   const mainClass = 'button';

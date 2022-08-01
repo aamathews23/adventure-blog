@@ -15,7 +15,7 @@ import Link from '../global/Link';
 import Text from '../global/Text';
 
 // Types
-import PostType from '../../types/Post';
+import PostType from '../../types/posts/Post';
 
 const Details = ({
   title,

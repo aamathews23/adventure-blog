@@ -1,6 +1,6 @@
 import styles from '../../styles/components/home/job.module.scss';
 import Text from '../global/Text';
-import JobType from '../../types/Job';
+import JobType from '../../types/home/Job';
 
 const Job = ({ title, duration, description, isActive }: JobType) => {
   const mainClass = 'job';

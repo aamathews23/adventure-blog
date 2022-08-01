@@ -1,7 +1,7 @@
 import styles from '../../styles/components/home/work.module.scss';
 import Text from '../global/Text';
 import Jobs from './Jobs';
-import WorkType from '../../types/Work';
+import WorkType from '../../types/home/Work';
 
 const Work = ({ title, jobs }: WorkType) => {
   const mainClass = 'work';

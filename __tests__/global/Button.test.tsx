@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Button from '../components/global/Button';
+import Button from '../../components/global/Button';
 import '@testing-library/jest-dom';
 
 const label = 'Click me!';

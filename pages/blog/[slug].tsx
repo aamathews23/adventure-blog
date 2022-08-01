@@ -17,7 +17,7 @@ import Details from '../../components/posts/Details';
 import Markdown from '../../components/posts/Markdown';
 
 // Import types
-import PostType from '../../types/Post';
+import PostType from '../../types/posts/Post';
 
 type PostPageType = {
   post: PostType;
