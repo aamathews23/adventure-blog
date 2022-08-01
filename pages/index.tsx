@@ -44,6 +44,7 @@ const HomePage = () => {
         <Contact
           title={homePageModel.contact.title}
           body={homePageModel.contact.body}
+          cta={homePageModel.contact.cta}
         />
       </Page>
     </>

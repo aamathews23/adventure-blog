@@ -68,4 +68,8 @@ blog:
 contact:
   title: 'Contact'
   body: 'I am currently looking for a part-time freelance project. If you’re interested in working with me, send me an email and we can talk more. I look forward to hearing from you!'
+  cta:
+    label: 'Get started'
+    tag: 'a'
+    anchor: 'mailto:aamathews23@gmail.com'
 ---

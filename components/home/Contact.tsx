@@ -1,8 +1,9 @@
 import styles from '../../styles/components/home/contact.module.scss';
 import Text from '../global/Text';
+import Button from '../global/Button';
 import ContactType from '../../types/Contact';
 
-const Contact = ({ title, body }: ContactType) => {
+const Contact = ({ title, body, cta }: ContactType) => {
   const mainClass = 'contact';
   return (
     <section
@@ -21,6 +22,11 @@ const Contact = ({ title, body }: ContactType) => {
           className={styles[`${mainClass}__body`]}
           data-testid={`${mainClass}-body`}
           dangerouslySetInnerHTML={{ __html: body }}
+        />
+        <Button
+          label={cta.label}
+          tag={cta.tag}
+          anchor={cta.anchor}
         />
       </div>
     </section>
