@@ -24,6 +24,7 @@ const HomePage = () => {
         <Intro
           title={homePageModel.intro.title}
           body={homePageModel.intro.body}
+          cta={homePageModel.intro.cta}
         />
         <About
           title={homePageModel.about.title}
@@ -37,11 +38,13 @@ const HomePage = () => {
         />
         <Grid
           title={homePageModel.blog.title}
+          cta={homePageModel.blog.cta}
           posts={homePageModel.blog.posts}
         />
         <Contact
           title={homePageModel.contact.title}
           body={homePageModel.contact.body}
+          cta={homePageModel.contact.cta}
         />
       </Page>
     </>

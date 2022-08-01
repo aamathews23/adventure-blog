@@ -8,13 +8,12 @@ const Text = ({
   dangerouslySetInnerHTML,
   'data-testid': datatestid,
 }: TextType) => {
-  const mainClass = 'text';
   const Tag = tag as keyof JSX.IntrinsicElements;
   return (
     <Tag
       className={className}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
-      data-testid={datatestid || mainClass}
+      data-testid={datatestid || 'text'}
     >
       {children}
     </Tag>

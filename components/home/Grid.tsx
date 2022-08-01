@@ -2,8 +2,9 @@ import styles from '../../styles/components/home/grid.module.scss';
 import Text from '../global/Text';
 import Card from '../global/Card';
 import HomeGridType from '../../types/HomeGrid';
+import Button from '../global/Button';
 
-const Grid = ({ title, posts }: HomeGridType) => {
+const Grid = ({ title, cta, posts }: HomeGridType) => {
   const mainClass = 'grid';
   return (
     <section
@@ -34,6 +35,11 @@ const Grid = ({ title, posts }: HomeGridType) => {
             />
           ))}
       </div>
+      <Button
+        label={cta.label}
+        tag={cta.tag}
+        anchor={cta.anchor}
+      />
     </section>
   );
 };
