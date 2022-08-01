@@ -16,7 +16,7 @@ const Grid = ({ posts }: GridType) => (
       <Card
         key={key}
         title={post.title}
-        body={post.body}
+        cardBody={post.cardBody}
         date={post.date}
         type={post.type}
         image={post.image}

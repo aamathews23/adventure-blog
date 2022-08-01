@@ -1,6 +1,3 @@
-// Import styles
-import styles from '../styles/pages/home.module.scss';
-
 // Import content
 import {
   attributes as homePageModel,
@@ -16,7 +13,6 @@ import Grid from '../components/home/Grid';
 import Contact from '../components/home/Contact';
 
 const HomePage = () => {
-  const mainClass = 'home';
   return (
     <>
       <HomePageContent />

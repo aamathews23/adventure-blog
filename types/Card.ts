@@ -2,7 +2,7 @@ import ImageType from './Image';
 
 type Card = {
   title: string;
-  body: string;
+  cardBody: string;
   image: ImageType;
   type?: string;
   date?: string;

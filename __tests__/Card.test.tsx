@@ -3,7 +3,7 @@ import Card from '../components/global/Card';
 import '@testing-library/jest-dom';
 
 const title = 'Post 1';
-const body = 'Body 1';
+const cardBody = 'Body 1';
 const date = '05/12/2022';
 const image = {
   src: 'example.jpg',
@@ -15,7 +15,7 @@ describe('Card', () => {
     const { getByTestId } = render(
       <Card
         title={title}
-        body={body}
+        cardBody={cardBody}
         date={date}
         image={image}
       />,
@@ -27,7 +27,7 @@ describe('Card', () => {
     const { getByText } = render(
       <Card
         title={title}
-        body={body}
+        cardBody={cardBody}
         date={date}
         image={image}
       />,
@@ -38,18 +38,18 @@ describe('Card', () => {
     const { getByText } = render(
       <Card
         title={title}
-        body={body}
+        cardBody={cardBody}
         date={date}
         image={image}
       />,
     );
-    expect(getByText(body)).toBeInTheDocument();
+    expect(getByText(cardBody)).toBeInTheDocument();
   });
   it('renders the date', () => {
     const { getByText } = render(
       <Card
         title={title}
-        body={body}
+        cardBody={cardBody}
         date={date}
         image={image}
       />,
@@ -60,7 +60,7 @@ describe('Card', () => {
     const { getByAltText } = render(
       <Card
         title={title}
-        body={body}
+        cardBody={cardBody}
         date={date}
         image={image}
       />,

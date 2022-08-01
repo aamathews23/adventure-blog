@@ -1,6 +1,6 @@
 ---
 title: Snow-tastrophe
-body: A long hike up a snowy mountain...
+cardBody: A long hike up a snowy mountain...
 date: 05/07/2022
 type: blog
 image:

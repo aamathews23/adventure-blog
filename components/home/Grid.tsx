@@ -27,7 +27,7 @@ const Grid = ({ title, posts }: HomeGridType) => {
             <Card
               key={index}
               title={post.title}
-              body={post.body}
+              cardBody={post.cardBody}
               date={post.date}
               type={post.type}
               image={post.image}
