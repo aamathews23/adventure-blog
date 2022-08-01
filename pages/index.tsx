@@ -38,6 +38,7 @@ const HomePage = () => {
         />
         <Grid
           title={homePageModel.blog.title}
+          cta={homePageModel.blog.cta}
           posts={homePageModel.blog.posts}
         />
         <Contact

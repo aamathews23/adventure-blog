@@ -39,6 +39,10 @@ work:
       }
 blog:
   title: 'Blog'
+  cta:
+    label: 'View more'
+    tag: 'a'
+    anchor: '/blog'
   posts:
     - title: Snow-tastrophe
       cardBody: A long hike up a snowy mountain...
