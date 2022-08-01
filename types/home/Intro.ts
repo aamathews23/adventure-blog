@@ -1,4 +1,4 @@
-import ButtonType from './Button';
+import ButtonType from '../global/Button';
 
 type Intro = {
   title: string;

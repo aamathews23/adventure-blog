@@ -1,5 +1,5 @@
-import PostType from './Post';
-import ButtonType from './Button';
+import PostType from '../posts/Post';
+import ButtonType from '../global/Button';
 
 type HomeGrid = {
   title: string;

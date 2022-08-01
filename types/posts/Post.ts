@@ -1,4 +1,4 @@
-import CardType from './Card';
+import CardType from '../global/Card';
 
 interface Post extends CardType {
   location?: string;

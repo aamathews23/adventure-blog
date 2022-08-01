@@ -1,4 +1,4 @@
-import ImageType from './Image';
+import ImageType from '../global/Image';
 
 type About = {
   title: string;

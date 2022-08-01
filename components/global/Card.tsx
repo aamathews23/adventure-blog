@@ -8,7 +8,7 @@ import styles from '../../styles/components/global/card.module.scss';
 import Text from '../global/Text';
 
 // Types
-import CardType from '../../types/Card';
+import CardType from '../../types/global/Card';
 
 const loader = ({ src }: any) => {
   return src;

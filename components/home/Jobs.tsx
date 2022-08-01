@@ -1,6 +1,6 @@
 import styles from '../../styles/components/home/jobs.module.scss';
 import Job from './Job';
-import JobsType from '../../types/Jobs';
+import JobsType from '../../types/home/Jobs';
 
 const Jobs = ({ jobs }: JobsType) => {
   const mainClass = 'jobs';

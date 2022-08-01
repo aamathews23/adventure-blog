@@ -1,5 +1,5 @@
 // Types
-import TextType from '../../types/Text';
+import TextType from '../../types/global/Text';
 
 const Text = ({
   tag = 'p',

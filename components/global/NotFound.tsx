@@ -8,7 +8,7 @@ import styles from '../../styles/components/global/not-found.module.scss';
 import Text from '../global/Text';
 
 // Types
-import NotFoundType from '../../types/NotFound';
+import NotFoundType from '../../types/global/NotFound';
 
 /**
  * Creates a not found component to be used throughout the pages.

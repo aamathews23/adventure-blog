@@ -1,4 +1,4 @@
-import ButtonType from './Button';
+import ButtonType from '../global/Button';
 
 type Contact = {
   title: string;

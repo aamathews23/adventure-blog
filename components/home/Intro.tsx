@@ -6,7 +6,7 @@ import Text from '../global/Text';
 import Button from '../global/Button';
 
 // Types
-import IntroType from '../../types/Intro';
+import IntroType from '../../types/home/Intro';
 
 const Intro = ({ title, body, cta }: IntroType) => {
   const mainClass = 'intro';

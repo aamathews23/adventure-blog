@@ -9,7 +9,7 @@ import Header from '../navigation/Header';
 import Footer from '../navigation/Footer';
 
 // Types
-import PageType from '../../types/Page';
+import PageType from '../../types/layout/Page';
 
 /**
  * Creates and configures a page component for the Next app.

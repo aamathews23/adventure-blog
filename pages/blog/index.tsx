@@ -14,7 +14,7 @@ import PostSection from '../../components/posts/Section';
 import NotFound from '../../components/global/NotFound';
 
 // Import types
-import CollectionType from '../../types/Collection';
+import CollectionType from '../../types/home/Collection';
 
 type HomePageType = {
   collections: CollectionType[];

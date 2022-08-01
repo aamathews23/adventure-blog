@@ -5,7 +5,7 @@ import React from 'react';
 import styles from '../../styles/components/global/link.module.scss';
 
 // Types
-import LinkType from '../../types/Link';
+import LinkType from '../../types/global/Link';
 
 /**
  * Creates a link component to be used throughout the app.

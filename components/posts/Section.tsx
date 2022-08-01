@@ -6,7 +6,7 @@ import PostGrid from './Grid';
 import Text from '../global/Text';
 
 // Types
-import SectionType from '../../types/Section';
+import SectionType from '../../types/posts/Section';
 
 const Section = ({ title, posts }: SectionType) => {
   const mainClass = 'section';
