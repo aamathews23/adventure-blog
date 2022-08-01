@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import About from '../components/home/About';
+import About from '../../components/home/About';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';

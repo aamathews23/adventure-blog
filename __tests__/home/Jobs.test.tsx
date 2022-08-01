@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Jobs from '../components/home/Jobs';
+import Jobs from '../../components/home/Jobs';
 import '@testing-library/jest-dom';
 
 const jobs = [
@@ -7,6 +7,7 @@ const jobs = [
     title: 'Test Job',
     duration: '1 - 2',
     description: 'This is a test job',
+    isActive: false,
   },
 ];
 

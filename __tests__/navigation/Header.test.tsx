@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Header from '../components/navigation/Header';
+import Header from '../../components/navigation/Header';
 import '@testing-library/jest-dom';
 
 describe('Header', () => {

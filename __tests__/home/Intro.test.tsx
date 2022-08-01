@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Contact from '../components/home/Contact';
+import Intro from '../../components/home/Intro';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
@@ -8,21 +8,21 @@ const cta = {
   label: 'Test cta',
 };
 
-describe('Contact', () => {
+describe('Intro', () => {
   it('mounts', () => {
     const { getByTestId } = render(
-      <Contact
+      <Intro
         title={title}
         body={body}
         cta={cta}
       />,
     );
-    const contact = getByTestId('contact');
-    expect(contact).toBeInTheDocument();
+    const intro = getByTestId('intro');
+    expect(intro).toBeInTheDocument();
   });
   it('has the title', () => {
     const { getByText } = render(
-      <Contact
+      <Intro
         title={title}
         body={body}
         cta={cta}
@@ -32,7 +32,7 @@ describe('Contact', () => {
   });
   it('has the body', () => {
     const { getByText } = render(
-      <Contact
+      <Intro
         title={title}
         body={body}
         cta={cta}
@@ -42,7 +42,7 @@ describe('Contact', () => {
   });
   it('has the cta', () => {
     const { getByText } = render(
-      <Contact
+      <Intro
         title={title}
         body={body}
         cta={cta}

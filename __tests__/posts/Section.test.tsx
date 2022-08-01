@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import Section from '../components/posts/Section';
-import PostType from '../types/Post';
+import Section from '../../components/posts/Section';
+import PostType from '../../types/Post';
 import '@testing-library/jest-dom';
 
 const title = 'Title';
@@ -10,8 +10,10 @@ const posts: PostType[] = [
     title: 'Post 1',
     cardBody: 'Body 1',
     date: '05/12/2022',
-    previewImg: 'example.jpg',
-    previewImgAlt: 'alt text',
+    image: {
+      src: 'example.jpg',
+      alt: 'alt text',
+    },
   },
 ];
 

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Details from '../components/posts/Details';
+import Details from '../../components/posts/Details';
 import '@testing-library/jest-dom';
 
 const title = 'Post 1';
@@ -16,6 +16,8 @@ describe('Details', () => {
       <Details
         title={title}
         date={date}
+        cardBody=""
+        image={{ src: '', alt: '' }}
         location={location}
         locationUrl={locationUrl}
         distance={distance}
@@ -31,6 +33,8 @@ describe('Details', () => {
       <Details
         title={title}
         date={date}
+        cardBody=""
+        image={{ src: '', alt: '' }}
         location={location}
         locationUrl={locationUrl}
         distance={distance}
@@ -45,6 +49,8 @@ describe('Details', () => {
       <Details
         title={title}
         date={date}
+        cardBody=""
+        image={{ src: '', alt: '' }}
         location={location}
         locationUrl={locationUrl}
         distance={distance}
@@ -59,6 +65,8 @@ describe('Details', () => {
       <Details
         title={title}
         date={date}
+        cardBody=""
+        image={{ src: '', alt: '' }}
         location={location}
         locationUrl={locationUrl}
         distance={distance}
@@ -75,6 +83,8 @@ describe('Details', () => {
       <Details
         title={title}
         date={date}
+        cardBody=""
+        image={{ src: '', alt: '' }}
         location={location}
         locationUrl={locationUrl}
         distance={distance}
@@ -89,6 +99,8 @@ describe('Details', () => {
       <Details
         title={title}
         date={date}
+        cardBody=""
+        image={{ src: '', alt: '' }}
         location={location}
         locationUrl={locationUrl}
         distance={distance}
@@ -103,6 +115,8 @@ describe('Details', () => {
       <Details
         title={title}
         date={date}
+        cardBody=""
+        image={{ src: '', alt: '' }}
         location={location}
         locationUrl={locationUrl}
         distance={distance}

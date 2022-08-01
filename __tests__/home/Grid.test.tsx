@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import Grid from '../components/home/Grid';
-import PostType from '../types/Post';
+import Grid from '../../components/home/Grid';
+import PostType from '../../types/Post';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
