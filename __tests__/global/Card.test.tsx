@@ -3,21 +3,23 @@ import Card from '../../components/global/Card';
 import '@testing-library/jest-dom';
 
 const title = 'Post 1';
-const cardBody = 'Body 1';
+const description = 'Body 1';
 const date = '05/12/2022';
 const image = {
   src: 'example.jpg',
   alt: 'alt text',
 };
+const collection = ['2022'];
 
 describe('Card', () => {
   it('mounts', () => {
     const { getByTestId } = render(
       <Card
         title={title}
-        cardBody={cardBody}
+        description={description}
         date={date}
         image={image}
+        collection={collection}
       />,
     );
     const card = getByTestId('card');
@@ -27,9 +29,10 @@ describe('Card', () => {
     const { getByText } = render(
       <Card
         title={title}
-        cardBody={cardBody}
+        description={description}
         date={date}
         image={image}
+        collection={collection}
       />,
     );
     expect(getByText(title)).toBeInTheDocument();
@@ -38,20 +41,22 @@ describe('Card', () => {
     const { getByText } = render(
       <Card
         title={title}
-        cardBody={cardBody}
+        description={description}
         date={date}
         image={image}
+        collection={collection}
       />,
     );
-    expect(getByText(cardBody)).toBeInTheDocument();
+    expect(getByText(description)).toBeInTheDocument();
   });
   it('renders the date', () => {
     const { getByText } = render(
       <Card
         title={title}
-        cardBody={cardBody}
+        description={description}
         date={date}
         image={image}
+        collection={collection}
       />,
     );
     expect(getByText(date)).toBeInTheDocument();
@@ -60,9 +65,10 @@ describe('Card', () => {
     const { getByAltText } = render(
       <Card
         title={title}
-        cardBody={cardBody}
+        description={description}
         date={date}
         image={image}
+        collection={collection}
       />,
     );
     const img = getByAltText(image.alt);

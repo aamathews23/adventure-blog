@@ -4,8 +4,8 @@ import matter from 'gray-matter';
 
 // Import content
 import {
-  attributes as homePageModel,
-  react as HomePageContent,
+  attributes as blogPageModel,
+  react as BlogPageContent,
 } from '../../content/pages/blog.md';
 
 // Import components
@@ -14,20 +14,20 @@ import PostSection from '../../components/posts/Section';
 import NotFound from '../../components/global/NotFound';
 
 // Import types
-import CollectionType from '../../types/home/Collection';
+import CollectionType from '../../types/posts/Collection';
 
-type HomePageType = {
+type BlogPageType = {
   collections: CollectionType[];
 };
 
-const HomePage = ({ collections }: HomePageType) => {
+const BlogPage = ({ collections }: BlogPageType) => {
   return (
     <>
-      <HomePageContent />
+      <BlogPageContent />
       <Page
-        title={homePageModel.title}
-        description={homePageModel.description}
-        previewImg={homePageModel.previewImg}
+        title={blogPageModel.title}
+        description={blogPageModel.description}
+        previewImg={blogPageModel.previewImg}
       >
         {collections && collections.length > 0 ? (
           collections.map((collection, index) => (
@@ -38,7 +38,7 @@ const HomePage = ({ collections }: HomePageType) => {
             />
           ))
         ) : (
-          <NotFound text={homePageModel.notFound} />
+          <NotFound text={blogPageModel.notFound} />
         )}
       </Page>
     </>
@@ -68,4 +68,4 @@ export async function getStaticProps() {
   };
 }
 
-export default HomePage;
+export default BlogPage;

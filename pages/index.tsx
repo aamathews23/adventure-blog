@@ -39,7 +39,7 @@ const HomePage = () => {
         <Grid
           title={homePageModel.blog.title}
           cta={homePageModel.blog.cta}
-          posts={homePageModel.blog.posts}
+          cards={homePageModel.blog.posts}
         />
         <Contact
           title={homePageModel.contact.title}

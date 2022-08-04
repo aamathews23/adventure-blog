@@ -13,14 +13,13 @@ import {
 
 // Import components
 import Page from '../../components/layout/Page';
-import Details from '../../components/posts/Details';
 import Markdown from '../../components/posts/Markdown';
 
 // Import types
-import PostType from '../../types/posts/Post';
+import CardType from '../../types/global/Card';
 
 type PostPageType = {
-  post: PostType;
+  post: CardType;
   content?: string;
 };
 
@@ -31,26 +30,11 @@ const PostPage = ({ post, content }: PostPageType) => {
       <PostPageContent />
       <Page
         title={`${post.title} | ${postPageModel.title}`}
-        description={post.cardBody}
+        description={post.description}
         previewImg={post.image.src}
       >
         <div className={styles[mainClass]}>
-          <div className={styles[`${mainClass}__details`]}>
-            <Details
-              title={post.title}
-              cardBody={post.cardBody}
-              date={post.date}
-              image={post.image}
-              location={post.location}
-              locationUrl={post.locationUrl}
-              distance={post.distance}
-              duration={post.duration}
-              intensity={post.intensity}
-            />
-          </div>
-          <div className={styles[`${mainClass}__content`]}>
-            {content && <Markdown content={content} />}
-          </div>
+          {content && <Markdown content={content} />}
         </div>
       </Page>
     </>
