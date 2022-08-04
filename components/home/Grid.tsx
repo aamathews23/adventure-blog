@@ -4,7 +4,7 @@ import Card from '../global/Card';
 import HomeGridType from '../../types/home/Grid';
 import Button from '../global/Button';
 
-const Grid = ({ title, cta, posts }: HomeGridType) => {
+const Grid = ({ title, cta, cards }: HomeGridType) => {
   const mainClass = 'grid';
   return (
     <section
@@ -22,16 +22,17 @@ const Grid = ({ title, cta, posts }: HomeGridType) => {
         className={styles[`${mainClass}__grid`]}
         data-testid={`${mainClass}-grid`}
       >
-        {posts &&
-          posts.length > 0 &&
-          posts.map((post, index) => (
+        {cards &&
+          cards.length > 0 &&
+          cards.map((card, index) => (
             <Card
               key={index}
-              title={post.title}
-              cardBody={post.cardBody}
-              date={post.date}
-              type={post.type}
-              image={post.image}
+              title={card.title}
+              description={card.description}
+              date={card.date}
+              type={card.type}
+              image={card.image}
+              collection={card.collection}
             />
           ))}
       </div>

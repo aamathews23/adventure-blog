@@ -1,8 +1,8 @@
-import PostType from '../posts/Post';
+import CardType from '../global/Card';
 
 type Collection = {
   title: string;
-  posts: PostType[];
+  posts: CardType[];
 };
 
 export default Collection;

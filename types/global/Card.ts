@@ -2,8 +2,9 @@ import ImageType from './Image';
 
 type Card = {
   title: string;
-  cardBody: string;
+  description: string;
   image: ImageType;
+  collection: string[];
   type?: string;
   date?: string;
 };

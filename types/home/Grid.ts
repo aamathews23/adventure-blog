@@ -1,10 +1,10 @@
-import PostType from '../posts/Post';
+import CardType from '../global/Card';
 import ButtonType from '../global/Button';
 
 type HomeGrid = {
   title: string;
   cta: ButtonType;
-  posts: PostType[];
+  cards: CardType[];
 };
 
 export default HomeGrid;

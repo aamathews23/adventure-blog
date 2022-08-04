@@ -1,24 +1,4 @@
 .post {
-  display: flex;
-  flex-direction: column;
   margin: 32px 0;
-
-  &__details {
-    margin-bottom: 32px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    flex-direction: row;
-
-    &__details {
-      width: 30%;
-      border-right: 2px solid #fff;
-      margin-right: 32px;
-      margin-bottom: 0;
-    }
-
-    &__content {
-      width: 70%;
-    }
-  }
+  max-width: 700px;
 }

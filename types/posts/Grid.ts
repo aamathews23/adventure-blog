@@ -1,7 +1,7 @@
-import PostType from './Post';
+import CardType from '../global/Card';
 
 type Grid = {
-  posts: PostType[];
+  posts: CardType[];
 };
 
 export default Grid;

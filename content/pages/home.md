@@ -45,26 +45,32 @@ blog:
     anchor: '/blog'
   posts:
     - title: Snow-tastrophe
-      cardBody: A long hike up a snowy mountain...
+      description: A long hike up a snowy mountain...
       date: 05/07/2022
       type: blog
       image:
         src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
         alt: a snowy peak rising from a valley
+      collection:
+        - '2022'
     - title: Snow-tastrophe
-      cardBody: A long hike up a snowy mountain...
+      description: A long hike up a snowy mountain...
       date: 05/07/2022
       type: blog
       image:
         src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
         alt: a snowy peak rising from a valley
+      collection:
+        - '2022'
     - title: Snow-tastrophe
-      cardBody: A long hike up a snowy mountain...
+      description: A long hike up a snowy mountain...
       date: 05/07/2022
       type: blog
       image:
         src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
         alt: a snowy peak rising from a valley
+      collection:
+        - '2022'
 contact:
   title: 'Contact'
   body: 'I am currently looking for a part-time freelance project. If you’re interested in working with me, send me an email and we can talk more. I look forward to hearing from you!'

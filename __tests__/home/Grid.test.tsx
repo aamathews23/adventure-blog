@@ -1,21 +1,22 @@
 import { render } from '@testing-library/react';
 import Grid from '../../components/home/Grid';
-import PostType from '../../types/posts/Post';
+import CardType from '../../types/global/Card';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
 const cta = {
   label: 'Test cta',
 };
-const posts: PostType[] = [
+const cards: CardType[] = [
   {
     title: 'Test title card',
-    cardBody: 'Test body card',
+    description: 'Test body card',
     date: '07/30/2022',
     image: {
       src: 'example.jpg',
       alt: 'example alt',
     },
+    collection: ['2022'],
   },
 ];
 
@@ -24,7 +25,7 @@ describe('Grid', () => {
     const { getByTestId } = render(
       <Grid
         title={title}
-        posts={posts}
+        cards={cards}
         cta={cta}
       />,
     );
@@ -35,7 +36,7 @@ describe('Grid', () => {
     const { getByText } = render(
       <Grid
         title={title}
-        posts={posts}
+        cards={cards}
         cta={cta}
       />,
     );
@@ -45,7 +46,7 @@ describe('Grid', () => {
     const { getByText } = render(
       <Grid
         title={title}
-        posts={posts}
+        cards={cards}
         cta={cta}
       />,
     );
@@ -55,10 +56,10 @@ describe('Grid', () => {
     const { getByText } = render(
       <Grid
         title={title}
-        posts={posts}
+        cards={cards}
         cta={cta}
       />,
     );
-    expect(getByText(posts[0].title)).toBeInTheDocument();
+    expect(getByText(cards[0].title)).toBeInTheDocument();
   });
 });
