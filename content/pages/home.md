@@ -48,13 +48,20 @@ work:
     - title: Software Engineer &#64;&nbsp;<a href="https://www.rei.com/adventures"
         target="_blank">REI Co-op</a>
       duration: October 2021 - Present
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        egestas, diam id iaculis congue, eros quam pulvinar orci, vel imperdiet
-        est enim a enim. Sed id consectetur massa. Aenean et semper nisi. Cras
-        nisi elit, accumsan nec interdum aliquam, dapibus in dolor. Sed nisi
-        dolor, ultrices non nunc ut, aliquet volutpat arcu. Donec et arcu
-        mattis, dapibus ligula a, blandit nisl. Cras imperdiet est ac commodo
-        faucibus.
+      description: >-
+        Currently my job duties are all frontend related. I spend a lot of time
+        working with UX designers, web producers, copy writers, and product
+        managers to bring new experiences to life!
+
+
+        A list of my current day to day tasks include:
+
+
+        * Turning Figma designs into reusable, testable components using HTML, CSS and Javascript.
+
+        * Building dynamic components which can house flexable content from a CMS.
+
+        * Writing unit tests to ensure components are behaving as expected.
       isActive: true
     - title: Fullstack Engineer &#64;&nbsp;<a href="https://www.costco.com"
         target="_blank">Costco</a>
