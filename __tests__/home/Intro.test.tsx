@@ -3,7 +3,7 @@ import Intro from '../../components/home/Intro';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
-const body = 'Test body';
+const main = 'Test body';
 const cta = {
   label: 'Test cta',
 };
@@ -13,7 +13,7 @@ describe('Intro', () => {
     const { getByTestId } = render(
       <Intro
         title={title}
-        body={body}
+        main={main}
         cta={cta}
       />,
     );
@@ -24,27 +24,27 @@ describe('Intro', () => {
     const { getByText } = render(
       <Intro
         title={title}
-        body={body}
+        main={main}
         cta={cta}
       />,
     );
     expect(getByText(title)).toBeInTheDocument();
   });
-  it('has the body', () => {
+  it('has the main', () => {
     const { getByText } = render(
       <Intro
         title={title}
-        body={body}
+        main={main}
         cta={cta}
       />,
     );
-    expect(getByText(body)).toBeInTheDocument();
+    expect(getByText(main)).toBeInTheDocument();
   });
   it('has the cta', () => {
     const { getByText } = render(
       <Intro
         title={title}
-        body={body}
+        main={main}
         cta={cta}
       />,
     );

@@ -23,12 +23,12 @@ const HomePage = () => {
       >
         <Intro
           title={homePageModel.intro.title}
-          body={homePageModel.intro.body}
+          main={homePageModel.intro.main}
           cta={homePageModel.intro.cta}
         />
         <About
           title={homePageModel.about.title}
-          body={homePageModel.about.body}
+          main={homePageModel.about.main}
           skills={homePageModel.about.skills}
           image={homePageModel.about.image}
         />
@@ -43,7 +43,7 @@ const HomePage = () => {
         />
         <Contact
           title={homePageModel.contact.title}
-          body={homePageModel.contact.body}
+          main={homePageModel.contact.main}
           cta={homePageModel.contact.cta}
         />
       </Page>

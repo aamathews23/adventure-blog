@@ -1,3 +1,5 @@
+import { Remarkable } from 'remarkable';
+
 // Styles
 import styles from '../../styles/components/home/intro.module.scss';
 
@@ -8,7 +10,8 @@ import Button from '../global/Button';
 // Types
 import IntroType from '../../types/home/Intro';
 
-const Intro = ({ title, body, cta }: IntroType) => {
+const Intro = ({ title, main, cta }: IntroType) => {
+  const md = new Remarkable();
   const mainClass = 'intro';
   return (
     <section
@@ -22,9 +25,9 @@ const Intro = ({ title, body, cta }: IntroType) => {
           dangerouslySetInnerHTML={{ __html: title }}
           data-testid={`${mainClass}-title`}
         />
-        <Text
+        <div
           className={styles[`${mainClass}__body`]}
-          dangerouslySetInnerHTML={{ __html: body }}
+          dangerouslySetInnerHTML={{ __html: md.render(main) }}
           data-testid={`${mainClass}-body`}
         />
         <Button

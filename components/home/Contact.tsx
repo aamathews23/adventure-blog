@@ -1,9 +1,11 @@
+import { Remarkable } from 'remarkable';
 import styles from '../../styles/components/home/contact.module.scss';
 import Text from '../global/Text';
 import Button from '../global/Button';
 import ContactType from '../../types/home/Contact';
 
-const Contact = ({ title, body, cta }: ContactType) => {
+const Contact = ({ title, main, cta }: ContactType) => {
+  const md = new Remarkable();
   const mainClass = 'contact';
   return (
     <section
@@ -18,10 +20,10 @@ const Contact = ({ title, body, cta }: ContactType) => {
         >
           {title}
         </Text>
-        <Text
+        <div
           className={styles[`${mainClass}__body`]}
           data-testid={`${mainClass}-body`}
-          dangerouslySetInnerHTML={{ __html: body }}
+          dangerouslySetInnerHTML={{ __html: md.render(main) }}
         />
         <Button
           label={cta.label}

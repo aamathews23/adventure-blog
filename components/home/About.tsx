@@ -1,3 +1,5 @@
+import { Remarkable } from 'remarkable';
+
 // Components
 import Image from 'next/image';
 import Text from '../global/Text';
@@ -12,7 +14,8 @@ const loader = ({ src }: any) => {
   return src;
 };
 
-const About = ({ title, body, skills, image }: AboutType) => {
+const About = ({ title, main, skills, image }: AboutType) => {
+  const md = new Remarkable();
   const mainClass = 'about';
   return (
     <section
@@ -26,10 +29,10 @@ const About = ({ title, body, skills, image }: AboutType) => {
       >
         {title}
       </Text>
-      <Text
+      <div
         className={styles[`${mainClass}__body`]}
         data-testid={`${mainClass}-body`}
-        dangerouslySetInnerHTML={{ __html: body }}
+        dangerouslySetInnerHTML={{ __html: md.render(main) }}
       />
       <div
         className={styles[`${mainClass}__list`]}

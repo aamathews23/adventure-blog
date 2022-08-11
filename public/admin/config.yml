@@ -6,6 +6,7 @@ media_library:
   config:
     cloud_name: dmrjua4dg
     api_key: 481127667714968
+publish_mode: editorial_workflow
 collections:
   - name: 'pages'
     label: 'Pages'
@@ -39,9 +40,9 @@ collections:
                   required: true,
                 }
               - {
-                  name: 'body',
-                  label: 'Body',
-                  widget: 'string',
+                  name: 'main',
+                  label: 'Main',
+                  widget: 'markdown',
                   required: true,
                 }
               - name: 'cta'
@@ -74,9 +75,9 @@ collections:
                   required: true,
                 }
               - {
-                  name: 'body',
-                  label: 'Body',
-                  widget: 'string',
+                  name: 'main',
+                  label: 'Main',
+                  widget: 'markdown',
                   required: true,
                 }
               - {
@@ -134,7 +135,7 @@ collections:
                   - {
                       name: 'description',
                       label: 'Description',
-                      widget: 'string',
+                      widget: 'markdown',
                       required: true,
                     }
                   - {
@@ -227,9 +228,9 @@ collections:
                   required: true,
                 }
               - {
-                  name: 'body',
-                  label: 'Body',
-                  widget: 'string',
+                  name: 'main',
+                  label: 'Main',
+                  widget: 'markdown',
                   required: true,
                 }
               - name: 'cta'
