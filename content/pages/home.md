@@ -90,24 +90,6 @@ blog:
         alt: a snowy peak rising from a valley
       collection:
         - "2022"
-    - title: Snow-tastrophe
-      description: A long hike up a snowy mountain...
-      date: 05/07/2022
-      type: blog
-      image:
-        src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
-        alt: a snowy peak rising from a valley
-      collection:
-        - "2022"
-    - title: Snow-tastrophe
-      description: A long hike up a snowy mountain...
-      date: 05/07/2022
-      type: blog
-      image:
-        src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
-        alt: a snowy peak rising from a valley
-      collection:
-        - "2022"
 contact:
   title: Contact
   main: I am currently looking for a part-time freelance project. If you’re
