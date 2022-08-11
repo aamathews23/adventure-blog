@@ -2,7 +2,7 @@ import ButtonType from '../global/Button';
 
 type Intro = {
   title: string;
-  body: string;
+  main: string;
   cta: ButtonType;
 };
 

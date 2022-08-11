@@ -3,7 +3,7 @@ import Contact from '../../components/home/Contact';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
-const body = 'Test body';
+const main = 'Test body';
 const cta = {
   label: 'Test cta',
 };
@@ -13,7 +13,7 @@ describe('Contact', () => {
     const { getByTestId } = render(
       <Contact
         title={title}
-        body={body}
+        main={main}
         cta={cta}
       />,
     );
@@ -24,27 +24,27 @@ describe('Contact', () => {
     const { getByText } = render(
       <Contact
         title={title}
-        body={body}
+        main={main}
         cta={cta}
       />,
     );
     expect(getByText(title)).toBeInTheDocument();
   });
-  it('has the body', () => {
+  it('has the main', () => {
     const { getByText } = render(
       <Contact
         title={title}
-        body={body}
+        main={main}
         cta={cta}
       />,
     );
-    expect(getByText(body)).toBeInTheDocument();
+    expect(getByText(main)).toBeInTheDocument();
   });
   it('has the cta', () => {
     const { getByText } = render(
       <Contact
         title={title}
-        body={body}
+        main={main}
         cta={cta}
       />,
     );

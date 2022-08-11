@@ -2,7 +2,7 @@ import ImageType from '../global/Image';
 
 type About = {
   title: string;
-  body: string;
+  main: string;
   skills: string[];
   image?: ImageType;
 };
