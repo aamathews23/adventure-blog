@@ -1,17 +1,37 @@
 ---
 title: Aaron Mathews
-description: I am a full stack web dev whose passionate about developing simple, interactive applications.
+description: I am a full stack web dev whose passionate about developing simple,
+  interactive applications.
 previewImg: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011722/Adventure%20Blog/dirty-harrys-peak/mountain-1.jpg
 intro:
   title: 'Hi, I’m <span style="color: #53D670;">Aaron.</span>'
-  main: 'I’m a frontend engineer with a fullstack background. I love working on business applications and building fun web experiences for customers. Currently I’m working on expanding the outdoor experiences platform at [REI Co-op](https://www.rei.com).'
+  main: I’m a frontend engineer with a fullstack background. I love working on
+    business applications and building fun web experiences for customers.
+    Currently I’m working on expanding the outdoor experiences platform at [REI
+    Co-op](https://www.rei.com).
   cta:
-    label: 'Let’s connect'
-    tag: 'a'
-    anchor: 'mailto:aamathews23@gmail.com'
+    label: Let’s connect
+    tag: a
+    anchor: mailto:aamathews23@gmail.com
 about:
-  title: 'About'
-  main: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi. Volutpat maecenas volutpat blandit aliquam etiam erat velit. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. At elementum eu facilisis sed. Feugiat in ante metus dictum at tempor. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Vitae sapien pellentesque habitant morbi tristique senectus. Amet consectetur adipiscing elit duis tristique sollicitudin nibh sit. Libero id faucibus nisl tincidunt eget nullam non nisi. Sed faucibus turpis in eu mi bibendum neque egestas. Libero nunc consequat interdum varius. Sit amet dictum sit amet justo donec enim diam vulputate.'
+  title: About
+  main: >-
+    Welcome!
+
+
+    As mentioned above I'm currently a frontend engineer at [REI Co-op](https://www.rei.com), but I have a full stack engineer background. I studied computer science in college and am coming up on my 4th year of job experience as a software engineer.
+
+
+    I have a lot of fun programming, but it's not my only interest! I also enjoy video games, hikes, ice hockey, and as of late barbecuing. I'm currently based out of Seattle, WA.
+
+
+    The hikes here are awesome. Between the Snoqualmie Pass and Mount Rainier National Park there is an abundance of trails to explore. I try my best to blog about my adventures so people can stay updated with where I've been!
+
+
+    I play on two adult ice hockey teams in the PNW as a goalie and a defensemen. I grew up playing hockey from about 2nd grade through my sophomore year of highschool where I primarily played as a goalie. I love the game and it's a great way to keep myself active.
+
+
+    That's pretty much me in a nutshell! I hope we can work together to solve any problems you have.
   skills:
     - Javascript
     - Typescript
@@ -21,28 +41,57 @@ about:
     - Netlify
   image:
     src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011722/Adventure%20Blog/dirty-harrys-peak/mountain-1.jpg
-    alt: 'a snowy peak'
+    alt: a snowy peak
 work:
-  title: 'Work'
+  title: Work
   jobs:
-    - {
-        title: 'Software Engineer &#64;&nbsp;<a href="https://www.rei.com/adventures" target="_blank">REI Co-op</a>',
-        duration: 'October 2021 - Present',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas, diam id iaculis congue, eros quam pulvinar orci, vel imperdiet est enim a enim. Sed id consectetur massa. Aenean et semper nisi. Cras nisi elit, accumsan nec interdum aliquam, dapibus in dolor. Sed nisi dolor, ultrices non nunc ut, aliquet volutpat arcu. Donec et arcu mattis, dapibus ligula a, blandit nisl. Cras imperdiet est ac commodo faucibus.',
-        isActive: true,
-      }
-    - {
-        title: 'Fullstack Engineer &#64;&nbsp;<a href="https://www.costco.com" target="_blank">Costco</a>',
-        duration: 'November 2018 - October 2021',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas, diam id iaculis congue, eros quam pulvinar orci, vel imperdiet est enim a enim. Sed id consectetur massa. Aenean et semper nisi. Cras nisi elit, accumsan nec interdum aliquam, dapibus in dolor. Sed nisi dolor, ultrices non nunc ut, aliquet volutpat arcu. Donec et arcu mattis, dapibus ligula a, blandit nisl. Cras imperdiet est ac commodo faucibus.',
-        isActive: false,
-      }
+    - title: Software Engineer &#64;&nbsp;<a href="https://www.rei.com/adventures"
+        target="_blank">REI Co-op</a>
+      duration: October 2021 - Present
+      description: >-
+        Currently my job duties are all frontend related. I spend a lot of time
+        working with UX designers, web producers, copy writers, and product
+        managers to bring new experiences to life!
+
+
+
+
+        A list of my current day to day tasks include:
+
+
+        * Turning Figma designs into reusable, testable components using HTML, CSS and Javascript.
+
+        * Building dynamic components which can house flexable content from a CMS.
+
+        * Writing unit tests to ensure components are behaving as expected.
+      isActive: true
+    - title: Fullstack Engineer &#64;&nbsp;<a href="https://www.costco.com"
+        target="_blank">Costco</a>
+      duration: November 2018 - October 2021
+      description: >-
+        During my time at Costco I had a number of different roles. I started in
+        the warehouse as a cart pusher and found my way up to the corporate
+        office as a web developer.
+
+
+        I joined the merchandising vertical where I worked on a number of different applications. Some applications I worked on helped internal teams with item procurement, facility audits, item quality and pricing.
+
+
+        My job functions included:
+
+
+        * Creating and modifying frontend experiences to streamline workflows and automate tasks.
+
+        * Create and modify backend services to better manage data, send emails, and automate more tasks.
+
+        * Create and modify databases to support new data models and enhance workflows.
+      isActive: false
 blog:
-  title: 'Blog'
+  title: Blog
   cta:
-    label: 'View more'
-    tag: 'a'
-    anchor: '/blog'
+    label: View more
+    tag: a
+    anchor: /blog
   posts:
     - title: Snow-tastrophe
       description: A long hike up a snowy mountain...
@@ -52,30 +101,14 @@ blog:
         src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
         alt: a snowy peak rising from a valley
       collection:
-        - '2022'
-    - title: Snow-tastrophe
-      description: A long hike up a snowy mountain...
-      date: 05/07/2022
-      type: blog
-      image:
-        src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
-        alt: a snowy peak rising from a valley
-      collection:
-        - '2022'
-    - title: Snow-tastrophe
-      description: A long hike up a snowy mountain...
-      date: 05/07/2022
-      type: blog
-      image:
-        src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
-        alt: a snowy peak rising from a valley
-      collection:
-        - '2022'
+        - "2022"
 contact:
-  title: 'Contact'
-  main: 'I am currently looking for a part-time freelance project. If you’re interested in working with me, send me an email and we can talk more. I look forward to hearing from you!'
+  title: Contact
+  main: I am currently looking for a part-time freelance project. If you’re
+    interested in working with me, send me an email and we can talk more. I look
+    forward to hearing from you!
   cta:
-    label: 'Get started'
-    tag: 'a'
-    anchor: 'mailto:aamathews23@gmail.com'
+    label: Get started
+    tag: a
+    anchor: mailto:aamathews23@gmail.com
 ---
