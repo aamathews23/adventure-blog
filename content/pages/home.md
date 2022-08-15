@@ -68,13 +68,23 @@ work:
     - title: Fullstack Engineer &#64;&nbsp;<a href="https://www.costco.com"
         target="_blank">Costco</a>
       duration: November 2018 - October 2021
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        egestas, diam id iaculis congue, eros quam pulvinar orci, vel imperdiet
-        est enim a enim. Sed id consectetur massa. Aenean et semper nisi. Cras
-        nisi elit, accumsan nec interdum aliquam, dapibus in dolor. Sed nisi
-        dolor, ultrices non nunc ut, aliquet volutpat arcu. Donec et arcu
-        mattis, dapibus ligula a, blandit nisl. Cras imperdiet est ac commodo
-        faucibus.
+      description: >-
+        During my time at Costco I had a number of different roles. I started in
+        the warehouse as a cart pusher and found my way up to the corporate
+        office as a web developer.
+
+
+        I joined the merchandising vertical where I worked on a number of different applications. Some applications I worked on helped internal teams with item procurement, facility audits, item quality and pricing.
+
+
+        My job functions included:
+
+
+        * Creating and modifying frontend experiences to streamline workflows and automate tasks.
+
+        * Create and modify backend services to better manage data, send emails, and automate more tasks.
+
+        * Create and modify databases to support new data models and enhance workflows.
       isActive: false
 blog:
   title: Blog
