@@ -1,4 +1,6 @@
-.button {
+import { css } from '@emotion/react';
+
+const style = css`
   display: inline-flex;
   font-family: Karla, sans-serif;
   font-size: 16px;
@@ -21,4 +23,6 @@
     outline: 2px solid #fff;
     outline-offset: 4px;
   }
-}
+`;
+
+export default style;

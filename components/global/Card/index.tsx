@@ -1,19 +1,23 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-
-// Styles
-import styles from '../../styles/components/global/card.module.scss';
-
-// Components
-import Text from '../global/Text';
-
-// Types
-import CardType from '../../types/global/Card';
+import style from './style';
+import Text from '../Text';
+import CardType from '../../../types/global/Card';
 
 const loader = ({ src }: any) => {
   return src;
 };
 
+/**
+ * Creates a card component to be used throughout the app.
+ *
+ * @param {String} title
+ * @param {String} description
+ * @param {String} type
+ * @param {String} date
+ * @param {ImageType} image
+ * @returns a card component
+ */
 const Card = ({ title, description, type, date, image }: CardType) => {
   const mainClass = 'card';
   const router = useRouter();
@@ -23,13 +27,13 @@ const Card = ({ title, description, type, date, image }: CardType) => {
   };
   return (
     <div
-      className={styles[mainClass]}
+      css={style.card}
       data-testid={mainClass}
       tabIndex={0}
       onClick={handlePostClick}
     >
       {image && (
-        <figure className={styles[`${mainClass}__img`]}>
+        <figure css={style.img}>
           <Image
             src={image.src}
             alt={image.alt}
@@ -41,16 +45,16 @@ const Card = ({ title, description, type, date, image }: CardType) => {
           />
         </figure>
       )}
-      <header className={styles[`${mainClass}__header`]}>
+      <header css={style.header}>
         <Text
           tag="h3"
-          className={styles[`${mainClass}__title`]}
+          css={style.title}
         >
           {title}
         </Text>
-        {date && <Text className={styles[`${mainClass}__date`]}>{date}</Text>}
+        {date && <Text css={style.date}>{date}</Text>}
       </header>
-      <Text className={styles[`${mainClass}__body`]}>{description}</Text>
+      <Text css={style.body}>{description}</Text>
     </div>
   );
 };

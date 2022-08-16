@@ -1,4 +1,6 @@
-.link {
+import { css } from '@emotion/react';
+
+const style = css`
   color: #fff;
   text-decoration: none;
   font-family: Karla, sans-serif;
@@ -31,4 +33,6 @@
     outline: 2px solid #fff;
     outline-offset: 4px;
   }
-}
+`;
+
+export default style;
