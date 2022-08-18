@@ -29,7 +29,7 @@ describe('Grid', () => {
         cta={cta}
       />,
     );
-    const grid = getByTestId('grid');
+    const grid = getByTestId('home-grid');
     expect(grid).toBeInTheDocument();
   });
   it('has the title', () => {

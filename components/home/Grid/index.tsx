@@ -1,26 +1,25 @@
-import styles from '../../styles/components/home/grid.module.scss';
-import Text from '../global/Text';
-import Card from '../global/Card';
-import HomeGridType from '../../types/home/Grid';
-import Button from '../global/Button';
+import Text from '../../global/Text';
+import Card from '../../global/Card';
+import Button from '../../global/Button';
+import HomeGridType from '../../../types/home/Grid';
+import style from './style';
 
 const Grid = ({ title, cta, cards }: HomeGridType) => {
-  const mainClass = 'grid';
   return (
     <section
-      className={styles[mainClass]}
-      data-testid={mainClass}
+      css={style.section}
+      data-testid="home-grid"
     >
       <Text
         tag="h2"
-        className={styles[`${mainClass}__title`]}
-        data-testid={`${mainClass}-title`}
+        style={style.title}
+        data-testid="home-grid-title"
       >
         {title}
       </Text>
       <div
-        className={styles[`${mainClass}__grid`]}
-        data-testid={`${mainClass}-grid`}
+        css={style.grid}
+        data-testid="home-grid-grid"
       >
         {cards &&
           cards.length > 0 &&

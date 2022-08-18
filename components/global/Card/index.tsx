@@ -48,13 +48,13 @@ const Card = ({ title, description, type, date, image }: CardType) => {
       <header css={style.header}>
         <Text
           tag="h3"
-          css={style.title}
+          style={style.title}
         >
           {title}
         </Text>
-        {date && <Text css={style.date}>{date}</Text>}
+        {date && <Text style={style.date}>{date}</Text>}
       </header>
-      <Text css={style.body}>{description}</Text>
+      <Text style={style.body}>{description}</Text>
     </div>
   );
 };

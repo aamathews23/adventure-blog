@@ -1,14 +1,8 @@
 import { Remarkable } from 'remarkable';
-
-// Components
 import Image from 'next/image';
-import Text from '../global/Text';
-
-// Styles
-import styles from '../../styles/components/home/about.module.scss';
-
-// Types
-import AboutType from '../../types/home/About';
+import Text from '../../global/Text';
+import AboutType from '../../../types/home/About';
+import style from './style';
 
 const loader = ({ src }: any) => {
   return src;
@@ -16,32 +10,31 @@ const loader = ({ src }: any) => {
 
 const About = ({ title, main, skills, image }: AboutType) => {
   const md = new Remarkable();
-  const mainClass = 'about';
   return (
     <section
-      className={styles[mainClass]}
-      data-testid={mainClass}
+      css={style.section}
+      data-testid="about"
     >
       <Text
         tag="h2"
-        className={styles[`${mainClass}__title`]}
-        data-testid={`${mainClass}-title`}
+        style={style.title}
+        data-testid="about-title"
       >
         {title}
       </Text>
       <div
-        className={styles[`${mainClass}__body`]}
-        data-testid={`${mainClass}-body`}
+        css={style.body}
+        data-testid="about-body"
         dangerouslySetInnerHTML={{ __html: md.render(main) }}
       />
       <div
-        className={styles[`${mainClass}__list`]}
-        data-testid={`${mainClass}-list`}
+        css={style.list}
+        data-testid="about-list"
       >
         {skills.map((skill, key) => (
           <Text
-            className={styles[`${mainClass}__item`]}
-            data-testid={`${mainClass}-item`}
+            style={style.item}
+            data-testid="about-item"
             key={key}
           >
             {skill}
@@ -50,8 +43,8 @@ const About = ({ title, main, skills, image }: AboutType) => {
       </div>
       {image && (
         <div
-          className={styles[`${mainClass}__img`]}
-          data-testid={`${mainClass}-img`}
+          css={style.img}
+          data-testid="about-img"
         >
           <Image
             src={image.src}

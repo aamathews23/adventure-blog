@@ -1,13 +1,12 @@
-import styles from '../../styles/components/home/jobs.module.scss';
-import Job from './Job';
-import JobsType from '../../types/home/Jobs';
+import Job from '../Job';
+import JobsType from '../../../types/home/Jobs';
+import style from './style';
 
 const Jobs = ({ jobs }: JobsType) => {
-  const mainClass = 'jobs';
   return (
     <ul
-      className={styles[mainClass]}
-      data-testid={mainClass}
+      css={style}
+      data-testid="jobs"
     >
       {jobs &&
         jobs.length > 0 &&

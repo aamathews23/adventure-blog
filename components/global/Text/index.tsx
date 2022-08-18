@@ -12,7 +12,7 @@ import TextType from '../../../types/global/Text';
  */
 const Text = ({
   tag = 'p',
-  css,
+  style,
   children,
   dangerouslySetInnerHTML,
   'data-testid': datatestid,
@@ -20,7 +20,7 @@ const Text = ({
   const Tag = tag as keyof JSX.IntrinsicElements;
   return (
     <Tag
-      css={css}
+      css={style}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       data-testid={datatestid || 'text'}
     >

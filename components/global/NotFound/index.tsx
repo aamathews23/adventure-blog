@@ -22,7 +22,7 @@ const NotFound = ({ text }: NotFoundType) => {
         icon={faPersonHiking}
       />
       <Text
-        css={style.text}
+        style={style.text}
         dangerouslySetInnerHTML={{ __html: text }}
       />
     </section>
