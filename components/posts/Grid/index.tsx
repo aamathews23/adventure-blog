@@ -1,15 +1,10 @@
-// Styles
-import styles from '../../styles/components/posts/grid.module.scss';
-
-// Components
-import Card from '../global/Card';
-
-// Types
-import GridType from '../../types/posts/Grid';
+import Card from '../../global/Card';
+import GridType from '../../../types/posts/Grid';
+import style from './style';
 
 const Grid = ({ posts }: GridType) => (
   <div
-    className={styles.grid}
+    css={style}
     data-testid="grid"
   >
     {posts.map((post, key) => (

@@ -1,16 +1,12 @@
 import { Remarkable } from 'remarkable';
-
-// Styles
-import styles from '../../styles/components/posts/markdown.module.scss';
-
-// Types
-import MarkdownType from '../../types/posts/Markdown';
+import MarkdownType from '../../../types/posts/Markdown';
+import style from './style';
 
 const Markdown = ({ content }: MarkdownType) => {
   const md = new Remarkable();
   return (
     <section
-      className={styles.markdown}
+      css={style}
       data-testid="markdown"
       dangerouslySetInnerHTML={{ __html: md.render(content) }}
     />
