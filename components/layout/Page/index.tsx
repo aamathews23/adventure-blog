@@ -1,15 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-
-// Styles
-import styles from '../../styles/components/layout/page.module.scss';
-
-// Components
-import Header from '../navigation/Header';
-import Footer from '../navigation/Footer';
-
-// Types
-import PageType from '../../types/layout/Page';
+import Header from '../../navigation/Header';
+import Footer from '../../navigation/Footer';
+import PageType from '../../../types/layout/Page';
+import style from './style';
 
 /**
  * Creates and configures a page component for the Next app.
@@ -26,10 +20,9 @@ const Page: NextPage<PageType> = ({
   previewImg,
   children,
 }: PageType) => {
-  const mainClass = 'page';
   return (
     <div
-      className={styles[mainClass]}
+      css={style.page}
       data-testid="page"
     >
       <Head>
@@ -54,7 +47,7 @@ const Page: NextPage<PageType> = ({
       <Header />
       {children && (
         <main
-          className={styles[`${mainClass}__body`]}
+          css={style.body}
           data-testid="page-body"
         >
           {children}
