@@ -1,9 +1,6 @@
-// Styles
-import styles from '../../styles/components/navigation/list-menu.module.scss';
-
-// Components
-import Link from '../global/Link';
-import Text from '../global/Text';
+import Link from '../../global/Link';
+import Text from '../../global/Text';
+import style from './style';
 
 /**
  * Creates a list menu component to be used throughout the pages.
@@ -11,17 +8,16 @@ import Text from '../global/Text';
  * @returns a list menu component
  */
 const ListMenu = () => {
-  const mainClass = 'list-menu';
   return (
     <ul
-      className={styles[mainClass]}
-      data-testid={mainClass}
+      css={style.list}
+      data-testid="list-menu"
     >
       <Text tag="li">
         <Link to="/">
           <Text
             tag="span"
-            className={styles[`${mainClass}__number`]}
+            style={style.number}
           >
             1.
           </Text>
@@ -32,7 +28,7 @@ const ListMenu = () => {
         <Link to="/blog">
           <Text
             tag="span"
-            className={styles[`${mainClass}__number`]}
+            style={style.number}
           >
             2.
           </Text>

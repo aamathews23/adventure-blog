@@ -1,4 +1,6 @@
-.list-menu {
+import { css } from '@emotion/react';
+
+const list = css`
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -9,11 +11,6 @@
     margin-bottom: 16px;
   }
 
-  &__number {
-    margin-right: 8px;
-    color: #53d670;
-  }
-
   @media screen and (min-width: 768px) {
     flex-direction: row;
 
@@ -22,4 +19,16 @@
       margin-left: 16px;
     }
   }
-}
+`;
+
+const number = css`
+  margin-right: 8px;
+  color: #53d670;
+`;
+
+const style = {
+  list,
+  number,
+};
+
+export default style;

@@ -1,17 +1,22 @@
 import { useState, useEffect } from 'react';
+import { SerializedStyles } from '@emotion/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import ListMenu from '../ListMenu';
+import Text from '../../global/Text';
+import style from './style';
 
-// Styles
-import styles from '../../styles/components/navigation/drawer-menu.module.scss';
-
-// Components
-import ListMenu from './ListMenu';
-import Text from '../global/Text';
-
+/**
+ * Creates a drawer menu component to be used throughout the pages.
+ *
+ * @returns a drawer menu component
+ */
 const DrawerMenu = () => {
-  const mainClass = 'drawer-menu';
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [asideStyle, setAsideStyle] = useState<SerializedStyles>(style.aside);
+  const [drawerStyle, setDrawerStyle] = useState<SerializedStyles>(
+    style.drawer,
+  );
 
   useEffect(() => {
     if (typeof document !== 'undefined' && document) {
@@ -26,6 +31,8 @@ const DrawerMenu = () => {
     if (document && typeof document !== 'undefined') {
       const body = document.querySelector('body');
       body?.classList.add('no-scroll');
+      setAsideStyle(style.aside);
+      setDrawerStyle(style.drawer);
     }
   };
 
@@ -33,13 +40,9 @@ const DrawerMenu = () => {
   const handleClose = () => {
     if (document && typeof document !== 'undefined') {
       const body = document.querySelector('body');
-      const aside = document.querySelector('[data-testid="drawer-menu-aside"]');
-      const drawer = document.querySelector(
-        '[data-testid="drawer-menu-drawer"]',
-      );
       body?.classList.remove('no-scroll');
-      drawer?.classList.add(styles[`${mainClass}--slide-out`]);
-      aside?.classList.add(styles[`${mainClass}--fade-out`]);
+      setAsideStyle(style.asideFadeOut);
+      setDrawerStyle(style.drawerSlideOut);
     }
     setTimeout(() => {
       setIsOpen(false);
@@ -59,12 +62,12 @@ const DrawerMenu = () => {
 
   return (
     <div
-      className={styles[mainClass]}
-      data-testid={mainClass}
+      css={style.menu}
+      data-testid="drawer-menu"
     >
       <div
-        className={styles[`${mainClass}__button`]}
-        data-testid={`${mainClass}-button`}
+        css={style.button}
+        data-testid="drawer-menu-button"
         role="button"
         aria-label="Open menu"
         tabIndex={0}
@@ -75,22 +78,22 @@ const DrawerMenu = () => {
       </div>
       {isOpen && (
         <aside
-          className={styles[`${mainClass}__aside`]}
-          data-testid={`${mainClass}-aside`}
+          css={asideStyle}
+          data-testid="drawer-menu-aside"
         >
           <div
-            className={styles[`${mainClass}__drawer`]}
-            data-testid={`${mainClass}-drawer`}
+            css={drawerStyle}
+            data-testid="drawer-menu-drawer"
           >
-            <header className={styles[`${mainClass}__drawer-header`]}>
+            <header css={style.header}>
               <Text
-                className={styles[`${mainClass}__drawer-title`]}
                 tag="h3"
+                style={style.title}
               >
                 Where to next?
               </Text>
               <div
-                className={styles[`${mainClass}__button`]}
+                css={style.button}
                 role="button"
                 aria-label="Close menu"
                 tabIndex={0}
