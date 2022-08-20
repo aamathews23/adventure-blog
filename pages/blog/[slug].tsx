@@ -1,14 +1,19 @@
 import { readdirSync, readFileSync } from 'fs';
+import { css } from '@emotion/react';
 import matter from 'gray-matter';
 import path from 'path';
 import {
   attributes as postPageModel,
   react as PostPageContent,
 } from '../../../content/pages/post.md';
-import Page from '../../../components/layout/Page';
-import Markdown from '../../../components/posts/Markdown';
-import CardType from '../../../types/global/Card';
-import style from './style';
+import Page from '../../components/layout/Page';
+import Markdown from '../../components/posts/Markdown';
+import CardType from '../../types/global/Card';
+
+const style = css({
+  margin: '32px 0',
+  maxWidth: 700,
+});
 
 type PostPageType = {
   post: CardType;
