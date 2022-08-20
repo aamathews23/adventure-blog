@@ -5,7 +5,7 @@ import path from 'path';
 import {
   attributes as postPageModel,
   react as PostPageContent,
-} from '../../../content/pages/post.md';
+} from '../../content/pages/post.md';
 import Page from '../../components/layout/Page';
 import Markdown from '../../components/posts/Markdown';
 import CardType from '../../types/global/Card';
