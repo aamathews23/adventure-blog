@@ -1,11 +1,10 @@
-import { Remarkable } from 'remarkable';
+import Markdown from '../../global/Markdown';
 import Text from '../../global/Text';
 import Button from '../../global/Button';
 import ContactType from '../../../types/home/Contact';
 import style from './style';
 
 const Contact = ({ title, main, cta }: ContactType) => {
-  const md = new Remarkable();
   return (
     <section
       css={style.section}
@@ -22,8 +21,9 @@ const Contact = ({ title, main, cta }: ContactType) => {
         <div
           css={style.body}
           data-testid="contact-body"
-          dangerouslySetInnerHTML={{ __html: md.render(main) }}
-        />
+        >
+          <Markdown content={main} />
+        </div>
         <Button
           label={cta.label}
           tag={cta.tag}

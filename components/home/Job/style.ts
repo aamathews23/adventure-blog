@@ -47,7 +47,6 @@ const duration = css({
   marginLeft: 13,
   paddingTop: 16,
   paddingLeft: 22,
-  borderLeft: '1px solid #53d670',
 });
 
 const description = css({
@@ -57,7 +56,6 @@ const description = css({
   paddingTop: 16,
   paddingLeft: 22,
   paddingBottom: 32,
-  borderLeft: '1px solid #53d670',
 });
 
 const style = {

@@ -7,7 +7,7 @@ import {
   react as PostPageContent,
 } from '../../content/pages/post.md';
 import Page from '../../components/layout/Page';
-import Markdown from '../../components/posts/Markdown';
+import Markdown from '../../components/global/Markdown';
 import CardType from '../../types/global/Card';
 
 const style = css({

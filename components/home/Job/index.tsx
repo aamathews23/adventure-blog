@@ -1,10 +1,9 @@
-import { Remarkable } from 'remarkable';
+import Markdown from '../../global/Markdown';
 import Text from '../../global/Text';
 import JobType from '../../../types/home/Job';
 import style from './style';
 
 const Job = ({ title, duration, description, isActive }: JobType) => {
-  const md = new Remarkable();
   return (
     <li
       css={style.job}
@@ -22,11 +21,9 @@ const Job = ({ title, duration, description, isActive }: JobType) => {
       >
         {duration}
       </Text>
-      <div
-        css={style.description}
-        data-testid="job-description"
-        dangerouslySetInnerHTML={{ __html: md.render(description) }}
-      />
+      <div css={style.description}>
+        <Markdown content={description} />
+      </div>
     </li>
   );
 };
