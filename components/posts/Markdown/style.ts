@@ -64,7 +64,7 @@ const style = css({
     listStylePosition: 'inside',
   },
   '& p': {
-    lineHeight: 20,
+    lineHeight: '20px',
   },
   '& li': {
     marginBottom: 8,

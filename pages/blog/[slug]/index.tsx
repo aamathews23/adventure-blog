@@ -1,22 +1,14 @@
 import { readdirSync, readFileSync } from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-
-// Import styles
-import styles from '../../styles/pages/post.module.scss';
-
-// Import content
 import {
   attributes as postPageModel,
   react as PostPageContent,
-} from '../../content/pages/post.md';
-
-// Import components
-import Page from '../../components/layout/Page';
-import Markdown from '../../components/posts/Markdown';
-
-// Import types
-import CardType from '../../types/global/Card';
+} from '../../../content/pages/post.md';
+import Page from '../../../components/layout/Page';
+import Markdown from '../../../components/posts/Markdown';
+import CardType from '../../../types/global/Card';
+import style from './style';
 
 type PostPageType = {
   post: CardType;
@@ -24,7 +16,6 @@ type PostPageType = {
 };
 
 const PostPage = ({ post, content }: PostPageType) => {
-  const mainClass = 'post';
   return (
     <>
       <PostPageContent />
@@ -33,7 +24,7 @@ const PostPage = ({ post, content }: PostPageType) => {
         description={post.description}
         previewImg={post.image.src}
       >
-        <div className={styles[mainClass]}>
+        <div css={style}>
           {content && <Markdown content={content} />}
         </div>
       </Page>

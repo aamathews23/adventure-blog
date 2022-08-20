@@ -25,6 +25,7 @@ const icon = css({
   },
   '&:not(:last-child)': { marginRight: 16 },
   '&:hover, &:focus': {
+    cursor: 'pointer',
     '& svg': {
       transform: 'scale(1.25)',
       transition: 'transform 300ms',
