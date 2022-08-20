@@ -24,9 +24,7 @@ const PostPage = ({ post, content }: PostPageType) => {
         description={post.description}
         previewImg={post.image.src}
       >
-        <div css={style}>
-          {content && <Markdown content={content} />}
-        </div>
+        <div css={style}>{content && <Markdown content={content} />}</div>
       </Page>
     </>
   );
