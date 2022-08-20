@@ -1,65 +1,49 @@
 import { css } from '@emotion/react';
+import breakpoints from '../../../common/breakpoints';
 
-const section = css`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 128px;
+const section = css({
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%',
+  marginBottom: 128,
+  [breakpoints.sm]: { alignItems: 'center' },
+  [breakpoints.lg]: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    maxWidth: 1065,
+  },
+});
 
-  @media screen and (min-width: 768px) {
-    align-items: center;
-  }
+const title = css({
+  fontFamily: 'Karla, sans-serif',
+  fontSize: 32,
+  marginBottom: 32,
+  [breakpoints.lg]: { fontSize: 48 },
+});
 
-  @media screen and (min-width: 1440px) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1065px;
-  }
-`;
-
-const title = css`
-  font-family: Karla, sans-serif;
-  font-size: 32px;
-  margin-bottom: 32px;
-
-  @media screen and (min-width: 1440px) {
-    font-size: 48px;
-  }
-`;
-
-const grid = css`
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 24px;
-  width: 100%;
-  margin-bottom: 32px;
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 16px;
-    row-gap: 32px;
-
-    & > * {
-      grid-column: span 2;
-
-      &:last-child {
-        grid-column: 2 / span 2;
-      }
-    }
-  }
-
-  @media screen and (min-width: 1440px) {
-    grid-template-columns: 1fr 1fr 1fr;
-
-    & > * {
-      grid-column: span 1;
-
-      &:last-child {
-        grid-column: span 1;
-      }
-    }
-  }
-`;
+const grid = css({
+  display: 'grid',
+  gridTemplateColumns: '1fr',
+  rowGap: 24,
+  width: '100%',
+  marginBottom: 32,
+  [breakpoints.sm]: {
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    columnGap: 16,
+    rowGap: 32,
+    '& > *': {
+      gridColumn: 'span 2',
+      '&:last-child': { gridColumn: '2 / span 2' },
+    },
+  },
+  [breakpoints.lg]: {
+    gridTemplateColumns: '1fr 1fr 1fr',
+    '& > *': {
+      gridColumn: 'span 1',
+      '&:last-child': { gridColumn: 'span 1' },
+    },
+  },
+});
 
 const style = {
   section,

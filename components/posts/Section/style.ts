@@ -7,14 +7,14 @@ const section = css({
 });
 
 const title = css({
-  fontSize: '32px',
+  fontSize: 32,
   fontWeight: 'bold',
   fontFamily: 'Karla, sans-serif',
-  marginBottom: '48px',
-  [breakpoints[0]]: {
-    fontSize: '48px',
+  marginBottom: 48,
+  [breakpoints.sm]: {
+    fontSize: 48,
   },
-  [breakpoints[1]]: {
+  [breakpoints.lg]: {
     textAlign: 'center',
   },
 });

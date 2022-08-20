@@ -1,25 +1,20 @@
 import { css } from '@emotion/react';
+import breakpoints from '../../../common/breakpoints';
 
-const section = css`
-  display: flex;
-  flex-direction: column;
-  max-width: 343px;
-  margin: 0 auto 128px auto;
+const section = css({
+  display: 'flex',
+  flexDirection: 'column',
+  maxWidth: 343,
+  margin: '0 auto 128px auto',
+  [breakpoints.sm]: { textAlign: 'center' },
+});
 
-  @media screen and (min-width: 768px) {
-    text-align: center;
-  }
-`;
-
-const title = css`
-  font-family: Karla, sans-serif;
-  font-size: 32px;
-  margin-bottom: 32px;
-
-  @media screen and (min-width: 1440px) {
-    font-size: 48px;
-  }
-`;
+const title = css({
+  fontFamily: 'Karla, sans-serif',
+  fontSize: 32,
+  marginBottom: 32,
+  [breakpoints.lg]: { fontSize: 48 },
+});
 
 const style = {
   section,

@@ -1,40 +1,32 @@
 import { css } from '@emotion/react';
+import breakpoints from '../../../common/breakpoints';
 
-const section = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 75vh;
-`;
+const section = css({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '75vh',
+});
 
-const content = css`
-  max-width: 343px;
+const content = css({
+  maxWidth: 343,
+  [breakpoints.sm]: { textAlign: 'center' },
+  [breakpoints.lg]: { maxWidth: 405 },
+});
 
-  @media screen and (min-width: 768px) {
-    text-align: center;
-  }
+const title = css({
+  fontSize: 32,
+  fontFamily: 'Karla, sans-serif',
+  marginBottom: 16,
+  [breakpoints.lg]: { fontSize: 48 },
+});
 
-  @media screen and (min-width: 1440px) {
-    max-width: 405px;
-  }
-`;
-
-const title = css`
-  font-size: 32px;
-  font-family: Karla, sans-serif;
-  margin-bottom: 16px;
-
-  @media screen and (min-width: 1440px) {
-    font-size: 48px;
-  }
-`;
-
-const body = css`
-  font-size: 16px;
-  font-family: Inconsolata, monospace;
-  margin-bottom: 32px;
-`;
+const body = css({
+  fontSize: 16,
+  fontFamily: 'Inconsolata, monospace',
+  marginBottom: 32,
+});
 
 const style = {
   section,

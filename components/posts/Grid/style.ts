@@ -3,15 +3,15 @@ import breakpoints from '../../../common/breakpoints';
 
 const style = css({
   display: 'grid',
-  rowGap: '48px',
-  [breakpoints[0]]: {
+  rowGap: 48,
+  [breakpoints.sm]: {
     gridTemplateColumns: '1fr 1fr',
-    columnGap: '16px',
-    rowGap: '32px',
+    columnGap: 16,
+    rowGap: 32,
   },
-  [breakpoints[1]]: {
+  [breakpoints.lg]: {
     gridTemplateColumns: '1fr 1fr 1fr',
-    columnGap: '48px',
+    columnGap: 48,
   },
 });
 

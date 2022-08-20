@@ -3,78 +3,78 @@ import breakpoints from '../../../common/breakpoints';
 
 const style = css({
   '& h1': {
-    fontSize: '48px',
+    fontSize: 48,
     fontWeight: 'bold',
     fontFamily: 'Karla, sans-serif',
-    marginBottom: '24px',
-    [breakpoints[0]]: {
-      fontSize: '64px',
+    marginBottom: 24,
+    [breakpoints.sm]: {
+      fontSize: 64,
     },
   },
   '& h2': {
-    fontSize: '32px',
+    fontSize: 32,
     fontWeight: 'bold',
     fontFamily: 'Karla, sans-serif',
-    marginBottom: '24px',
-    [breakpoints[0]]: {
-      fontSize: '48px',
+    marginBottom: 24,
+    [breakpoints.sm]: {
+      fontSize: 48,
     },
   },
   '& h3': {
-    fontSize: '24px',
+    fontSize: 24,
     fontWeight: 'bold',
     fontFamily: 'Karla, sans-serif',
-    marginBottom: '16px',
-    [breakpoints[0]]: {
-      fontSize: '32px',
+    marginBottom: 16,
+    [breakpoints.sm]: {
+      fontSize: 32,
     },
   },
   '& h4': {
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'bold',
     fontFamily: 'Karla, sans-serif',
-    marginBottom: '16px',
-    [breakpoints[0]]: {
-      fontSize: '24px',
+    marginBottom: 16,
+    [breakpoints.sm]: {
+      fontSize: 24,
     },
   },
   '& h5': {
-    fontSize: '16px',
+    fontSize: 16,
     fontWeight: 'bold',
     fontFamily: 'Karla, sans-serif',
-    marginBottom: '8px',
+    marginBottom: 8,
   },
   '& h6': {
-    fontSize: '12px',
+    fontSize: 12,
     fontWeight: 'bold',
     fontFamily: 'Karla, sans-serif',
-    marginBottom: '8px',
+    marginBottom: 8,
   },
   '& h1, & h2, & h3, & h4, & h5, & h6': {
     width: 'fit-content',
   },
   '& p, & a, & li': {
-    fontSize: '16px',
+    fontSize: 16,
     fontFamily: 'Inconsolata, monospace',
   },
   '& p, & img, & blockquote': {
-    marginBottom: '16px',
+    marginBottom: 16,
   },
   '& ul, & ol': {
     listStylePosition: 'inside',
   },
   '& p': {
-    lineHeight: '20px',
+    lineHeight: 20,
   },
   '& li': {
-    marginBottom: '8px',
+    marginBottom: 8,
     '& li': {
-      marginLeft: '16px',
+      marginLeft: 16,
     },
   },
   '& img': {
     width: '100%',
-    borderRadius: '8px',
+    borderRadius: 8,
   },
 });
 

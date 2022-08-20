@@ -1,41 +1,35 @@
 import { css } from '@emotion/react';
+import breakpoints from '../../../common/breakpoints';
 
-const header = css`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 48px;
+const header = css({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  height: 48,
+  [breakpoints.lg]: { height: 64 },
+});
 
-  @media screen and (min-width: 1440px) {
-    height: 64px;
-  }
-`;
+const title = css({
+  fontSize: 24,
+  fontWeight: 'bold',
+  fontFamily: 'Karla, sans-serif',
+  color: '#53d670',
+  [breakpoints.sm]: { fontSize: 32 },
+});
 
-const title = css`
-  font-size: 24px;
-  font-weight: bold;
-  font-family: Karla, sans-serif;
-  color: #53d670;
+const drawer = css({
+  [breakpoints.sm]: {
+    display: 'none',
+  },
+});
 
-  @media screen and (min-width: 768px) {
-    font-size: 32px;
-  }
-`;
-
-const drawer = css`
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-`;
-
-const list = css`
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    display: initial;
-  }
-`;
+const list = css({
+  display: 'none',
+  [breakpoints.sm]: {
+    display: 'initial',
+  },
+});
 
 const style = {
   header,

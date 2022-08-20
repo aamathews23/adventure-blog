@@ -1,30 +1,28 @@
 import { css } from '@emotion/react';
+import breakpoints from '../../../common/breakpoints';
 
-const list = css`
-  display: flex;
-  flex-direction: column;
-  list-style: none;
+const list = css({
+  display: 'flex',
+  flexDirection: 'column',
+  listStyle: 'none',
+  li: {
+    display: 'flex',
+    width: 'fit-content',
+    marginBottom: 16,
+  },
+  [breakpoints.sm]: {
+    flexDirection: 'row',
+    li: {
+      marginBottom: 0,
+      marginLeft: 16,
+    },
+  },
+});
 
-  li {
-    display: flex;
-    width: fit-content;
-    margin-bottom: 16px;
-  }
-
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-
-    li {
-      margin-bottom: 0;
-      margin-left: 16px;
-    }
-  }
-`;
-
-const number = css`
-  margin-right: 8px;
-  color: #53d670;
-`;
+const number = css({
+  marginRight: 8,
+  color: '#53d670',
+});
 
 const style = {
   list,
