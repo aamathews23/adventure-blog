@@ -1,5 +1,5 @@
-import { Remarkable } from 'remarkable';
 import Image from 'next/image';
+import Markdown from '../../global/Markdown';
 import Text from '../../global/Text';
 import AboutType from '../../../types/home/About';
 import style from './style';
@@ -9,7 +9,6 @@ const loader = ({ src }: any) => {
 };
 
 const About = ({ title, main, skills, image }: AboutType) => {
-  const md = new Remarkable();
   return (
     <section
       css={style.section}
@@ -25,8 +24,9 @@ const About = ({ title, main, skills, image }: AboutType) => {
       <div
         css={style.body}
         data-testid="about-body"
-        dangerouslySetInnerHTML={{ __html: md.render(main) }}
-      />
+      >
+        <Markdown content={main} />
+      </div>
       <div
         css={style.list}
         data-testid="about-list"

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Markdown from '../../components/posts/Markdown';
+import Markdown from '../../components/global/Markdown';
 import '@testing-library/jest-dom';
 
 const text = 'Hello world';

@@ -1,11 +1,10 @@
-import { Remarkable } from 'remarkable';
 import Text from '../../global/Text';
 import Button from '../../global/Button';
+import Markdown from '../../global/Markdown';
 import IntroType from '../../../types/home/Intro';
 import style from './style';
 
 const Intro = ({ title, main, cta }: IntroType) => {
-  const md = new Remarkable();
   return (
     <section
       css={style.section}
@@ -20,9 +19,10 @@ const Intro = ({ title, main, cta }: IntroType) => {
         />
         <div
           css={style.body}
-          dangerouslySetInnerHTML={{ __html: md.render(main) }}
           data-testid="intro-body"
-        />
+        >
+          <Markdown content={main} />
+        </div>
         <Button
           label={cta.label}
           tag={cta.tag}

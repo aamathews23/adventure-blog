@@ -60,9 +60,6 @@ const style = css({
   '& p, & img, & blockquote': {
     marginBottom: 16,
   },
-  '& ul, & ol': {
-    listStylePosition: 'inside',
-  },
   '& p': {
     lineHeight: '20px',
   },
