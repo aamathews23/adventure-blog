@@ -5,9 +5,11 @@ const section = css({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  maxWidth: 343,
   margin: '0 auto 128px auto',
-  [breakpoints.sm]: { textAlign: 'center' },
+  maxWidth: 1024,
+  [breakpoints.sm]: {
+    flexDirection: 'row-reverse',
+  },
 });
 
 const title = css({
@@ -50,7 +52,6 @@ const item = css({
 const img = css({
   borderRadius: '50%',
   overflow: 'hidden',
-  marginTop: 48,
   '& > span': { display: 'block !important' },
 });
 
