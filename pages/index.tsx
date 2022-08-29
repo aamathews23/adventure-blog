@@ -25,6 +25,7 @@ const HomePage = () => {
           title={homePageModel.intro.title}
           main={homePageModel.intro.main}
           cta={homePageModel.intro.cta}
+          image={homePageModel.intro.image}
         />
         <About
           title={homePageModel.about.title}

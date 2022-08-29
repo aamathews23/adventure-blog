@@ -6,13 +6,26 @@ const section = css({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  height: '75vh',
+  maxWidth: 1024,
+  minHeight: '75vh',
+  padding: '64px 0',
+  [breakpoints.sm]: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
 });
 
 const content = css({
-  maxWidth: 343,
-  [breakpoints.sm]: { textAlign: 'center' },
-  [breakpoints.lg]: { maxWidth: 405 },
+  marginBottom: 48,
+  [breakpoints.sm]: {
+    marginBottom: 0,
+    paddingRight: 64,
+    width: '50%',
+  },
+  [breakpoints.lg]: {
+    paddingRight: 100,
+  },
 });
 
 const title = css({
@@ -28,11 +41,23 @@ const body = css({
   marginBottom: 24,
 });
 
+const img = css({
+  maxWidth: 500,
+  maxHeight: 500,
+  borderRadius: '50%',
+  overflow: 'hidden',
+  '& > span': { display: 'block !important' },
+  [breakpoints.sm]: {
+    width: '50%',
+  },
+});
+
 const style = {
   section,
   content,
   title,
   body,
+  img,
 };
 
 export default style;

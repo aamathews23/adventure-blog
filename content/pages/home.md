@@ -13,6 +13,9 @@ intro:
     label: Let’s connect
     tag: a
     anchor: mailto:aamathews23@gmail.com
+  image:
+    src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011722/Adventure%20Blog/dirty-harrys-peak/mountain-1.jpg
+    alt: a snowy peak
 about:
   title: About
   main: >-

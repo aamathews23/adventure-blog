@@ -7,6 +7,10 @@ const main = 'Test body';
 const cta = {
   label: 'Test cta',
 };
+const image = {
+  src: 'example.jpg',
+  alt: 'alt text',
+};
 
 describe('Intro', () => {
   it('mounts', () => {
@@ -15,6 +19,7 @@ describe('Intro', () => {
         title={title}
         main={main}
         cta={cta}
+        image={image}
       />,
     );
     const intro = getByTestId('intro');
@@ -26,6 +31,7 @@ describe('Intro', () => {
         title={title}
         main={main}
         cta={cta}
+        image={image}
       />,
     );
     expect(getByText(title)).toBeInTheDocument();
@@ -36,6 +42,7 @@ describe('Intro', () => {
         title={title}
         main={main}
         cta={cta}
+        image={image}
       />,
     );
     expect(getByText(main)).toBeInTheDocument();
@@ -46,8 +53,20 @@ describe('Intro', () => {
         title={title}
         main={main}
         cta={cta}
+        image={image}
       />,
     );
     expect(getByText(cta.label)).toBeInTheDocument();
+  });
+  it('has the image', () => {
+    const { getByAltText } = render(
+      <Intro
+        title={title}
+        main={main}
+        cta={cta}
+        image={image}
+      />,
+    );
+    expect(getByAltText(image.alt).getAttribute('src')).toEqual(image.src);
   });
 });

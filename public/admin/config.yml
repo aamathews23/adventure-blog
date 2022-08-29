@@ -63,6 +63,24 @@ collections:
                       default: 'button',
                     }
                   - { name: 'anchor', label: 'Anchor', widget: 'string' }
+              - name: 'image'
+                label: 'Image'
+                widget: 'object'
+                required: true
+                fields:
+                  - {
+                      name: 'src',
+                      label: 'Source',
+                      widget: 'image',
+                      allow_multiple: false,
+                      required: true,
+                    }
+                  - {
+                      name: 'alt',
+                      label: 'Alternative Text',
+                      widget: 'string',
+                      required: true,
+                    }
           - name: 'about'
             label: 'About'
             widget: 'object'

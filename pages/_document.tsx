@@ -20,7 +20,7 @@ const Document = () => (
       <Global
         styles={{
           'html, body, #__next': {
-            heigth: '100%',
+            height: '100%',
             width: '100%',
             backgroundColor: '#28282c',
             color: '#fff',
