@@ -4,15 +4,6 @@ import '@testing-library/jest-dom';
 
 const title = 'Page title';
 const description = 'Page description';
-const header = {
-  title: 'Hello world',
-  to: '/',
-};
-const footer = {
-  copyright: 'copyright',
-  linkedinUrl: 'https://example.com',
-  githubUrl: 'https://example.com',
-};
 
 describe('Page', () => {
   it('mounts', () => {

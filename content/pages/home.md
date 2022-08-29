@@ -22,19 +22,16 @@ about:
     Welcome!
 
 
-    As mentioned above I'm currently a frontend engineer at [REI Co-op](https://www.rei.com), but I have a full stack engineer background. I studied computer science in college and am coming up on my 4th year of job experience as a software engineer.
+    I studied computer science in college and am coming up on my 4th year of job experience as a software engineer.
 
 
     I have a lot of fun programming, but it's not my only interest! I also enjoy video games, hikes, ice hockey, and as of late barbecuing. I'm currently based out of Seattle, WA.
 
 
-    The hikes here are awesome. Between the Snoqualmie Pass and Mount Rainier National Park there is an abundance of trails to explore. I try my best to blog about my adventures so people can stay updated with where I've been!
-
-
-    I play on two adult ice hockey teams in the PNW as a goalie and a defensemen. I grew up playing hockey from about 2nd grade through my sophomore year of highschool where I primarily played as a goalie. I love the game and it's a great way to keep myself active.
-
-
     That's pretty much me in a nutshell! I hope we can work together to solve any problems you have.
+
+
+    Below is a list of my skills:
   skills:
     - Javascript
     - Typescript
