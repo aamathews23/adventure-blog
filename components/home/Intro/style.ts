@@ -11,7 +11,8 @@ const title = css({
 const body = css({
   fontSize: 16,
   fontFamily: 'Inconsolata, monospace',
-  marginBottom: 24,
+  marginBottom: 32,
+  [breakpoints.lg]: { marginBottom: 48 },
 });
 
 const img = css({
