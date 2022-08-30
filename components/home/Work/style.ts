@@ -4,7 +4,7 @@ import breakpoints from '../../../common/breakpoints';
 const section = css({
   display: 'flex',
   flexDirection: 'column',
-  maxWidth: 343,
+  maxWidth: 500,
   margin: '0 auto 128px auto',
   [breakpoints.sm]: { textAlign: 'center' },
 });

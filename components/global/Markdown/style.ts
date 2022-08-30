@@ -64,6 +64,7 @@ const style = css({
     lineHeight: '20px',
   },
   '& li': {
+    marginLeft: 16,
     marginBottom: 8,
     '& li': {
       marginLeft: 16,
