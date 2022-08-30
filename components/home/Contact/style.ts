@@ -11,6 +11,7 @@ const section = css({
 
 const content = css({
   maxWidth: 400,
+  textAlign: 'center',
 });
 
 const title = css({
