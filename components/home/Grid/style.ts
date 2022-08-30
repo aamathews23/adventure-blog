@@ -8,9 +8,10 @@ const section = css({
   marginBottom: 128,
   [breakpoints.sm]: { alignItems: 'center' },
   [breakpoints.lg]: {
+    alignItems: 'flex-start',
     marginLeft: 'auto',
     marginRight: 'auto',
-    maxWidth: 1065,
+    maxWidth: 1440,
   },
 });
 
@@ -37,6 +38,7 @@ const grid = css({
     },
   },
   [breakpoints.lg]: {
+    marginBottom: 48,
     gridTemplateColumns: '1fr 1fr 1fr',
     '& > *': {
       gridColumn: 'span 1',
