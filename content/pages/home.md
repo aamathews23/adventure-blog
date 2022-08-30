@@ -2,7 +2,7 @@
 title: Aaron Mathews
 description: I am a full stack web dev whose passionate about developing simple,
   interactive applications.
-previewImg: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011722/Adventure%20Blog/dirty-harrys-peak/mountain-1.jpg
+previewImg: https://res.cloudinary.com/dmrjua4dg/image/upload/v1661830211/Adventure%20Blog/hockey-win.jpg
 intro:
   title: 'Hi, I’m <span style="color: #53D670;">Aaron.</span>'
   main: I’m a frontend engineer with a fullstack background. I love working on
