@@ -10,9 +10,8 @@ const section = css({
 });
 
 const content = css({
-  maxWidth: 343,
-  [breakpoints.sm]: { textAlign: 'center' },
-  [breakpoints.lg]: { maxWidth: 405 },
+  maxWidth: 400,
+  textAlign: 'center',
 });
 
 const title = css({
@@ -26,6 +25,7 @@ const body = css({
   fontSize: 16,
   fontFamily: 'Inconsolata, monospace',
   marginBottom: 32,
+  [breakpoints.lg]: { marginBottom: 48 },
 });
 
 const style = {
