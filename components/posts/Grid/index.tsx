@@ -2,6 +2,12 @@ import Card from '../../global/Card';
 import GridType from '../../../types/posts/Grid';
 import style from './style';
 
+/**
+ * Creates a grid component to be used on the blog page
+ *
+ * @param {Array<Card>} posts
+ * @returns a grid component
+ */
 const Grid = ({ posts }: GridType) => (
   <div
     css={style}

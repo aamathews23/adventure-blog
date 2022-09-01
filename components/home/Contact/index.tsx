@@ -4,6 +4,14 @@ import Button from '../../global/Button';
 import ContactType from '../../../types/home/Contact';
 import style from './style';
 
+/**
+ * Creates a contact component to be used on the home page
+ *
+ * @param {String} title
+ * @param {String} main
+ * @param {Button} cta
+ * @returns a contact component
+ */
 const Contact = ({ title, main, cta }: ContactType) => {
   return (
     <section

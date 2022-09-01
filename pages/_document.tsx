@@ -1,6 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 import { Global } from '@emotion/react';
 
+/**
+ * Overrides the default Next document component
+ *
+ * @returns a document component
+ */
 const Document = () => (
   <Html>
     <Head>

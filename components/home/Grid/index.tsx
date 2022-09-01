@@ -1,10 +1,18 @@
 import Text from '../../global/Text';
 import Card from '../../global/Card';
 import Button from '../../global/Button';
-import HomeGridType from '../../../types/home/Grid';
+import GridType from '../../../types/home/Grid';
 import style from './style';
 
-const Grid = ({ title, cta, cards }: HomeGridType) => {
+/**
+ * Creates a grid component to be used on the home page
+ *
+ * @param {String} title
+ * @param {Button} cta
+ * @param {Array<Card>} cards
+ * @returns a grid component
+ */
+const Grid = ({ title, cta, cards }: GridType) => {
   return (
     <section
       css={style.section}

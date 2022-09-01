@@ -1,6 +1,15 @@
 import style from './style';
 import SplitBlockType from '../../../types/layout/SplitBlock';
 
+/**
+ * Creates a split block component to be used on the home page
+ *
+ * @param {ReactNode} left
+ * @param {ReactNode} right
+ * @param {Boolean} isReverse
+ * @param {String} dataTestId
+ * @returns a split block component
+ */
 const SplitBlock = ({
   left,
   right,

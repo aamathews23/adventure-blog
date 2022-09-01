@@ -1,3 +1,6 @@
+/**
+ * The link type
+ */
 type Link = {
   to: string;
   className?: string;

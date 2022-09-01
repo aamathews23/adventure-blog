@@ -1,5 +1,8 @@
 import ImageType from './Image';
 
+/**
+ * The card type
+ */
 type Card = {
   title: string;
   description: string;

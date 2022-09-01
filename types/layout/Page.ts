@@ -1,3 +1,6 @@
+/**
+ * The page component type
+ */
 type Page = {
   title: string;
   description: string;

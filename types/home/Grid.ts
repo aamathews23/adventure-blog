@@ -1,10 +1,13 @@
 import CardType from '../global/Card';
 import ButtonType from '../global/Button';
 
-type HomeGrid = {
+/**
+ * The home grid component type
+ */
+type Grid = {
   title: string;
   cta: ButtonType;
   cards: CardType[];
 };
 
-export default HomeGrid;
+export default Grid;
