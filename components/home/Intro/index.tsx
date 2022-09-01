@@ -6,10 +6,25 @@ import SplitBlock from '../../layout/SplitBlock';
 import IntroType from '../../../types/home/Intro';
 import style from './style';
 
+/**
+ * Extracts the image source
+ *
+ * @param src
+ * @returns a string
+ */
 const loader = ({ src }: any) => {
   return src;
 };
 
+/**
+ * Creates an intro component to be used on the home page
+ *
+ * @param {String} title
+ * @param {String} main
+ * @param {Button} cta
+ * @param {Image} image
+ * @returns an intro component
+ */
 const Intro = ({ title, main, cta, image }: IntroType) => {
   return (
     <SplitBlock

@@ -1,3 +1,6 @@
+/**
+ * The split block component type
+ */
 type SplitBlock = {
   left: React.ReactNode;
   right: React.ReactNode;

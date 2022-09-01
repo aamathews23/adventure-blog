@@ -1,17 +1,19 @@
-// Import content
-import {
-  attributes as homePageModel,
-  react as HomePageContent,
-} from '../content/pages/home.md';
-
-// Import components
 import Page from '../components/layout/Page';
 import Intro from '../components/home/Intro';
 import About from '../components/home/About';
 import Work from '../components/home/Work';
 import Grid from '../components/home/Grid';
 import Contact from '../components/home/Contact';
+import {
+  attributes as homePageModel,
+  react as HomePageContent,
+} from '../content/pages/home.md';
 
+/**
+ * Serves the home page of the site
+ *
+ * @returns a home page component
+ */
 const HomePage = () => {
   return (
     <>

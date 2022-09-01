@@ -3,6 +3,15 @@ import Text from '../../global/Text';
 import JobType from '../../../types/home/Job';
 import style from './style';
 
+/**
+ * Creates a job component to be used on the home page
+ *
+ * @param {String} title
+ * @param {String} duration
+ * @param {String} description
+ * @param {Boolean} isActive
+ * @returns a job component
+ */
 const Job = ({ title, duration, description, isActive }: JobType) => {
   return (
     <li

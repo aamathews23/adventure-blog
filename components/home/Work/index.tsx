@@ -3,6 +3,13 @@ import Text from '../../global/Text';
 import WorkType from '../../../types/home/Work';
 import style from './style';
 
+/**
+ * Creates a work component to be used on the home page
+ *
+ * @param {String} title
+ * @param {Array<Jobs>} jobs
+ * @returns a work component
+ */
 const Work = ({ title, jobs }: WorkType) => {
   return (
     <section

@@ -5,10 +5,25 @@ import SplitBlock from '../../layout/SplitBlock';
 import AboutType from '../../../types/home/About';
 import style from './style';
 
+/**
+ * Extracts the image source
+ *
+ * @param src
+ * @returns a string
+ */
 const loader = ({ src }: any) => {
   return src;
 };
 
+/**
+ * Creates an about component to be used on the home page
+ *
+ * @param {String} title
+ * @param {String} main
+ * @param {Array<String>} skills
+ * @param {Image} image
+ * @returns an about component
+ */
 const About = ({ title, main, skills, image }: AboutType) => {
   return (
     <SplitBlock

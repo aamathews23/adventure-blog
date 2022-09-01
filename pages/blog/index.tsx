@@ -1,25 +1,26 @@
 import { readdirSync, readFileSync } from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-
-// Import content
 import {
   attributes as blogPageModel,
   react as BlogPageContent,
 } from '../../content/pages/blog.md';
-
-// Import components
 import Page from '../../components/layout/Page';
 import PostSection from '../../components/posts/Section';
 import NotFound from '../../components/global/NotFound';
-
-// Import types
 import CollectionType from '../../types/posts/Collection';
 
+// The blog page type
 type BlogPageType = {
   collections: CollectionType[];
 };
 
+/**
+ * Serves the blog page of the site
+ *
+ * @param {Array<Collection>} collections
+ * @returns a blog page component
+ */
 const BlogPage = ({ collections }: BlogPageType) => {
   return (
     <>
@@ -45,6 +46,11 @@ const BlogPage = ({ collections }: BlogPageType) => {
   );
 };
 
+/**
+ * Parses the post data from the files
+ *
+ * @returns the blog posts
+ */
 export async function getStaticProps() {
   const collectionsObj = readdirSync(path.join('content', 'posts'))
     .map((file) => readFileSync(path.join('content', 'posts', file)).toString())

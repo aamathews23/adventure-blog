@@ -1,3 +1,6 @@
+/**
+ * The job component type
+ */
 type Job = {
   title: string;
   duration: string;
