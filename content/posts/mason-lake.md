@@ -7,6 +7,8 @@ type: blog
 image:
   src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1662529756/Adventure%20Blog/mason-lake/lake-2.jpg
   alt: Mason Lake, a crystal clear mountain lake
+collection:
+  - "2022"
 ---
 # Mason Lake
 
