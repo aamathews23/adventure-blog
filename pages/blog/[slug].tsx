@@ -34,7 +34,7 @@ const PostPage = ({ post, content }: PostPageType) => {
     <>
       <PostPageContent />
       <Page
-        title={`${post.title} | ${postPageModel.title}`}
+        title={`${postPageModel.title} | ${post.title}`}
         description={post.description}
         previewImg={post.image.src}
       >
