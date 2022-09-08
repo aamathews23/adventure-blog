@@ -346,6 +346,13 @@ collections:
           default: 'blog',
           required: true,
         }
+      - {
+          name: 'collection',
+          label: 'Collection',
+          widget: 'list',
+          allow_add: 'false',
+          default: ['2022']
+        }
       - name: 'image'
         label: 'Image'
         widget: 'object'
