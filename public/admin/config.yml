@@ -350,8 +350,8 @@ collections:
           name: 'collection',
           label: 'Collection',
           widget: 'list',
-          allow_add: 'false',
-          default: ['2022']
+          allow_add: false,
+          default: ['2022'],
         }
       - name: 'image'
         label: 'Image'
