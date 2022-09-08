@@ -23,7 +23,12 @@ const Card = ({ title, description, type, date, image }: CardType) => {
   const router = useRouter();
   const handlePostClick = (e: any) => {
     e.preventDefault();
-    router.push(`${type || ''}/${title.toLowerCase().replaceAll(' ', '-')}`);
+    router.push(
+      `${type || ''}/${title
+        .toLowerCase()
+        .replaceAll(/[^a-zA-Z0-9\s]/g, '')
+        .replaceAll(' ', '-')}`,
+    );
   };
   return (
     <div
