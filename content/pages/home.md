@@ -40,8 +40,8 @@ about:
     - Next.js
     - Netlify
   image:
-    src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011722/Adventure%20Blog/dirty-harrys-peak/mountain-1.jpg
-    alt: a snowy peak
+    src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1661831154/Adventure%20Blog/grand-park-lake-eleanor-trail/mountain-ridge-3.jpg
+    alt: Mount Rainier across a valley
 work:
   title: Work
   jobs:
@@ -93,15 +93,30 @@ blog:
     tag: a
     anchor: /blog
   posts:
-    - title: Snow-tastrophe
-      description: A long hike up a snowy mountain...
-      date: 05/07/2022
-      type: blog
+    - type: blog
+      title: Grand Park
+      description: A wide open field, Mount Rainier up close, what more can you ask
+        for in the Pacific Northwest?
+      date: 07/24/2022
       image:
-        src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
-        alt: a snowy peak rising from a valley
-      collection:
-        - "2022"
+        src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1661831154/Adventure%20Blog/grand-park-lake-eleanor-trail/mountain-ridge-3.jpg
+        alt: Mount Rainier across a valley
+    - type: blog
+      title: Kendall Katwalk
+      description: The longest hike I've ever been on. I even saw a marmot. Checkout
+        the pics!
+      date: 07/17/2022
+      image:
+        src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1662528403/Adventure%20Blog/kendall-katwalk/ridge-2.jpg
+        alt: a cloudy mountain ridge
+    - type: blog
+      title: Mason Lake
+      description: Checkout some breathtaking views of Mason Lake via the Ira Springs
+        Memorial Trail!
+      date: 06/26/2022
+      image:
+        src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1662529756/Adventure%20Blog/mason-lake/lake-2.jpg
+        alt: Mason Lake, a crystal clear mountain lake
 contact:
   title: Contact
   main: I am currently looking for a part-time freelance project. If you’re
