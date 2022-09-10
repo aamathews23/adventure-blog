@@ -57,7 +57,7 @@ export async function getStaticProps() {
     .map((file) => readFileSync(path.join('content', 'posts', file)).toString())
     .map((post) => matter(post).data)
     .reduce((col, post) => {
-      post.collection.foreach((collection: string) => {
+      post.collection.forEach((collection: string) => {
         col[collection] = col[collection] ? [...col[collection], post] : [post];
       });
 
