@@ -9,6 +9,7 @@ import Page from '../../components/layout/Page';
 import PostSection from '../../components/posts/Section';
 import NotFound from '../../components/global/NotFound';
 import CollectionType from '../../types/posts/Collection';
+import CardType from '../../types/global/Card';
 
 // The blog page type
 type BlogPageType = {
@@ -56,15 +57,23 @@ export async function getStaticProps() {
     .map((file) => readFileSync(path.join('content', 'posts', file)).toString())
     .map((post) => matter(post).data)
     .reduce((col, post) => {
-      for (let collection of post.collection) {
+      post.collection.forEach((collection: string) => {
         col[collection] = col[collection] ? [...col[collection], post] : [post];
-      }
+      });
 
       return col;
     }, {});
 
   const collections: CollectionType[] = Object.keys(collectionsObj).map(
-    (key) => ({ title: key, posts: collectionsObj[key] }),
+    (key: string) => ({ title: key, posts: collectionsObj[key] }),
+  );
+
+  collections.forEach((collection: CollectionType) =>
+    collection.posts.sort((a: CardType, b: CardType) => {
+      const aDate = new Date(a.date || '').getTime();
+      const bDate = new Date(b.date || '').getTime();
+      return bDate - aDate;
+    }),
   );
 
   return {
