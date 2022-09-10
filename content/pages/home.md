@@ -101,6 +101,14 @@ blog:
       image:
         src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1661831154/Adventure%20Blog/grand-park-lake-eleanor-trail/mountain-ridge-3.jpg
         alt: Mount Rainier across a valley
+    - type: blog
+      title: Kendall Katwalk
+      description: The longest hike I've ever been on. I even saw a marmot. Checkout
+        the pics!
+      date: 07/17/2022
+      image:
+        src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1662528403/Adventure%20Blog/kendall-katwalk/ridge-2.jpg
+        alt: a cloudy mountain ridge
 contact:
   title: Contact
   main: I am currently looking for a part-time freelance project. If you’re
