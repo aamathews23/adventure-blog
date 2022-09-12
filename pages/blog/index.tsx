@@ -1,4 +1,5 @@
-import { readdirSync, readFileSync } from 'fs';
+// import { readdirSync } from 'fs';
+import { readdir, readFile } from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
 import {
@@ -53,28 +54,43 @@ const BlogPage = ({ collections }: BlogPageType) => {
  * @returns the blog posts
  */
 export async function getStaticProps() {
-  const collectionsObj = readdirSync(path.join('content', 'posts'))
-    .map((file) => readFileSync(path.join('content', 'posts', file)).toString())
-    .map((post) => matter(post).data)
-    .reduce((col, post) => {
-      post.collection.forEach((collection: string) => {
-        col[collection] = col[collection] ? [...col[collection], post] : [post];
-      });
+  /**
+   * Sort posts in descending order
+   * @param a the first post
+   * @param b the second post
+   * @returns a negitive number
+   */
+  const sortPostsDesc = (a: CardType, b: CardType) => {
+    const aDate = new Date(a.date || '').getTime();
+    const bDate = new Date(b.date || '').getTime();
+    return bDate - aDate;
+  };
 
-      return col;
-    }, {});
-
-  const collections: CollectionType[] = Object.keys(collectionsObj).map(
-    (key: string) => ({ title: key, posts: collectionsObj[key] }),
+  let collections: CollectionType[] = [];
+  const files = (await readdir(path.join('content', 'posts'))).map((fileName) =>
+    readFile(path.join('content', 'posts', fileName)),
   );
 
-  collections.forEach((collection: CollectionType) =>
-    collection.posts.sort((a: CardType, b: CardType) => {
-      const aDate = new Date(a.date || '').getTime();
-      const bDate = new Date(b.date || '').getTime();
-      return bDate - aDate;
-    }),
-  );
+  // Get file content and parse to format
+  await Promise.all(files).then((res) => {
+    // Create post collection obj
+    const obj = res
+      .map((file) => matter(file.toString()).data)
+      .reduce((col, post) => {
+        post.collection.forEach((collection: string) => {
+          col[collection] = col[collection]
+            ? [...col[collection], post]
+            : [post];
+        });
+        return col;
+      }, {});
+
+    // Convert obj to list of CollectionTypes
+    collections = Object.keys(obj).map((key: string) => ({
+      title: key,
+      posts: obj[key].sort(sortPostsDesc),
+    }));
+  });
 
   return {
     props: {
