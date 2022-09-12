@@ -7,7 +7,7 @@ import { Global } from '@emotion/react';
  * @returns a document component
  */
 const Document = () => (
-  <Html>
+  <Html lang="en">
     <Head>
       <link
         rel="preconnect"
