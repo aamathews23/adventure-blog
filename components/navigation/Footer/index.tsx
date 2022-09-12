@@ -16,7 +16,10 @@ const Footer = () => {
       data-testid="footer"
     >
       <div>
-        <Link href="https://www.linkedin.com/in/aaron-mathews-953408150/">
+        <Link
+          href="https://www.linkedin.com/in/aaron-mathews-953408150/"
+          passHref
+        >
           <a
             css={style.icon}
             data-testid="footer-linkedin"
@@ -26,7 +29,10 @@ const Footer = () => {
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </Link>
-        <Link href="https://github.com/aamathews23">
+        <Link
+          href="https://github.com/aamathews23"
+          passHref
+        >
           <a
             css={style.icon}
             data-testid="footer-github"
