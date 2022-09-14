@@ -18,13 +18,13 @@ const Markdown = ({ content }: MarkdownType) => {
           return hljs.highlight(str, { language: lang }).value;
         } catch (err) {}
       }
-  
+
       try {
         return hljs.highlightAuto(str).value;
       } catch (err) {}
-  
+
       return '';
-    }
+    },
   });
   return (
     <section
