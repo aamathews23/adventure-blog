@@ -1,6 +1,6 @@
-import { Remarkable } from 'remarkable';
-import hljs from 'highlight.js';
 import MarkdownType from '../../../types/global/Markdown';
+import useEmojis from '../../../common/useEmojis';
+import useMarkdown from '../../../common/useMarkdown';
 import style from './style';
 import 'highlight.js/styles/github-dark.css';
 
@@ -11,26 +11,11 @@ import 'highlight.js/styles/github-dark.css';
  * @returns a markdown component
  */
 const Markdown = ({ content }: MarkdownType) => {
-  const md = new Remarkable({
-    highlight: function (str: string, lang: string) {
-      if (lang && hljs.getLanguage(lang)) {
-        try {
-          return hljs.highlight(str, { language: lang }).value;
-        } catch (err) {}
-      }
-
-      try {
-        return hljs.highlightAuto(str).value;
-      } catch (err) {}
-
-      return '';
-    },
-  });
   return (
     <section
       css={style}
       data-testid="markdown"
-      dangerouslySetInnerHTML={{ __html: md.render(content) }}
+      dangerouslySetInnerHTML={{ __html: useMarkdown(useEmojis(content)) }}
     />
   );
 };
