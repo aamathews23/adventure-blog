@@ -53,11 +53,11 @@ const style = css({
   '& h1, & h2, & h3, & h4, & h5, & h6': {
     width: 'fit-content',
   },
-  '& p, & a, & li': {
+  '& p, & a, & li, & code': {
     fontSize: 16,
     fontFamily: 'Inconsolata, monospace',
   },
-  '& p, & img, & blockquote': {
+  '& p, & img, & blockquote, & pre': {
     marginBottom: 16,
   },
   '& p': {
@@ -72,6 +72,13 @@ const style = css({
   },
   '& img': {
     width: '100%',
+    borderRadius: 8,
+  },
+  '& pre': {
+    backgroundColor: '#313135',
+    paddingTop: 16,
+    paddingRight: 16,
+    paddingBottom: 16,
     borderRadius: 8,
   },
 });
