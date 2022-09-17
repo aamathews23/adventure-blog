@@ -15,10 +15,6 @@ image:
 React is the most popular web tool in the front-end ecosystem. It is not a framework, but a library which assists you in creating functionally componentized websites and web applications.
 This tutorial is geared to cover the basics of React and Typescript. It will assume you have a basic understanding of HTML and CSS.
 
-## Vite
-
-I like to use Vite as a build tool. It is a much faster tool than the standard `create-react-app` tool, while providing all of the same functionality. To read more about Vite checkout their documentation!
-
 ## Table of Contents
 
 ## React Overview
@@ -31,7 +27,7 @@ The main tooling within the React ecosystem is:
 - Typescript - a type safe superset of Javascript which allows for strict typing of data
 - create-react-app - the command line utility to create new React apps
 - Babel & webpack - the React build system
-- npm - the Node.js pacakage manager
+- npm - the Node.js package manager
 
 ## Basics of React
 
@@ -152,7 +148,9 @@ const MyComponent = () => {
 
 ## Todo Project
 
-I like to use Vite which works as both a command line utility to create new React apps, and as a build system which is **_way_** faster than the default Babel and webpack system.
+### Vite
+
+I like to use Vite as a build tool. It is a much faster tool than the standard `create-react-app` tool, while providing all of the same functionality. To read more about Vite checkout their documentation!
 
 ### How to Use React with Vite
 
