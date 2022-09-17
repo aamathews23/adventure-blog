@@ -5,7 +5,7 @@ description: This tutorial explains the basics of React by walking through a
 date: 09/17/2022
 type: blog
 collection:
-  - "2022"
+  - Tutorials
 image:
   src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1663296373/Adventure%20Blog/vue-todo-tutorial.jpg
   alt: todo list application user interface
@@ -19,12 +19,12 @@ This tutorial is geared to cover the basics of React and Typescript. It will ass
 
 ## React Overview
 
-React is a Javascript library and tool in which to build front-end applications with.
+React is a JavaScript library and tool in which to build front-end applications with.
 
 The main tooling within the React ecosystem is:
 
 - Node.js - the runtime environment which executes your React app
-- Typescript - a type safe superset of Javascript which allows for strict typing of data
+- Typescript - a type safe superset of JavaScript which allows for strict typing of data
 - create-react-app - the command line utility to create new React apps
 - Babel & webpack - the React build system
 - npm - the Node.js package manager
@@ -141,6 +141,8 @@ const MyComponent = () => {
 ```
 
 ### Props
+
+Props are used to provide a component with outside information it might need to render.
 
 ### State
 
