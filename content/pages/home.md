@@ -42,50 +42,6 @@ about:
   image:
     src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1661831154/Adventure%20Blog/grand-park-lake-eleanor-trail/mountain-ridge-3.jpg
     alt: Mount Rainier across a valley
-work:
-  title: Work
-  jobs:
-    - title: Software Engineer &#64;&nbsp;<a href="https://www.rei.com/adventures"
-        target="_blank">REI Co-op</a>
-      duration: October 2021 - Present
-      description: >-
-        Currently my job duties are all frontend related. I spend a lot of time
-        working with UX designers, web producers, copy writers, and product
-        managers to bring new experiences to life!
-
-
-
-
-        A list of my current day to day tasks include:
-
-
-        * Turning Figma designs into reusable, testable components using HTML, CSS and Javascript.
-
-        * Building dynamic components which can house flexable content from a CMS.
-
-        * Writing unit tests to ensure components are behaving as expected.
-      isActive: true
-    - title: Fullstack Engineer &#64;&nbsp;<a href="https://www.costco.com"
-        target="_blank">Costco</a>
-      duration: November 2018 - October 2021
-      description: >-
-        During my time at Costco I had a number of different roles. I started in
-        the warehouse as a cart pusher and found my way up to the corporate
-        office as a web developer.
-
-
-        I joined the merchandising vertical where I worked on a number of different applications. Some applications I worked on helped internal teams with item procurement, facility audits, item quality and pricing.
-
-
-        My job functions included:
-
-
-        * Creating and modifying frontend experiences to streamline workflows and automate tasks.
-
-        * Create and modify backend services to better manage data, send emails, and automate more tasks.
-
-        * Create and modify databases to support new data models and enhance workflows.
-      isActive: false
 blog:
   title: Blog
   cta:
@@ -117,13 +73,4 @@ blog:
       image:
         src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1662529756/Adventure%20Blog/mason-lake/lake-2.jpg
         alt: Mason Lake, a crystal clear mountain lake
-contact:
-  title: Contact
-  main: I am currently looking for a part-time freelance project. If you’re
-    interested in working with me, send me an email and we can talk more. I look
-    forward to hearing from you!
-  cta:
-    label: Get started
-    tag: a
-    anchor: mailto:aamathews23@gmail.com
 ---

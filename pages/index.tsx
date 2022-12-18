@@ -1,9 +1,7 @@
 import Page from '../components/layout/Page';
 import Intro from '../components/home/Intro';
 import About from '../components/home/About';
-import Work from '../components/home/Work';
 import Grid from '../components/home/Grid';
-import Contact from '../components/home/Contact';
 import {
   attributes as homePageModel,
   react as HomePageContent,
@@ -35,19 +33,10 @@ const HomePage = () => {
           skills={homePageModel.about.skills}
           image={homePageModel.about.image}
         />
-        <Work
-          title={homePageModel.work.title}
-          jobs={homePageModel.work.jobs}
-        />
         <Grid
           title={homePageModel.blog.title}
           cta={homePageModel.blog.cta}
           cards={homePageModel.blog.posts}
-        />
-        <Contact
-          title={homePageModel.contact.title}
-          main={homePageModel.contact.main}
-          cta={homePageModel.contact.cta}
         />
       </Page>
     </>
