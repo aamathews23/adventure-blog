@@ -1,5 +1,5 @@
 import Page from '../components/layout/Page';
-import Intro from '../components/home/Intro';
+import Hero from '../components/home/Hero';
 import About from '../components/home/About';
 import Grid from '../components/home/Grid';
 import {
@@ -21,11 +21,11 @@ const HomePage = () => {
         description={homePageModel.description}
         previewImg={homePageModel.previewImg}
       >
-        <Intro
-          title={homePageModel.intro.title}
-          main={homePageModel.intro.main}
-          cta={homePageModel.intro.cta}
-          image={homePageModel.intro.image}
+        <Hero
+          title={homePageModel.hero.title}
+          main={homePageModel.hero.main}
+          cta={homePageModel.hero.cta}
+          image={homePageModel.hero.image}
         />
         <About
           title={homePageModel.about.title}
