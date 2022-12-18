@@ -1,5 +1,11 @@
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import breakpoints from '../../../common/breakpoints';
+
+const section = css({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+});
 
 const title = css({
   fontSize: 48,
@@ -8,11 +14,41 @@ const title = css({
   [breakpoints.lg]: { fontSize: 64 },
 });
 
-const body = css({
-  fontSize: 16,
+const activities = css({
+  position: 'relative',
+  fontSize: 24,
   fontFamily: 'Inconsolata, monospace',
   marginBottom: 32,
-  [breakpoints.lg]: { marginBottom: 48 },
+  width: 200,
+  [breakpoints.lg]: {
+    fontSize: 32,
+    marginBottom: 48,
+  },
+});
+
+const fade = keyframes`
+  0%, 5% {
+    top: 20px;
+    opacity: 0;
+  }
+
+  16.67%, 66.67% {
+    top: 0;
+    opacity: 1;
+  }
+
+  95%, 100% {
+    top: -20px;
+    opacity: 0;
+  }
+`;
+
+const activity = css({
+  display: 'inline-block',
+  position: 'absolute',
+  color: '#53d670',
+  width: 150,
+  animation: `${fade} 3s ease infinite`,
 });
 
 const img = css({
@@ -22,8 +58,10 @@ const img = css({
 });
 
 const style = {
+  section,
   title,
-  body,
+  activities,
+  activity,
   img,
 };
 

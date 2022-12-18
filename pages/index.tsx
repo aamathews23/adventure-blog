@@ -23,7 +23,7 @@ const HomePage = () => {
       >
         <Hero
           title={homePageModel.hero.title}
-          main={homePageModel.hero.main}
+          activities={homePageModel.hero.activities}
           cta={homePageModel.hero.cta}
           image={homePageModel.hero.image}
         />

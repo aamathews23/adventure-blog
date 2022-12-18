@@ -6,7 +6,7 @@ import ImageType from '../global/Image';
  */
 type Hero = {
   title: string;
-  main: string;
+  activities: string[];
   cta: ButtonType;
   image: ImageType;
 };

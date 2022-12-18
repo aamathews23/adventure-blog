@@ -3,7 +3,7 @@ import Hero from '../../components/home/Hero';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
-const main = 'Test body';
+const activities = ['software', 'design', 'hockey'];
 const cta = {
   label: 'Test cta',
 };
@@ -17,7 +17,7 @@ describe('Hero', () => {
     const { getByTestId } = render(
       <Hero
         title={title}
-        main={main}
+        activities={activities}
         cta={cta}
         image={image}
       />,
@@ -29,29 +29,18 @@ describe('Hero', () => {
     const { getByText } = render(
       <Hero
         title={title}
-        main={main}
+        activities={activities}
         cta={cta}
         image={image}
       />,
     );
     expect(getByText(title)).toBeInTheDocument();
   });
-  it('has the main', () => {
-    const { getByText } = render(
-      <Hero
-        title={title}
-        main={main}
-        cta={cta}
-        image={image}
-      />,
-    );
-    expect(getByText(main)).toBeInTheDocument();
-  });
   it('has the cta', () => {
     const { getByText } = render(
       <Hero
         title={title}
-        main={main}
+        activities={activities}
         cta={cta}
         image={image}
       />,
@@ -62,7 +51,7 @@ describe('Hero', () => {
     const { getByAltText } = render(
       <Hero
         title={title}
-        main={main}
+        activities={activities}
         cta={cta}
         image={image}
       />,
