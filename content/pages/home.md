@@ -3,12 +3,16 @@ title: Aaron Mathews
 description: I am a full stack web dev whose passionate about developing simple,
   interactive applications.
 previewImg: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011722/Adventure%20Blog/dirty-harrys-peak/mountain-1.jpg
-intro:
-  title: 'Hi, I’m <span style="color: #53D670;">Aaron.</span>'
-  main: I’m a frontend engineer with a fullstack background. I love working on
-    business applications and building fun web experiences for customers.
-    Currently I’m working on expanding the outdoor experiences platform at [REI
-    Co-op](https://www.rei.com).
+hero:
+  title: Hi, I’m Aaron!
+  body: I’m a fullstack developer and I enjoy
+  activities:
+    - software
+    - design
+    - hockey
+    - video games
+    - hiking
+    - cooking
   cta:
     label: Let’s connect
     tag: a

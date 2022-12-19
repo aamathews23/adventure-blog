@@ -2,13 +2,14 @@ import ButtonType from '../global/Button';
 import ImageType from '../global/Image';
 
 /**
- * The intro component type
+ * The hero component type
  */
-type Intro = {
+type Hero = {
   title: string;
-  main: string;
+  body: string;
+  activities: string[];
   cta: ButtonType;
   image: ImageType;
 };
 
-export default Intro;
+export default Hero;

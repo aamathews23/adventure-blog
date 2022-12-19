@@ -28,8 +28,8 @@ collections:
               widget: 'image',
               allow_multiple: false,
             }
-          - name: 'intro'
-            label: 'Intro'
+          - name: 'hero'
+            label: 'Hero'
             widget: 'object'
             required: true
             fields:
@@ -40,10 +40,17 @@ collections:
                   required: true,
                 }
               - {
-                  name: 'main',
-                  label: 'Main',
-                  widget: 'markdown',
+                  name: 'body',
+                  label: 'Body',
+                  widget: 'string',
                   required: true,
+                }
+              - {
+                  name: 'activities',
+                  label: 'Activities',
+                  widget: 'list',
+                  required: true,
+                  allow_add: true,
                 }
               - name: 'cta'
                 label: 'CTA'
@@ -122,47 +129,6 @@ collections:
                       widget: 'string',
                       required: true,
                     }
-          - name: 'work'
-            label: 'Work'
-            widget: 'object'
-            required: true
-            fields:
-              - {
-                  name: 'title',
-                  label: 'Title',
-                  widget: 'string',
-                  required: true,
-                }
-              - name: 'jobs'
-                label: 'Jobs'
-                widget: 'list'
-                required: true
-                fields:
-                  - {
-                      name: 'title',
-                      label: 'Title',
-                      widget: 'string',
-                      required: true,
-                    }
-                  - {
-                      name: 'duration',
-                      label: 'Duration',
-                      widget: 'string',
-                      required: true,
-                    }
-                  - {
-                      name: 'description',
-                      label: 'Description',
-                      widget: 'markdown',
-                      required: true,
-                    }
-                  - {
-                      name: 'isActive',
-                      label: 'Is Current Job?',
-                      widgeth: 'boolean',
-                      required: true,
-                      default: false,
-                    }
           - name: 'blog'
             label: 'Blog Section'
             widget: 'object'
@@ -234,41 +200,6 @@ collections:
                           widget: 'string',
                           required: true,
                         }
-          - name: 'contact'
-            label: 'Contact'
-            widget: 'object'
-            required: true
-            fields:
-              - {
-                  name: 'title',
-                  label: 'Title',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  name: 'main',
-                  label: 'Main',
-                  widget: 'markdown',
-                  required: true,
-                }
-              - name: 'cta'
-                label: 'CTA'
-                widget: 'object'
-                required: true
-                fields:
-                  - {
-                      name: 'label',
-                      label: 'label',
-                      widget: 'string',
-                      required: true,
-                    }
-                  - {
-                      name: 'tag',
-                      label: 'Tag',
-                      widget: 'string',
-                      default: 'button',
-                    }
-                  - { name: 'anchor', label: 'Anchor', widget: 'string' }
       - name: 'blog'
         label: 'Blog'
         file: 'content/pages/blog.md'

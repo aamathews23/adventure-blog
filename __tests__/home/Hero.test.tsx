@@ -1,9 +1,10 @@
 import { render } from '@testing-library/react';
-import Intro from '../../components/home/Intro';
+import Hero from '../../components/home/Hero';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
-const main = 'Test body';
+const body = 'Test body';
+const activities = ['software', 'design', 'hockey'];
 const cta = {
   label: 'Test cta',
 };
@@ -12,46 +13,50 @@ const image = {
   alt: 'alt text',
 };
 
-describe('Intro', () => {
+describe('Hero', () => {
   it('mounts', () => {
     const { getByTestId } = render(
-      <Intro
+      <Hero
         title={title}
-        main={main}
+        body={body}
+        activities={activities}
         cta={cta}
         image={image}
       />,
     );
-    const intro = getByTestId('intro');
-    expect(intro).toBeInTheDocument();
+    const hero = getByTestId('hero');
+    expect(hero).toBeInTheDocument();
   });
   it('has the title', () => {
     const { getByText } = render(
-      <Intro
+      <Hero
         title={title}
-        main={main}
+        body={body}
+        activities={activities}
         cta={cta}
         image={image}
       />,
     );
     expect(getByText(title)).toBeInTheDocument();
   });
-  it('has the main', () => {
+  it('has the body', () => {
     const { getByText } = render(
-      <Intro
+      <Hero
         title={title}
-        main={main}
+        body={body}
+        activities={activities}
         cta={cta}
         image={image}
       />,
     );
-    expect(getByText(main)).toBeInTheDocument();
+    expect(getByText(body)).toBeInTheDocument();
   });
   it('has the cta', () => {
     const { getByText } = render(
-      <Intro
+      <Hero
         title={title}
-        main={main}
+        body={body}
+        activities={activities}
         cta={cta}
         image={image}
       />,
@@ -60,9 +65,10 @@ describe('Intro', () => {
   });
   it('has the image', () => {
     const { getByAltText } = render(
-      <Intro
+      <Hero
         title={title}
-        main={main}
+        body={body}
+        activities={activities}
         cta={cta}
         image={image}
       />,
