@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Text from '../../global/Text';
 import Button from '../../global/Button';
-import SplitBlock from '../../layout/SplitBlock';
 import HeroType from '../../../types/home/Hero';
 import style from './style';
 
@@ -47,49 +46,45 @@ const Hero = ({ title, activities, cta, image }: HeroType) => {
   }, [activityIdx, activitiesMemo]);
 
   return (
-    <SplitBlock
+    <section
+      css={style.section}
       data-testid="hero"
-      left={
-        <div css={style.section}>
-          <Text
-            tag="h1"
-            style={style.title}
-            dangerouslySetInnerHTML={{ __html: title }}
-            data-testid="hero-title"
-          />
-          <div
-            css={style.activities}
-            data-testid="hero-activities"
-            aria-label={activitiesAriaLabel}
-          >
-            I enjoy&nbsp;
-            <strong css={style.activity}>{activities[activityIdx]}.</strong>
-          </div>
-          <Button
-            label={cta.label}
-            tag={cta.tag}
-            anchor={cta.anchor}
-          />
-        </div>
-      }
-      right={
-        <div
-          css={style.img}
-          data-testid="hero-img"
-        >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width="500"
-            height="500"
-            objectFit="cover"
-            loader={loader}
-            unoptimized
-            priority
-          />
-        </div>
-      }
-    />
+    >
+      <h1
+        css={style.title}
+        data-testid="hero-title"
+      >
+        {title}
+      </h1>
+      <p
+        css={style.activities}
+        data-testid="hero-activities"
+        aria-label={activitiesAriaLabel}
+      >
+        I enjoy&nbsp;
+        <strong css={style.activity}>{activities[activityIdx]}.</strong>
+      </p>
+      <Button
+        label={cta.label}
+        tag={cta.tag}
+        anchor={cta.anchor}
+      />
+      <div
+        css={style.img}
+        data-testid="hero-img"
+      >
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width="500"
+          height="500"
+          objectFit="cover"
+          loader={loader}
+          unoptimized
+          priority
+        />
+      </div>
+    </section>
   );
 };
 

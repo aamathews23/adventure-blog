@@ -39,11 +39,13 @@ collections:
                   widget: 'string',
                   required: true,
                 }
+              - {}
               - {
-                  name: 'main',
-                  label: 'Main',
-                  widget: 'markdown',
+                  name: 'activities',
+                  label: 'Activities',
+                  widget: 'list',
                   required: true,
+                  allow_add: true,
                 }
               - name: 'cta'
                 label: 'CTA'
