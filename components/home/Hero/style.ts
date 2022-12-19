@@ -12,10 +12,6 @@ const section = css({
     marginTop: 144,
     marginBottom: 144,
   },
-  [breakpoints.lg]: {
-    marginTop: 216,
-    marginBottom: 216,
-  },
 });
 
 const title = css({
