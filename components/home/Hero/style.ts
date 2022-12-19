@@ -7,6 +7,7 @@ const section = css({
   alignItems: 'center',
   marginTop: 72,
   marginBottom: 72,
+  textAlign: 'center',
   [breakpoints.sm]: {
     marginTop: 144,
     marginBottom: 144,
@@ -24,41 +25,33 @@ const title = css({
   [breakpoints.lg]: { fontSize: 48 },
 });
 
-const activities = css({
-  position: 'relative',
+const body = css({
   fontSize: 16,
   fontFamily: 'Inconsolata, monospace',
   marginBottom: 32,
-  width: 150,
+  maxWidth: 300,
   [breakpoints.lg]: {
     fontSize: 24,
     marginBottom: 48,
-    width: 200,
   },
 });
 
 const fade = keyframes`
-  0%, 5% {
-    top: 20px;
+  0%, 10% {
     opacity: 0;
   }
 
-  16.67%, 66.67% {
-    top: 0;
+  20%, 80% {
     opacity: 1;
   }
 
-  95%, 100% {
-    top: -20px;
+  90%, 100% {
     opacity: 0;
   }
 `;
 
 const activity = css({
-  display: 'inline-block',
-  position: 'absolute',
   color: '#53d670',
-  width: 150,
   animation: `${fade} 3s ease infinite`,
 });
 
@@ -98,7 +91,7 @@ const img = css({
 const style = {
   section,
   title,
-  activities,
+  body,
   activity,
   img,
 };

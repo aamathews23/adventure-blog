@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
-import Text from '../../global/Text';
 import Button from '../../global/Button';
 import HeroType from '../../../types/home/Hero';
 import style from './style';
@@ -19,12 +18,13 @@ const loader = ({ src }: any) => {
  * Creates a hero component to be used on the home page
  *
  * @param {String} title
+ * @param {String} body
  * @param {Array} activities
  * @param {Button} cta
  * @param {Image} image
  * @returns a hero component
  */
-const Hero = ({ title, activities, cta, image }: HeroType) => {
+const Hero = ({ title, body, activities, cta, image }: HeroType) => {
   const activitiesMemo = useMemo(() => activities, [activities]);
   const [activityIdx, setActivityIdx] = useState<number>(0);
   const activitiesAriaLabel = `I enjoy ${activitiesMemo
@@ -57,11 +57,11 @@ const Hero = ({ title, activities, cta, image }: HeroType) => {
         {title}
       </h1>
       <p
-        css={style.activities}
+        css={style.body}
         data-testid="hero-activities"
         aria-label={activitiesAriaLabel}
       >
-        I enjoy&nbsp;
+        {body}&nbsp;
         <strong css={style.activity}>{activities[activityIdx]}.</strong>
       </p>
       <Button

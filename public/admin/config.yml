@@ -39,7 +39,12 @@ collections:
                   widget: 'string',
                   required: true,
                 }
-              - {}
+              - {
+                  name: 'body',
+                  label: 'Body',
+                  widget: 'string',
+                  required: true,
+                }
               - {
                   name: 'activities',
                   label: 'Activities',

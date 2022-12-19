@@ -5,6 +5,7 @@ description: I am a full stack web dev whose passionate about developing simple,
 previewImg: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011722/Adventure%20Blog/dirty-harrys-peak/mountain-1.jpg
 hero:
   title: Hi, I’m Aaron!
+  body: I’m a fullstack developer and I enjoy
   activities:
     - software
     - design
