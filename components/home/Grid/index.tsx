@@ -36,7 +36,6 @@ const Grid = ({ title, cta, cards }: GridType) => {
               key={index}
               title={card.title}
               description={card.description}
-              date={card.date}
               type={card.type}
               image={card.image}
               collection={card.collection}

@@ -1,14 +1,15 @@
-import ImageType from './Image';
+import ImageType from '../global/Image';
 
 /**
- * The card type
+ * The post type
  */
-type Card = {
+type Post = {
   title: string;
   description: string;
   image: ImageType;
   collection: string[];
+  date?: string;
   type?: string;
 };
 
-export default Card;
+export default Post;

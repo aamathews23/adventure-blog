@@ -11,7 +11,6 @@ const cards: CardType[] = [
   {
     title: 'Test title card',
     description: 'Test body card',
-    date: '07/30/2022',
     image: {
       src: 'example.jpg',
       alt: 'example alt',

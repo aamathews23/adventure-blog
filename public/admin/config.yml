@@ -175,7 +175,6 @@ collections:
                       widget: 'string',
                       required: true,
                     }
-                  - { name: 'date', label: 'Date', widget: 'string' }
                   - {
                       name: 'type',
                       label: 'Type',

@@ -6,10 +6,12 @@ const card = css({
   backgroundColor: '#313135',
   padding: 16,
   borderRadius: 4,
+  boxShadow: '2px 2px 8px #0e0e0f',
   '&:hover, &:focus': {
     cursor: 'pointer',
-    transform: 'scale(1.03)',
-    transition: 'transform 300ms',
+    transform: 'translateY(-4px)',
+    boxShadow: '2px 2px 16px 4px #0e0e0f',
+    transition: 'transform 300ms, box-shadow 300ms',
   },
   '&:focus': {
     outline: '2px solid #fff',
@@ -34,20 +36,9 @@ const title = css({
   },
 });
 
-const date = css({
-  fontSize: 16,
-  fontFamily: 'Inconsolata, monospace',
-  [breakpoints.lg]: {
-    fontSize: 20,
-  },
-});
-
 const body = css({
   fontSize: 16,
   fontFamily: 'Inconsolata, monospace',
-  [breakpoints.lg]: {
-    fontSize: 20,
-  },
 });
 
 const img = css({
@@ -63,7 +54,6 @@ const style = {
   card,
   header,
   title,
-  date,
   body,
   img,
 };

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "npm run lint && npm run test && next build",
     "start": "next start",
-    "lint": "npx prettier -c . && next lint",
+    "lint": "npx prettier -c . && next lint && tsc",
     "fix": "npx prettier -w .",
     "test": "jest --all",
     "test:watch": "jest --watch",
