@@ -9,7 +9,6 @@ type Card = {
   image: ImageType;
   collection: string[];
   type?: string;
-  date?: string;
 };
 
 export default Card;

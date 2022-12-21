@@ -14,11 +14,10 @@ const loader = ({ src }: any) => {
  * @param {String} title
  * @param {String} description
  * @param {String} type
- * @param {String} date
  * @param {ImageType} image
  * @returns a card component
  */
-const Card = ({ title, description, type, date, image }: CardType) => {
+const Card = ({ title, description, type, image }: CardType) => {
   const mainClass = 'card';
   const router = useRouter();
   const handlePostClick = (e: any) => {
@@ -57,7 +56,6 @@ const Card = ({ title, description, type, date, image }: CardType) => {
         >
           {title}
         </Text>
-        {date && <Text style={style.date}>{date}</Text>}
       </header>
       <Text style={style.body}>{description}</Text>
     </div>
