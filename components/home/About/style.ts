@@ -52,6 +52,7 @@ const item = css({
 const img = css({
   borderRadius: '50%',
   overflow: 'hidden',
+  boxShadow: '0px 0px 12px 2px #0e0e0f',
   '& > span': { display: 'block !important' },
 });
 
