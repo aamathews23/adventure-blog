@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
 import Grid from '../../components/posts/Grid';
-import PostType from '../../types/posts/Post';
+import CardType from '../../types/global/Card';
 import '@testing-library/jest-dom';
 
-const posts: PostType[] = [];
+const posts: CardType[] = [];
 
 describe('Grid', () => {
   it('mounts', () => {

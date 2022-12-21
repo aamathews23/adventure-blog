@@ -1,4 +1,3 @@
-// import { readdirSync } from 'fs';
 import { readdir, readFile } from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
@@ -10,7 +9,7 @@ import Page from '../../components/layout/Page';
 import PostSection from '../../components/posts/Section';
 import NotFound from '../../components/global/NotFound';
 import CollectionType from '../../types/posts/Collection';
-import CardType from '../../types/global/Card';
+import PostType from '../../types/posts/Post';
 
 // The blog page type
 type BlogPageType = {
@@ -60,7 +59,7 @@ export async function getStaticProps() {
    * @param b the second post
    * @returns a negitive number
    */
-  const sortPostsDesc = (a: CardType, b: CardType) => {
+  const sortPostsDesc = (a: PostType, b: PostType) => {
     const aDate = new Date(a.date || '').getTime();
     const bDate = new Date(b.date || '').getTime();
     return bDate - aDate;

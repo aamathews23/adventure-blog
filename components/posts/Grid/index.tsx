@@ -18,7 +18,6 @@ const Grid = ({ posts }: GridType) => (
         key={key}
         title={post.title}
         description={post.description}
-        date={post.date}
         type={post.type}
         image={post.image}
         collection={post.collection}
