@@ -73,6 +73,7 @@ const style = css({
   '& img': {
     width: '100%',
     borderRadius: 8,
+    boxShadow: '0px 0px 12px 2px #0e0e0f',
   },
   '& pre': {
     backgroundColor: '#313135',

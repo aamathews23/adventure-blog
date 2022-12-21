@@ -80,7 +80,7 @@ const img = css({
   animation: `${borderShift} 10s ease infinite`,
   overflow: 'hidden',
   marginTop: 64,
-  boxShadow: '2px 2px 10px #0e0e0f',
+  boxShadow: '0px 0px 12px 2px #0e0e0f',
   '& > span': { display: 'block !important' },
 });
 
