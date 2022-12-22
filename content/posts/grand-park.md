@@ -3,7 +3,7 @@ title: Grand Park
 description: A wide open field, Mount Rainier up close, what more can you ask
   for in the Pacific Northwest?
 date: 07/24/2022
-type: blog
+type: adventures
 collection:
   - "2022"
 image:

@@ -25,14 +25,14 @@ const ListMenu = () => {
         </Link>
       </Text>
       <Text tag="li">
-        <Link to="/blog">
+        <Link to="/adventures">
           <Text
             tag="span"
             style={style.number}
           >
             2.
           </Text>
-          Blog
+          Adventures
         </Link>
       </Text>
     </ul>

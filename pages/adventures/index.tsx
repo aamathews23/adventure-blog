@@ -2,9 +2,9 @@ import { readdir, readFile } from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
 import {
-  attributes as blogPageModel,
-  react as BlogPageContent,
-} from '../../content/pages/blog.md';
+  attributes as pageModel,
+  react as Content,
+} from '../../content/pages/adventures.md';
 import Page from '../../components/layout/Page';
 import PostSection from '../../components/posts/Section';
 import NotFound from '../../components/global/NotFound';
@@ -25,11 +25,11 @@ type BlogPageType = {
 const BlogPage = ({ collections }: BlogPageType) => {
   return (
     <>
-      <BlogPageContent />
+      <Content />
       <Page
-        title={blogPageModel.title}
-        description={blogPageModel.description}
-        previewImg={blogPageModel.previewImg}
+        title={pageModel.title}
+        description={pageModel.description}
+        previewImg={pageModel.previewImg}
       >
         {collections && collections.length > 0 ? (
           collections.map((collection, index) => (
@@ -40,7 +40,7 @@ const BlogPage = ({ collections }: BlogPageType) => {
             />
           ))
         ) : (
-          <NotFound text={blogPageModel.notFound} />
+          <NotFound text={pageModel.notFound} />
         )}
       </Page>
     </>

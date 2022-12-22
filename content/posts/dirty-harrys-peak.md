@@ -2,7 +2,7 @@
 title: Dirty Harry's Peak
 description: A long hike up a snowy mountain...
 date: 05/07/2022
-type: blog
+type: adventures
 image:
   src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1655011697/Adventure%20Blog/dirty-harrys-peak/mountain-2.jpg
   alt: a snowy peak rising from a valley

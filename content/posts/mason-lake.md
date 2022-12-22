@@ -3,7 +3,7 @@ title: Mason Lake
 description: Checkout some breathtaking views of Mason Lake via the Ira Springs
   Memorial Trail!
 date: 06/26/2022
-type: blog
+type: adventures
 image:
   src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1662529756/Adventure%20Blog/mason-lake/lake-2.jpg
   alt: Mason Lake, a crystal clear mountain lake
