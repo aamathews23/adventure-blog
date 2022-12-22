@@ -1,7 +1,7 @@
 import Text from '../../global/Text';
-import Card from '../../global/Card';
+import CardGrid from '../../global/CardGrid';
 import Button from '../../global/Button';
-import GridType from '../../../types/home/Grid';
+import AdventuresType from '../../../types/home/Adventures';
 import style from './style';
 
 /**
@@ -12,7 +12,7 @@ import style from './style';
  * @param {Array<Card>} cards
  * @returns a grid component
  */
-const Grid = ({ title, cta, cards }: GridType) => {
+const Grid = ({ title, cta, cards }: AdventuresType) => {
   return (
     <section
       css={style.section}
@@ -25,23 +25,12 @@ const Grid = ({ title, cta, cards }: GridType) => {
       >
         {title}
       </Text>
-      <div
-        css={style.grid}
-        data-testid="home-grid-grid"
-      >
-        {cards &&
-          cards.length > 0 &&
-          cards.map((card, index) => (
-            <Card
-              key={index}
-              title={card.title}
-              description={card.description}
-              type={card.type}
-              image={card.image}
-              collection={card.collection}
-            />
-          ))}
-      </div>
+      {cards && cards.length > 0 && (
+        <CardGrid
+          items={cards}
+          type="adventures"
+        />
+      )}
       <Button
         label={cta.label}
         tag={cta.tag}

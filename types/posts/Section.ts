@@ -1,11 +1,11 @@
-import CardType from '../global/Card';
+import PostType from './Post';
 
 /**
  * The post section type
  */
 type Section = {
   title: string;
-  posts: CardType[];
+  posts: PostType[];
 };
 
 export default Section;

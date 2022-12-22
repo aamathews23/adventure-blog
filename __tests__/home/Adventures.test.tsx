@@ -1,13 +1,13 @@
 import { render } from '@testing-library/react';
-import Grid from '../../components/home/Grid';
-import CardType from '../../types/global/Card';
+import Grid from '../../components/home/Adventures';
+import AdventureType from '../../types/adventures/Adventure';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
 const cta = {
   label: 'Test cta',
 };
-const cards: CardType[] = [
+const cards: AdventureType[] = [
   {
     title: 'Test title card',
     description: 'Test body card',
@@ -15,7 +15,10 @@ const cards: CardType[] = [
       src: 'example.jpg',
       alt: 'example alt',
     },
-    collection: ['2022'],
+    trail: 'Trail',
+    link: 'https://example.com',
+    rating: 4.5,
+    date: '1/1/2022',
   },
 ];
 

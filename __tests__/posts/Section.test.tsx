@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
 import Section from '../../components/posts/Section';
-import CardType from '../../types/global/Card';
+import PostType from '../../types/posts/Post';
 import '@testing-library/jest-dom';
 
 const title = 'Title';
-const postsEmpty: CardType[] = [];
-const posts: CardType[] = [
+const postsEmpty: PostType[] = [];
+const posts: PostType[] = [
   {
     title: 'Post 1',
     description: 'Body 1',

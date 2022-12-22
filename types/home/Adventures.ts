@@ -1,13 +1,13 @@
-import CardType from '../global/Card';
 import ButtonType from '../global/Button';
+import Adventure from '../adventures/Adventure';
 
 /**
  * The home grid component type
  */
-type Grid = {
+type Adventures = {
   title: string;
   cta: ButtonType;
-  cards: CardType[];
+  cards: Adventure[];
 };
 
-export default Grid;
+export default Adventures;

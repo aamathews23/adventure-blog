@@ -1,7 +1,7 @@
 import Page from '../components/layout/Page';
 import Hero from '../components/home/Hero';
 import About from '../components/home/About';
-import Grid from '../components/home/Grid';
+import Adventures from '../components/home/Adventures';
 import {
   attributes as homePageModel,
   react as HomePageContent,
@@ -34,7 +34,7 @@ const HomePage = () => {
           skills={homePageModel.about.skills}
           image={homePageModel.about.image}
         />
-        <Grid
+        <Adventures
           title={homePageModel.blog.title}
           cta={homePageModel.blog.cta}
           cards={homePageModel.blog.posts}
