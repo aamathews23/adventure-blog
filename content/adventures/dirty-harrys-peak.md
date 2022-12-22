@@ -8,6 +8,9 @@ image:
   alt: a snowy peak rising from a valley
 collection:
   - "2022"
+trail: Dirty Harry's Peak
+link: https://www.wta.org/go-hiking/hikes/dirty-harrys-peak
+rating: 4.0
 ---
 # Dirty Harry’s Peak
 

@@ -9,6 +9,9 @@ image:
   alt: Mason Lake, a crystal clear mountain lake
 collection:
   - "2022"
+trail: Ira Spring Trail - Mason Lake
+link: https://www.wta.org/go-hiking/hikes/ira-spring-memorial
+rating: 4.9
 ---
 # Mason Lake
 

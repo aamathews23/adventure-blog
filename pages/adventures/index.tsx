@@ -66,8 +66,8 @@ export async function getStaticProps() {
   };
 
   let collections: CollectionType[] = [];
-  const files = (await readdir(path.join('content', 'posts'))).map((fileName) =>
-    readFile(path.join('content', 'posts', fileName)),
+  const files = (await readdir(path.join('content', 'adventures'))).map(
+    (fileName) => readFile(path.join('content', 'adventures', fileName)),
   );
 
   // Get file content and parse to format

@@ -9,6 +9,9 @@ collection:
 image:
   src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1661831154/Adventure%20Blog/grand-park-lake-eleanor-trail/mountain-ridge-3.jpg
   alt: Mount Rainier across a valley
+trail: Grand Park via Lake Eleanor
+link: https://www.wta.org/go-hiking/hikes/grand-park-via-lake-eleanor
+rating: 4.8
 ---
 # Grand Park
 

@@ -8,6 +8,9 @@ collection:
 image:
   src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1662528403/Adventure%20Blog/kendall-katwalk/ridge-2.jpg
   alt: a cloudy mountain ridge
+trail: Kendall Katwalk
+link: https://www.wta.org/go-hiking/hikes/kendall-katwalk
+rating: 4.9
 ---
 # Kendall Katwalk
 

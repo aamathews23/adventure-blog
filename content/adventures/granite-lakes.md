@@ -9,6 +9,9 @@ image:
   alt: a frozen lake in the middle of Snoqualmie Pass
 collection:
   - "2022"
+trail: Granite Creek Trail to Granite Lakes
+link: https://www.wta.org/go-hiking/hikes/granite-creek-road-trail
+rating: 4.0
 ---
 # Granite Lakes
 
