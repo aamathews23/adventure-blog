@@ -8,7 +8,6 @@ const image = {
   src: 'example.jpg',
   alt: 'alt text',
 };
-const collection = ['2022'];
 
 describe('Card', () => {
   it('mounts', () => {
@@ -17,7 +16,6 @@ describe('Card', () => {
         title={title}
         description={description}
         image={image}
-        collection={collection}
       />,
     );
     const card = getByTestId('card');
@@ -29,7 +27,6 @@ describe('Card', () => {
         title={title}
         description={description}
         image={image}
-        collection={collection}
       />,
     );
     expect(getByText(title)).toBeInTheDocument();
@@ -40,7 +37,6 @@ describe('Card', () => {
         title={title}
         description={description}
         image={image}
-        collection={collection}
       />,
     );
     expect(getByText(description)).toBeInTheDocument();
@@ -51,7 +47,6 @@ describe('Card', () => {
         title={title}
         description={description}
         image={image}
-        collection={collection}
       />,
     );
     const img = getByAltText(image.alt);

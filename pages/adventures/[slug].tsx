@@ -3,12 +3,13 @@ import { css } from '@emotion/react';
 import matter from 'gray-matter';
 import path from 'path';
 import {
-  attributes as postPageModel,
-  react as PostPageContent,
-} from '../../content/pages/post.md';
+  attributes as pageModel,
+  react as Content,
+} from '../../content/pages/adventure.md';
 import Page from '../../components/layout/Page';
 import Markdown from '../../components/global/Markdown';
-import CardType from '../../types/global/Card';
+import TrailInfo from '../../components/adventures/TrailInfo';
+import AdventureType from '../../types/adventures/Adventure';
 
 // Page styles
 const style = css({
@@ -17,27 +18,33 @@ const style = css({
 });
 
 // Page type
-type PostPageType = {
-  post: CardType;
+type AdventurePageType = {
+  adventure: AdventureType;
   content?: string;
 };
 
 /**
- * Serves the home page of the site
+ * Serves the adventure page of the site
  *
- * @param {Card} post
+ * @param {Object} adventure
  * @param {String} content
- * @returns a post page component
+ * @returns a adventure page component
  */
-const PostPage = ({ post, content }: PostPageType) => {
+const AdventurePage = ({ adventure, content }: AdventurePageType) => {
   return (
     <>
-      <PostPageContent />
+      <Content />
       <Page
-        title={`${postPageModel.title} | ${post.title}`}
-        description={post.description}
-        previewImg={post.image.src}
+        title={`${pageModel.title} | ${adventure.title}`}
+        description={adventure.description}
+        previewImg={adventure.image.src}
       >
+        <TrailInfo
+          trail={adventure.trail}
+          link={adventure.link}
+          rating={adventure.rating}
+          date={adventure.date}
+        />
         <div css={style}>{content && <Markdown content={content} />}</div>
       </Page>
     </>
@@ -50,7 +57,7 @@ const PostPage = ({ post, content }: PostPageType) => {
  * @returns the file paths
  */
 export const getStaticPaths = async () => {
-  const paths = readdirSync(path.join('content', 'posts')).map((file) => ({
+  const paths = readdirSync(path.join('content', 'adventures')).map((file) => ({
     params: {
       slug: file.replace('.md', ''),
     },
@@ -70,16 +77,16 @@ export const getStaticPaths = async () => {
  */
 export const getStaticProps = async ({ params: { slug } }: any) => {
   const file = readFileSync(
-    path.join('content', 'posts', `${slug}.md`),
+    path.join('content', 'adventures', `${slug}.md`),
   ).toString();
   const content = matter(file);
 
   return {
     props: {
-      post: content.data,
+      adventure: content.data,
       content: content.content,
     },
   };
 };
 
-export default PostPage;
+export default AdventurePage;

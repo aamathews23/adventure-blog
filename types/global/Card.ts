@@ -7,7 +7,6 @@ type Card = {
   title: string;
   description: string;
   image: ImageType;
-  collection: string[];
   type?: string;
 };
 

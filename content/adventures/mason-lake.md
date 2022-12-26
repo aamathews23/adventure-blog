@@ -3,12 +3,13 @@ title: Mason Lake
 description: Checkout some breathtaking views of Mason Lake via the Ira Springs
   Memorial Trail!
 date: 06/26/2022
-type: blog
 image:
   src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1662529756/Adventure%20Blog/mason-lake/lake-2.jpg
   alt: Mason Lake, a crystal clear mountain lake
-collection:
-  - "2022"
+year: 2022
+trail: Ira Spring Trail - Mason Lake
+link: https://www.wta.org/go-hiking/hikes/ira-spring-memorial
+rating: 4.9
 ---
 # Mason Lake
 
