@@ -32,7 +32,7 @@ describe('Grid', () => {
         cta={cta}
       />,
     );
-    const grid = getByTestId('home-grid');
+    const grid = getByTestId('adventures');
     expect(grid).toBeInTheDocument();
   });
   it('has the title', () => {
