@@ -19,6 +19,7 @@ const cards: AdventureType[] = [
     link: 'https://example.com',
     rating: 4.5,
     date: '1/1/2022',
+    year: '2022',
   },
 ];
 

@@ -5,20 +5,16 @@ const section = css({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  textAlign: 'center',
   marginTop: 72,
   marginBottom: 72,
-  textAlign: 'center',
-  [breakpoints.sm]: {
-    marginTop: 144,
-    marginBottom: 144,
-  },
 });
 
 const title = css({
-  fontSize: 32,
+  fontSize: 48,
   fontFamily: 'Karla, sans-serif',
   marginBottom: 24,
-  [breakpoints.lg]: { fontSize: 48 },
+  [breakpoints.lg]: { fontSize: 64 },
 });
 
 const body = css({

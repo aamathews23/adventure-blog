@@ -11,6 +11,7 @@ type Adventure = {
   rating: number;
   date: string;
   image: ImageType;
+  year: string;
 };
 
 export default Adventure;

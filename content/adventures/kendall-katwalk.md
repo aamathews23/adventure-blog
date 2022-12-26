@@ -3,8 +3,7 @@ title: Kendall Katwalk
 description: The longest hike I've ever been on. I even saw a marmot. Checkout the pics!
 date: 07/17/2022
 type: adventures
-collection:
-  - "2022"
+year: 2022
 image:
   src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1662528403/Adventure%20Blog/kendall-katwalk/ridge-2.jpg
   alt: a cloudy mountain ridge

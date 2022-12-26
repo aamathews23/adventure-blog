@@ -1,16 +1,16 @@
 import Card from '../../global/Card';
 import GridType from '../../../types/global/CardGrid';
 import Adventure from '../../../types/adventures/Adventure';
-import Post from '../../../types/posts/Post';
 import style from './style';
 
 /**
- * Creates a grid component to be used on the blog page
+ * Creates a grid component
  *
- * @param {Array<T>} items
+ * @param {Array} items
+ * @param {String} type
  * @returns a grid component
  */
-const Grid = <T extends Adventure | Post>({ items, type }: GridType<T>) => (
+const Grid = <T extends Adventure>({ items, type }: GridType<T>) => (
   <div
     css={style}
     data-testid="grid"

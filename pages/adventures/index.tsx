@@ -1,47 +1,97 @@
 import { readdir, readFile } from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
+import { css } from '@emotion/react';
 import {
   attributes as pageModel,
   react as Content,
 } from '../../content/pages/adventures.md';
 import Page from '../../components/layout/Page';
-import PostSection from '../../components/posts/Section';
 import NotFound from '../../components/global/NotFound';
-import CollectionType from '../../types/posts/Collection';
-import PostType from '../../types/posts/Post';
+import AdventureType from '../../types/adventures/Adventure';
+import CardGrid from '../../components/global/CardGrid';
+import Text from '../../components/global/Text';
+import breakpoints from '../../common/breakpoints';
 
-// The blog page type
-type BlogPageType = {
-  collections: CollectionType[];
+// The section type
+type SectionType = {
+  title: string;
+  adventures: AdventureType[];
+};
+
+// The adventure page type
+type AdventurePageType = {
+  sections: SectionType[];
 };
 
 /**
- * Serves the blog page of the site
+ * Serves the adventure page of the site
  *
- * @param {Array<Collection>} collections
- * @returns a blog page component
+ * @param {Array} sections
+ * @returns an adventure page component
  */
-const BlogPage = ({ collections }: BlogPageType) => {
+const AdventurePage = ({ sections }: AdventurePageType) => {
   return (
     <>
       <Content />
       <Page
-        title={pageModel.title}
+        title={`${pageModel.title} | Aaron Mathews`}
         description={pageModel.description}
         previewImg={pageModel.previewImg}
       >
-        {collections && collections.length > 0 ? (
-          collections.map((collection, index) => (
-            <PostSection
-              key={index}
-              title={collection.title}
-              posts={collection.posts}
-            />
-          ))
-        ) : (
-          <NotFound text={pageModel.notFound} />
-        )}
+        <section
+          css={css({
+            marginTop: 72,
+            marginBottom: 72,
+          })}
+        >
+          <Text
+            tag="h1"
+            style={css({
+              fontSize: 48,
+              fontFamily: 'Karla, sans-serif',
+              marginBottom: 16,
+              textAlign: 'center',
+              [breakpoints.lg]: { fontSize: 64 },
+            })}
+          >
+            {pageModel.title}
+          </Text>
+          <Text
+            tag="p"
+            style={css({
+              fontSize: 16,
+              fontFamily: 'Inconsolata, monospace',
+              marginBottom: 64,
+              textAlign: 'center',
+            })}
+          >
+            {pageModel.description}
+          </Text>
+          {sections && sections.length > 0 ? (
+            sections.map((collection, index) => (
+              <section key={index}>
+                <Text
+                  tag="h2"
+                  style={css({
+                    fontSize: 32,
+                    fontFamily: 'Karla, sans-serif',
+                    marginBottom: 16,
+                    [breakpoints.lg]: { fontSize: 48 },
+                  })}
+                >
+                  {collection.title}
+                </Text>
+                <CardGrid
+                  type="adventures"
+                  items={collection.adventures}
+                />
+              </section>
+            ))
+          ) : (
+            <NotFound text={pageModel.notFound} />
+          )}
+        </section>
       </Page>
     </>
   );
@@ -59,13 +109,13 @@ export async function getStaticProps() {
    * @param b the second post
    * @returns a negitive number
    */
-  const sortPostsDesc = (a: PostType, b: PostType) => {
+  const sortPostsDesc = (a: AdventureType, b: AdventureType) => {
     const aDate = new Date(a.date || '').getTime();
     const bDate = new Date(b.date || '').getTime();
     return bDate - aDate;
   };
 
-  let collections: CollectionType[] = [];
+  let sections: SectionType[] = [];
   const files = (await readdir(path.join('content', 'adventures'))).map(
     (fileName) => readFile(path.join('content', 'adventures', fileName)),
   );
@@ -75,27 +125,27 @@ export async function getStaticProps() {
     // Create post collection obj
     const obj = res
       .map((file) => matter(file.toString()).data)
-      .reduce((col, post) => {
-        post.collection.forEach((collection: string) => {
-          col[collection] = col[collection]
-            ? [...col[collection], post]
-            : [post];
-        });
-        return col;
-      }, {});
+      .reduce(
+        (col, adventure) => ({
+          ...col,
+          [adventure.year]: col[adventure.year]
+            ? [...col[adventure.year], adventure]
+            : [adventure],
+        }),
+        {},
+      );
 
-    // Convert obj to list of CollectionTypes
-    collections = Object.keys(obj).map((key: string) => ({
+    sections = Object.keys(obj).map((key: string) => ({
       title: key,
-      posts: obj[key].sort(sortPostsDesc),
+      adventures: obj[key].sort(sortPostsDesc),
     }));
   });
 
   return {
     props: {
-      collections,
+      sections,
     },
   };
 }
 
-export default BlogPage;
+export default AdventurePage;
