@@ -3,7 +3,6 @@ title: Grand Park
 description: A wide open field, Mount Rainier up close, what more can you ask
   for in the Pacific Northwest?
 date: 07/24/2022
-type: adventures
 year: 2022
 image:
   src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1661831154/Adventure%20Blog/grand-park-lake-eleanor-trail/mountain-ridge-3.jpg

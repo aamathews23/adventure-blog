@@ -129,8 +129,8 @@ collections:
                       widget: 'string',
                       required: true,
                     }
-          - name: 'blog'
-            label: 'Blog Section'
+          - name: 'adventures'
+            label: 'Adventures'
             widget: 'object'
             required: true
             fields:
@@ -158,8 +158,8 @@ collections:
                       default: 'button',
                     }
                   - { name: 'anchor', label: 'Anchor', widget: 'string' }
-              - name: 'posts'
-                label: 'Blog Posts'
+              - name: 'items'
+                label: 'Items'
                 widget: 'list'
                 required: true
                 fields:
@@ -174,12 +174,6 @@ collections:
                       label: 'Description',
                       widget: 'string',
                       required: true,
-                    }
-                  - {
-                      name: 'type',
-                      label: 'Type',
-                      widget: 'string',
-                      default: 'blog',
                     }
                   - name: 'image'
                     label: 'Image'
@@ -199,9 +193,9 @@ collections:
                           widget: 'string',
                           required: true,
                         }
-      - name: 'blog'
-        label: 'Blog'
-        file: 'content/pages/blog.md'
+      - name: 'adventures'
+        label: 'Adventures'
+        file: 'content/pages/adventures.md'
         fields:
           - { name: 'title', label: 'Title', widget: 'string', required: true }
           - {
@@ -222,9 +216,9 @@ collections:
               widget: 'string',
               required: true,
             }
-      - name: 'post'
-        label: 'Post'
-        file: 'content/pages/post.md'
+      - name: 'adventure'
+        label: 'Adventure'
+        file: 'content/pages/adventure.md'
         fields:
           - { name: 'title', label: 'Title', widget: 'string', required: true }
       - name: '404'
@@ -250,9 +244,9 @@ collections:
               widget: 'string',
               required: true,
             }
-  - name: 'posts'
-    label: 'Posts'
-    folder: 'content/posts'
+  - name: 'adventures'
+    label: 'Adventures'
+    folder: 'content/adventures'
     create: true
     fields:
       - { name: 'title', label: 'Title', widget: 'string', required: true }
@@ -268,20 +262,6 @@ collections:
           widget: 'date',
           format: 'MM/DD/YYYY',
           required: true,
-        }
-      - {
-          name: 'type',
-          label: 'Type',
-          widget: 'string',
-          default: 'blog',
-          required: true,
-        }
-      - {
-          name: 'collection',
-          label: 'Collection',
-          widget: 'list',
-          allow_add: false,
-          default: ['2022'],
         }
       - name: 'image'
         label: 'Image'
@@ -301,4 +281,8 @@ collections:
               widget: 'string',
               required: true,
             }
+      - { name: 'year', label: 'Year', widget: 'string', required: true }
+      - { name: 'trail', label: 'Trail', widget: 'string', required: true }
+      - { name: 'link', label: 'Link', widget: 'string', required: true }
+      - { name: 'rating', label: 'Rating', widget: 'number', required: true }
       - { name: 'body', 'Blog Post Content', widget: 'markdown' }

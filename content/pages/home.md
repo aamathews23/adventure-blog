@@ -46,29 +46,26 @@ about:
   image:
     src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1661831154/Adventure%20Blog/grand-park-lake-eleanor-trail/mountain-ridge-3.jpg
     alt: Mount Rainier across a valley
-blog:
+adventures:
   title: Adventures
   cta:
     label: View more
     tag: a
     anchor: /adventures
-  posts:
-    - type: adventures
-      title: Grand Park
+  items:
+    - title: Grand Park
       description: A wide open field, Mount Rainier up close, what more can you ask
         for in the Pacific Northwest?
       image:
         src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1661831154/Adventure%20Blog/grand-park-lake-eleanor-trail/mountain-ridge-3.jpg
         alt: Mount Rainier across a valley
-    - type: adventures
-      title: Kendall Katwalk
+    - title: Kendall Katwalk
       description: The longest hike I've ever been on. I even saw a marmot. Checkout
         the pics!
       image:
         src: https://res.cloudinary.com/dmrjua4dg/image/upload/v1662528403/Adventure%20Blog/kendall-katwalk/ridge-2.jpg
         alt: a cloudy mountain ridge
-    - type: adventures
-      title: Mason Lake
+    - title: Mason Lake
       description: Checkout some breathtaking views of Mason Lake via the Ira Springs
         Memorial Trail!
       image:

@@ -35,9 +35,9 @@ const HomePage = () => {
           image={homePageModel.about.image}
         />
         <Adventures
-          title={homePageModel.blog.title}
-          cta={homePageModel.blog.cta}
-          cards={homePageModel.blog.posts}
+          title={homePageModel.adventures.title}
+          cta={homePageModel.adventures.cta}
+          cards={homePageModel.adventures.items}
         />
       </Page>
     </>

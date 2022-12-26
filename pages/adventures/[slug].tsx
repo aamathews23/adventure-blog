@@ -5,7 +5,7 @@ import path from 'path';
 import {
   attributes as pageModel,
   react as Content,
-} from '../../content/pages/post.md';
+} from '../../content/pages/adventure.md';
 import Page from '../../components/layout/Page';
 import Markdown from '../../components/global/Markdown';
 import TrailInfo from '../../components/adventures/TrailInfo';

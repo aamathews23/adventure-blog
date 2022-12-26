@@ -12,16 +12,16 @@ import style from './style';
  * @param {Array<Card>} cards
  * @returns a grid component
  */
-const Grid = ({ title, cta, cards }: AdventuresType) => {
+const Adventures = ({ title, cta, cards }: AdventuresType) => {
   return (
     <section
       css={style.section}
-      data-testid="home-grid"
+      data-testid="adventures"
     >
       <Text
         tag="h2"
         style={style.title}
-        data-testid="home-grid-title"
+        data-testid="adventures-title"
       >
         {title}
       </Text>
@@ -31,6 +31,7 @@ const Grid = ({ title, cta, cards }: AdventuresType) => {
           type="adventures"
         />
       )}
+      <br />
       <Button
         label={cta.label}
         tag={cta.tag}
@@ -40,4 +41,4 @@ const Grid = ({ title, cta, cards }: AdventuresType) => {
   );
 };
 
-export default Grid;
+export default Adventures;
