@@ -7,6 +7,7 @@ const body = 'Test body';
 const activities = ['software', 'design', 'hockey'];
 const cta = {
   label: 'Test cta',
+  anchor: 'https://example.com',
 };
 const image = {
   src: 'example.jpg',

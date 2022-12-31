@@ -6,6 +6,7 @@ import '@testing-library/jest-dom';
 const title = 'Test title';
 const cta = {
   label: 'Test cta',
+  anchor: 'https://example.com',
 };
 const cards: AdventureType[] = [
   {

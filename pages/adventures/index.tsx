@@ -1,16 +1,14 @@
 import { readdir, readFile } from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
-import { css } from '@emotion/react';
 import {
   attributes as pageModel,
   react as Content,
 } from '../../content/pages/adventures.md';
 import Page from '../../components/layout/Page';
 import NotFound from '../../components/global/NotFound';
-import AdventureType from '../../types/adventures/Adventure';
 import CardGrid from '../../components/global/CardGrid';
-import Text from '../../components/global/Text';
+import AdventureType from '../../types/adventures/Adventure';
 import breakpoints from '../../common/breakpoints';
 
 // The section type
@@ -20,7 +18,7 @@ type SectionType = {
 };
 
 // The adventure page type
-type AdventurePageType = {
+type AdventurePageProps = {
   sections: SectionType[];
 };
 
@@ -30,7 +28,7 @@ type AdventurePageType = {
  * @param {Array} sections
  * @returns an adventure page component
  */
-const AdventurePage = ({ sections }: AdventurePageType) => {
+const AdventurePage = ({ sections }: AdventurePageProps) => {
   return (
     <>
       <Content />
@@ -40,48 +38,45 @@ const AdventurePage = ({ sections }: AdventurePageType) => {
         previewImg={pageModel.previewImg}
       >
         <section
-          css={css({
+          css={{
             marginTop: 72,
             marginBottom: 72,
-          })}
+          }}
         >
-          <Text
-            tag="h1"
-            style={css({
+          <h1
+            css={{
               fontSize: 48,
               fontFamily: 'Karla, sans-serif',
               marginBottom: 16,
               textAlign: 'center',
               [breakpoints.lg]: { fontSize: 64 },
-            })}
+            }}
           >
             {pageModel.title}
-          </Text>
-          <Text
-            tag="p"
-            style={css({
+          </h1>
+          <p
+            css={{
               fontSize: 16,
               fontFamily: 'Inconsolata, monospace',
               marginBottom: 64,
               textAlign: 'center',
-            })}
+            }}
           >
             {pageModel.description}
-          </Text>
+          </p>
           {sections && sections.length > 0 ? (
             sections.map((collection, index) => (
               <section key={index}>
-                <Text
-                  tag="h2"
-                  style={css({
+                <h2
+                  css={{
                     fontSize: 32,
                     fontFamily: 'Karla, sans-serif',
                     marginBottom: 16,
                     [breakpoints.lg]: { fontSize: 48 },
-                  })}
+                  }}
                 >
                   {collection.title}
-                </Text>
+                </h2>
                 <CardGrid
                   type="adventures"
                   items={collection.adventures}
