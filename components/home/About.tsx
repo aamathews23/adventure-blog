@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Markdown from '../global/Markdown';
-import SplitBlock from '../layout/SplitBlock';
-import breakpoints from '../../common/breakpoints';
+import Markdown from '@/global/Markdown';
+import SplitBlock from '@/layout/SplitBlock';
+import breakpoints from '@/common/breakpoints';
 
 type AboutProps = {
   title: string;

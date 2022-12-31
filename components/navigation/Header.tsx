@@ -1,7 +1,7 @@
-import Link from '../global/Link';
-import ListMenu from './ListMenu';
-import DrawerMenu from './DrawerMenu';
-import breakpoints from '../../common/breakpoints';
+import Link from '@/global/Link';
+import ListMenu from '@/navigation/ListMenu';
+import DrawerMenu from '@/navigation/DrawerMenu';
+import breakpoints from '@/common/breakpoints';
 
 /**
  * Creates a header component to be used throughout the pages.

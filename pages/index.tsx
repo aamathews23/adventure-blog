@@ -1,11 +1,11 @@
-import Page from '../components/layout/Page';
-import Hero from '../components/home/Hero';
-import About from '../components/home/About';
-import Adventures from '../components/home/Adventures';
+import Page from '@/layout/Page';
+import Hero from '@/home/Hero';
+import About from '@/home/About';
+import Adventures from '@/home/Adventures';
 import {
   attributes as homePageModel,
   react as HomePageContent,
-} from '../content/pages/home.md';
+} from '@/content/home.md';
 
 /**
  * Serves the home page of the site

@@ -1,7 +1,7 @@
-import CardGrid from '../global/CardGrid';
-import Button from '../global/Button';
-import Adventure from '../../types/adventures/Adventure';
-import breakpoints from '../../common/breakpoints';
+import CardGrid from '@/global/CardGrid';
+import Button from '@/global/Button';
+import Adventure from '@/types/Adventure';
+import breakpoints from '@/common/breakpoints';
 
 type AdventuresProps = {
   title: string;

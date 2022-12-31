@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMap, faStar, faCalendar } from '@fortawesome/free-solid-svg-icons';
-import Link from '../global/Link';
+import Link from '@/global/Link';
 
 type TrailInfoProps = {
   trail: string;

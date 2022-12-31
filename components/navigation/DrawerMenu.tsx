@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { SerializedStyles, css, keyframes } from '@emotion/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import ListMenu from './ListMenu';
-import breakpoints from '../../common/breakpoints';
+import ListMenu from '@/navigation/ListMenu';
+import breakpoints from '@/common/breakpoints';
 
 const fadeIn = keyframes`
   from {

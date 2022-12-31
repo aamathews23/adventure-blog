@@ -14,7 +14,18 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "baseUrl": ".",
+    "paths": {
+      "@/common/*": ["common/*"],
+      "@/adventures/*": ["components/adventures/*"],
+      "@/global/*": ["components/global/*"],
+      "@/home/*": ["components/home/*"],
+      "@/layout/*": ["components/layout/*"],
+      "@/navigation/*": ["components/navigation/*"],
+      "@/types/*": ["types/*"],
+      "@/content/*": ["content/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

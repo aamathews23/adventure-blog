@@ -1,6 +1,6 @@
-import useEmojis from '../../common/useEmojis';
-import useMarkdown from '../../common/useMarkdown';
-import breakpoints from '../../common/breakpoints';
+import useEmojis from '@/common/useEmojis';
+import useMarkdown from '@/common/useMarkdown';
+import breakpoints from '@/common/breakpoints';
 import 'highlight.js/styles/github-dark.css';
 
 /**

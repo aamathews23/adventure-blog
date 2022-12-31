@@ -5,11 +5,11 @@ import path from 'path';
 import {
   attributes as pageModel,
   react as Content,
-} from '../../content/pages/adventure.md';
-import Page from '../../components/layout/Page';
-import Markdown from '../../components/global/Markdown';
-import TrailInfo from '../../components/adventures/TrailInfo';
-import AdventureType from '../../types/adventures/Adventure';
+} from '@/content/adventure.md';
+import Page from '@/layout/Page';
+import Markdown from '@/global/Markdown';
+import TrailInfo from '@/adventures/TrailInfo';
+import AdventureType from '@/types/Adventure';
 
 // Page styles
 const style = css({

@@ -4,12 +4,12 @@ import matter from 'gray-matter';
 import {
   attributes as pageModel,
   react as Content,
-} from '../../content/pages/adventures.md';
-import Page from '../../components/layout/Page';
-import NotFound from '../../components/global/NotFound';
-import CardGrid from '../../components/global/CardGrid';
-import AdventureType from '../../types/adventures/Adventure';
-import breakpoints from '../../common/breakpoints';
+} from '@/content/adventures.md';
+import Page from '@/layout/Page';
+import NotFound from '@/global/NotFound';
+import CardGrid from '@/global/CardGrid';
+import AdventureType from '@/types/Adventure';
+import breakpoints from '@/common/breakpoints';
 
 // The section type
 type SectionType = {

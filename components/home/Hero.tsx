@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { keyframes } from '@emotion/react';
-import Button from '../global/Button';
-import breakpoints from '../../common/breakpoints';
+import Button from '@/global/Button';
+import breakpoints from '@/common/breakpoints';
 
 type HeroProps = {
   title: string;

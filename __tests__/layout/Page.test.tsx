@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Page from '../../components/layout/Page';
+import Page from '@/layout/Page';
 import '@testing-library/jest-dom';
 
 const title = 'Page title';

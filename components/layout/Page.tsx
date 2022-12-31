@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Header from '../navigation/Header';
-import Footer from '../navigation/Footer';
-import breakpoints from '../../common/breakpoints';
+import Header from '@/navigation/Header';
+import Footer from '@/navigation/Footer';
+import breakpoints from '@/common/breakpoints';
 
 type PageProps = {
   title: string;

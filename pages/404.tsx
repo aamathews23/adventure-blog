@@ -1,9 +1,9 @@
-import Page from '../components/layout/Page';
-import NotFound from '../components/global/NotFound';
+import Page from '@/layout/Page';
+import NotFound from '@/global/NotFound';
 import {
   attributes as notFoundModel,
   react as NotFoundPageContent,
-} from '../content/pages/404.md';
+} from '@/content/404.md';
 
 /**
  * Overrides the default Next 404 component

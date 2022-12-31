@@ -1,4 +1,4 @@
-import ImageType from '../global/Image';
+import ImageType from '@/types/Image';
 
 /**
  * The adventure type

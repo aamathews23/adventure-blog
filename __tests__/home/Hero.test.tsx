@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Hero from '../../components/home/Hero';
+import Hero from '@/home/Hero';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';

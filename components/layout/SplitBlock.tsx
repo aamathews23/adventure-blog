@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import breakpoints from '../../common/breakpoints';
+import breakpoints from '@/common/breakpoints';
 
 type SplitBlockProps = {
   left: React.ReactNode;

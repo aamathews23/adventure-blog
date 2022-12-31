@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
-import breakpoints from '../../common/breakpoints';
+import breakpoints from '@/common/breakpoints';
 
 /**
  * Creates a footer component to be used throughout the pages.

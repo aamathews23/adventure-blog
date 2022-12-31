@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import ImageType from '../../types/global/Image';
-import breakpoints from '../../common/breakpoints';
+import ImageType from '@/types/Image';
+import breakpoints from '@/common/breakpoints';
 
 /**
  * The card type

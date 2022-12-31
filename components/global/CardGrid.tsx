@@ -1,23 +1,23 @@
-import Card from '../global/Card';
-import Adventure from '../../types/adventures/Adventure';
-import breakpoints from '../../common/breakpoints';
+import Card from '@/global/Card';
+import Adventure from '@/types/Adventure';
+import breakpoints from '@/common/breakpoints';
 
 /**
- * The post grid type
+ * The card grid type
  */
-type GridProps = {
+type CardGridProps = {
   items: Adventure[];
   type?: string;
 };
 
 /**
- * Creates a grid component
+ * Creates a card grid component
  *
  * @param {Array} items
  * @param {String} type
- * @returns a grid component
+ * @returns a card grid component
  */
-const Grid = ({ items, type }: GridProps) => (
+const CardGrid = ({ items, type }: CardGridProps) => (
   <div
     css={{
       display: 'grid',
@@ -43,4 +43,4 @@ const Grid = ({ items, type }: GridProps) => (
   </div>
 );
 
-export default Grid;
+export default CardGrid;

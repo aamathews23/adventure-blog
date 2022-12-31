@@ -1,5 +1,5 @@
-import Link from '../global/Link';
-import breakpoints from '../../common/breakpoints';
+import Link from '@/global/Link';
+import breakpoints from '@/common/breakpoints';
 
 /**
  * Creates a list menu component to be used throughout the pages.

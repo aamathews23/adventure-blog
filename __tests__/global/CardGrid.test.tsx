@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import CardGrid from '../../components/global/CardGrid';
-import Adventure from '../../types/adventures/Adventure';
+import CardGrid from '@/global/CardGrid';
+import Adventure from '@/types/Adventure';
 import '@testing-library/jest-dom';
 
 const adventures: Adventure[] = [];
