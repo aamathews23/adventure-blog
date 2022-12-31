@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Hero from '../../components/home/Hero';
+import Hero from '@/home/Hero';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
@@ -7,6 +7,7 @@ const body = 'Test body';
 const activities = ['software', 'design', 'hockey'];
 const cta = {
   label: 'Test cta',
+  anchor: 'https://example.com',
 };
 const image = {
   src: 'example.jpg',

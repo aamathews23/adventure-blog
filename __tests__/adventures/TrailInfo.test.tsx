@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import TrailInfo from '../../components/adventures/TrailInfo';
+import TrailInfo from '@/adventures/TrailInfo';
 import '@testing-library/jest-dom';
 
 const trail = 'Trail';

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Card from '../../components/global/Card';
+import Card from '@/global/Card';
 import '@testing-library/jest-dom';
 
 const title = 'Post 1';

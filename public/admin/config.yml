@@ -13,7 +13,7 @@ collections:
     files:
       - name: 'home'
         label: 'Home'
-        file: 'content/pages/home.md'
+        file: 'content/home.md'
         fields:
           - { name: 'title', label: 'Title', widget: 'string', required: true }
           - {
@@ -195,7 +195,7 @@ collections:
                         }
       - name: 'adventures'
         label: 'Adventures'
-        file: 'content/pages/adventures.md'
+        file: 'content/adventures.md'
         fields:
           - { name: 'title', label: 'Title', widget: 'string', required: true }
           - {
@@ -218,12 +218,12 @@ collections:
             }
       - name: 'adventure'
         label: 'Adventure'
-        file: 'content/pages/adventure.md'
+        file: 'content/adventure.md'
         fields:
           - { name: 'title', label: 'Title', widget: 'string', required: true }
       - name: '404'
         label: '404'
-        file: 'content/pages/404.md'
+        file: 'content/404.md'
         fields:
           - { name: 'title', label: 'Title', widget: 'string', required: true }
           - {

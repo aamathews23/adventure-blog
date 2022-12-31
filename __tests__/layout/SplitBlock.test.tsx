@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import SplitBlock from '../../components/layout/SplitBlock';
+import SplitBlock from '@/layout/SplitBlock';
 import '@testing-library/jest-dom';
 
 const left = (

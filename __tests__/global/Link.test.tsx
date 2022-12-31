@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Link from '../../components/global/Link';
+import Link from '@/global/Link';
 import '@testing-library/jest-dom';
 
 const to = '/';

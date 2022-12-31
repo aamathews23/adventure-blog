@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import ListMenu from '../../components/navigation/ListMenu';
+import ListMenu from '@/navigation/ListMenu';
 import '@testing-library/jest-dom';
 
 describe('ListMenu', () => {

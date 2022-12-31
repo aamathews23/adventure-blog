@@ -1,11 +1,12 @@
 import { render } from '@testing-library/react';
-import Grid from '../../components/home/Adventures';
-import AdventureType from '../../types/adventures/Adventure';
+import Grid from '@/home/Adventures';
+import AdventureType from '@/types/Adventure';
 import '@testing-library/jest-dom';
 
 const title = 'Test title';
 const cta = {
   label: 'Test cta',
+  anchor: 'https://example.com',
 };
 const cards: AdventureType[] = [
   {
