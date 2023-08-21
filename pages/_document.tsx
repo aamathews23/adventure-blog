@@ -22,6 +22,11 @@ const Document = () => (
         href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet"
       />
+      <link
+        href="/favicon.svg"
+        rel="icon"
+        sizes="any"
+      />
       <Global
         styles={{
           'html, body, #__next': {
