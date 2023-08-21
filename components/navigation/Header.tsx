@@ -1,6 +1,7 @@
 import Link from '@/global/Link';
 import ListMenu from '@/navigation/ListMenu';
 import DrawerMenu from '@/navigation/DrawerMenu';
+import Logo from '@/navigation/Logo';
 import breakpoints from '@/common/breakpoints';
 
 /**
@@ -23,14 +24,12 @@ const Header = () => (
     <Link to="/">
       <span
         css={{
-          fontSize: 24,
-          fontWeight: 'bold',
-          fontFamily: 'Karla, sans-serif',
-          color: '#53d670',
-          [breakpoints.sm]: { fontSize: 32 },
+          display: 'block',
+          width: 48,
+          [breakpoints.sm]: { width: 64 },
         }}
       >
-        AM
+        <Logo />
       </span>
     </Link>
     <nav
